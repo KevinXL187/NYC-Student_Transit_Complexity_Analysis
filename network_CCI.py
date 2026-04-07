@@ -5,6 +5,7 @@ import pandas as pd
 import geopandas as gpd
 import networkx as nx
 import matplotlib.pyplot as plt
+from scipy.spatial import KDTree
 from shapely.geometry import Point, LineString
 
 # create graph with stops and travel time as edges
@@ -14,7 +15,8 @@ edges_df = pd.read_csv("data/stop_times.csv")
 
 nxG = nx.Graph()
 for idx, rw in stops_df.iterrows():
-    nxG.add_node(rw['stop_id'], lat=rw['stop_lat'], lon=rw['stop_lon'])
+    nxG.add_node(rw['stop_id'], lat=rw['stop_lat'], lon=rw['stop_lon'], type='transit')
+
 for idx, rw in edges_df.iterrows():
     nxG.add_edge(rw['source_stop_id'], rw['target_stop_id'], weight=rw['travel_time'])
 
@@ -50,15 +52,34 @@ gdf_edges['thickness'] = ((gdf_edges['travel_time'] - min_tk) / (max_tk - min_tk
 #print(gdf_edges)
 
 # %%
-# load and parse school point data files
+# load and parse school point data
 school_gdf = gpd.read_file("./data/raw/schools/SchoolPoints_APS_2024_08_28.shp")
 for idx, rw in school_gdf.iterrows():
     sch_idx = f"school_{idx}"
     pos= (rw.geometry.x, rw.geometry.y)
-    nxG.add_node(sch_idx, pos=pos, name=rw.get('Name', idx))
+    nxG.add_node(sch_idx, pos=pos, name=rw.get('Name', idx), type='school')
+
+## connect school nodes only to nearest transit stop
+transit_nodes = [n for n, d in nxG.nodes(data=True) if d.get('type') == 'transit']
+transit_coords = [(nxG.nodes[n]['lon'], nxG.nodes[n]['lat']) for n in transit_nodes]
+
+spatIDX_tree = KDTree(transit_coords)
+for idx, rw in school_gdf.iterrows():
+    sch_id = f"school_{idx}"
+    pos = (rw.geometry.x, rw.geometry.y)
+    
+    nxG.add_node(sch_id, 
+                lon=school_lon, 
+                lat=school_lat, 
+                name=rw.get('NAME', idx), 
+                type='school')
+
+    # Find the nearest transit stop
+    # Add the edge (walking distance)
+
     
 # %%
-
+# load and parse zip node data 
 
 # %%
 # plotting
