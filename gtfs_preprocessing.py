@@ -1,74 +1,108 @@
+# pyright: basic
 import pandas as pd
 import glob, os
 
-def process_gtfs_edges(file_path):
-    school_start="07:00:00"
-    school_end="16:00:00"
+from scipy.spatial import KDTree
 
-    df = pd.read_csv(file_path)
-    df = df[df['trip_id'].str.contains('Weekday', case=False)].copy()
-    df = df[(df['arrival_time'] >= school_start) & (df['arrival_time'] <= school_end)]
-    df = df.sort_values(by=['trip_id', 'stop_sequence'])
+def to_seconds(t_str):
+    h, m, s = map(int, t_str.split(':'))
+    return h * 3600 + m * 60 + s
 
-    # Helper to convert HH:MM:SS to total seconds for weight calculation
-    def to_seconds(t_str):
-        h, m, s = map(int, t_str.split(':'))
-        return h * 3600 + m * 60 + s
+def process_gtfs_data(gtfs_dir, prefix):
+    # process stops
+    stops_df = pd.read_csv(os.path.join(gtfs_dir, "stops.txt"))
+    stops_df = stops_df[['stop_id', 'stop_name', 'stop_lat', 'stop_lon']].copy()
+    stops_df['stop_id'] = prefix + "_"+ stops_df['stop_id'].astype(str)
+    stops_df['mode'] = 'subway' if 'subway' in prefix else 'bus'
+
+    # process edges (travel time)
+    st_df = pd.read_csv(os.path.join(gtfs_dir, "stop_times.txt"))
+    edge_cols = ['source', 'target', 'weight', 'type']
+
+    ## filter for weekdays and school time
+    st_df = st_df[st_df['trip_id'].str.contains('Weekday|Wkd', case=False, na=False)].copy()
+    st_df = st_df[(st_df['arrival_time'] >= "07:00:00") & (st_df['arrival_time'] <= "10:00:00")]
+    st_df = st_df.sort_values(by=['trip_id', 'stop_sequence'])
+
+    print(prefix)
+    print(st_df.empty)
 
     edges = []
-
-    for _, trip_group in df.groupby('trip_id'):
-        group = trip_group.to_dict('records')
-        
-        for i in range(len(group) - 1):
-            curr_stop = group[i]
-            next_stop = group[i+1]
-            
-            # Calculate weight (travel time in seconds)
-            # travel_time = next_arrival - curr_departure
-            try:
-                weight = to_seconds(next_stop['arrival_time']) - to_seconds(curr_stop['departure_time'])
+    for _, group in st_df.groupby('trip_id'):
+        rows = group.to_dict('records')
+        for i in range(len(rows) - 1):
+            u, v = rows[i], rows[i+1]
+            weight = to_seconds(v['arrival_time']) - to_seconds(u['departure_time'])
+            if weight > 0:
                 edges.append({
-                    'source_stop_id': curr_stop['stop_id'],
-                    'target_stop_id': next_stop['stop_id'],
-                    'travel_time_seconds': weight
+                    'source': f"{prefix}_{u['stop_id']}",
+                    'target': f"{prefix}_{v['stop_id']}",
+                    'weight': weight,
+                    'type': 'transit_travel'
                 })
-            except (ValueError, TypeError): continue
+    
+    
+    edges_df = pd.DataFrame(edges, columns=edge_cols)
+    edges_df = edges_df.groupby(['source', 'target', 'type'], as_index=False)['weight'].mean()
 
-    edges_df = pd.DataFrame(edges)
-    edges_df.to_csv('subway_stop_times_edges.csv', index=False)
-    return edges_df
+    # process transfers for subway
+    transfer_file = os.path.join(gtfs_dir, "transfers.txt")
+    if os.path.exists(transfer_file):
+        trans_df = pd.read_csv(transfer_file)
+        trans_list = []
+        for _, row in trans_df.iterrows():
+            trans_list.append({
+                'source': f"{prefix}_{row['from_stop_id']}",
+                'target': f"{prefix}_{row['to_stop_id']}",
+                'weight': row['min_transfer_time'] if 'min_transfer_time' in row else 180,
+                'type': 'transfer'
+            })
+        trans_df = pd.DataFrame(trans_list)
+        edges_df = pd.concat([edges_df, trans_df])
 
-def concate_all_csv(dir_path, out_name):
-    csv_files = glob.glob(os.path.join(dir_path, "*.csv"))
-    dfs = []
-    for file_path in csv_files:
-        borough = os.path.basename(file_path)[:4]
-        df = pd.read_csv(file_path)
-        df['borough'] = borough
-        dfs.append(df)
-
-    combined_df = pd.concat(dfs, ignore_index=True)
-    combined_df.to_csv(out_name, index=False)
-
-def process_txt(file_path):
-    df = pd.read_csv(os.path.join(file_path, "stops.txt"))
-    df_trim = df.iloc[:, [0, 1, 3, 4]]
-    df_trim.to_csv("staten_island_stops.csv", index=False)
-
+    return stops_df, edges_df
+    
 if __name__ == '__main__':
-    fp = "data/archieved/stop"
-    process_gtfs_edges(fp)
-    concate_all_csv(fp, "stops.csv")
-    process_txt(fp)
+    base_dir = "./data/raw/gtfs_data"
 
+    source_map = {
+        "sub": "subway_gtfs",
+        "bus_bx": "bus_gtfs/bronx_bus_gtfs",
+        "bus_bk": "bus_gtfs/brooklyn_bus_gtfs",
+        "bus_mn": "bus_gtfs/manhattan_bus_gtfs",
+        "bus_abc": "bus_gtfs/mtabc_bus_gtfs",
+        "bus_qn": "bus_gtfs/queens_bus_gtfs",
+        "bus_si": "bus_gtfs/staten_island_bus_gtfs"
+    }
 
-"""
-stops.txt = stop_id, stop_name, stop_desc, stop_lat, stop_lon, zone_id, stop_url, location_type, parent_station
-stops.txt = stop_id, stop_name, stop_lat, stop_lon
+    all_stops = []
+    all_edges = []
 
-stop_times.txt = trip_id, arrival_time, departure_time, stop_id, stop_sequence, pickup_type, drop_off_type, timepoint
-stop_times.txt = trip_id, arrival_time, departure_time, stop_id
+    for prefix, rel_path in source_map.items():
+        full_path = os.path.join(base_dir, rel_path)
+        s, e = process_gtfs_data(full_path, prefix)
+        all_stops.append(s)
+        all_edges.append(e)
 
-transfers.txt = from_stop_id, to_stop_id, transfer_type, min_transfer_time
-"""
+    final_stops = pd.concat(all_stops)
+    final_edges = pd.concat(all_edges)
+
+    # Spatial Stitching (Bus <-> Subway and Bus <-> Bus between boroughs)
+    tree = KDTree(final_stops[['stop_lat', 'stop_lon']].values)
+    pairs = tree.query_pairs(r=0.00135) # ~150 meters
+    
+    spatial_edges = []
+    for i, j in pairs:
+        s1, s2 = final_stops.iloc[i], final_stops.iloc[j]
+
+        if s1['stop_id'] != s2['stop_id']:
+            spatial_edges.append({
+                'source': s1['stop_id'], 'target': s2['stop_id'],
+                'weight': 300, 'type': 'spatial_transfer'
+            })
+
+    final_edges = pd.concat([final_edges, pd.DataFrame(spatial_edges)])
+    
+    # Save the master files
+    final_stops.to_csv("processed_stops_2015.csv", index=False)
+    final_edges.to_csv("processed_edges_2015.csv", index=False)
