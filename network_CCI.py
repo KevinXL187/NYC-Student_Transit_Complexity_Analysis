@@ -9,7 +9,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 from scipy.spatial import KDTree
-from shapely.geometry import Point.LineString
+from shapely.geometry import Point, LineString
 
 # %%
 
@@ -58,6 +58,8 @@ school_gdf = gpd.read_file("./data/raw/schools/SchoolPoints_APS_2024_08_28.shp")
 for idx, rw in school_gdf.iterrows():
     nxG_final.add_node(
         f"school_{idx}", 
+        x = rw.geometry.x,
+        y = rw.geometry.y,
         pos= (rw.geometry.x, rw.geometry.y), 
         name= rw.get('Name', idx), 
         type='school')
@@ -73,11 +75,13 @@ for node, data in nxG_final(data=True):
 # %%
 # add nta nodes and walking edge to Graph
 nta_gdf = gpd.read_file()
-for idx, rw in nta.gdf.iterrows():
+for idx, rw in nta_gdf.iterrows():
     centeroids = 
 
     nxG_final.add_node(
         f"nta_{row.get('ntacode', idx)}",
+        x = rw.geometry.centroid.x,
+        y = rw.geometry.centroid.y,
         pos = (rw.geometry.centroid.x, rw.geometry.centroid.y),
         name=row.get('ntaname', 'Unknown'),
         type='origin'
@@ -93,18 +97,23 @@ for node, data in nxG_final(data=True):
 # %%
 # building nodes and edge geometry list
 
-# TODO : Filter the nodes into the different types so they can be represented differently on the visual
-# school, nta, transit
+## Filter the nodes into the different types so they can be represented differently on the visual
+## school, nta, transit
 nodes_data = []
 for node, data in nxG_final.nodes(data=True):
-    nodes_data.append({'stop_id': node, 'geometry': Point(data['x'], data['y'])})
+    nodes_data.append({
+        'stop_id': node, 
+        'geometry': Point(data['x'], data['y']),
+        'node_type': data.get('type', 'unknown')
+        })
+
 gdf_nodes = gpd.GeoDataFrame(nodes_data, crs=crs_code)
 
 gdf_nodes = gpd.sjoin(gdf_nodes, boroughs[['geometry']], predicate='within')
 valid_stops = set(gdf_nodes['stop_id'])
 
-# TODO: Filter the edges into different types so they can be represented differently on the visual
-# walking, transit
+# Filter the edges into different types so they can be represented differently on the visual
+# transfers, transit
 edges_data = []
 for u, v, data in nxG_final.edges(data=True):
     if u in valid_stops and v in valid_stops:
@@ -112,7 +121,8 @@ for u, v, data in nxG_final.edges(data=True):
         v_pos = (nxG_final.nodes[v]['x'], nxG_final.nodes[v]['y'])
         edges_data.append({
             'geometry' : LineString(u_pos, v_pos),
-            'travel_time' : data.get('weight', 0)
+            'travel_time' : data.get('weight', 0),
+            'edge_type' : data.get('type', 'unknown')
             })
 gdf_edges = gpd.GeoDataFrame(edges_data, crs=crs_code)
 
@@ -125,7 +135,69 @@ plt.ion()
 fig, ax = plt.subplots(figsize=(12, 12))
 boroughs.plot(ax=ax, color='#f2f2f2', edgecolor='black', linewidth=0.5)
 
-# %%
-# calculate CCI formula function
+## plot points
+markers = {'school' : 's', 'transit': 't', 'nta' : 'n'}
+color_nodes = {'school' : 'red', 'transit': 'blue', 'nta' : 'green'}
+for n_type, df in gdf_nodes.groupby('node_type'):
+    df.plot(
+        ax=ax, 
+        marker=markers.get(n_type, 'o'), 
+        color=color_nodes.get(n_type, 'black'), 
+        markersize=0.5,
+        alpha=0.2,
+        label=n_type
+        )
 
-def calculate_CCI(origin, dest, )
+## plot edges
+for e_type, df in gdf_edges.groupby('edge_type'):
+    cmap_options = ["magma_r",'cividis_r']
+    if e_type == "transit":
+        cmap = cmap_options[1],
+        label = "Transit Travel Time (seconds)",
+        zorder = 2
+    if e_type == "transfer":
+        camp= = cmap_options[0],
+        label = "Transfer Travel Time (seconds)"
+        zorder = 3,
+    df.plot(
+        ax = ax,
+        column="travel_time",
+        cmap = cmap,
+        zorder = zorder,
+        linewidth = 0.5,
+        alpha = 0.5,
+        legend=True,
+        legend_kwds = {
+            'label' : label,
+            'orientation' : 'horizontal',
+            'pad' : 0.05,
+            'shrink' : 0.5
+        }
+    )
+
+# %%
+# calculate Commute Complexity Index formula function
+
+def calculate_CCI(G, origin, dest):
+
+    path = nx.shortest_path(G, source=origin, target=dest, weight='weight')
+    total_travel_time = nx.shortest_path_length(G, origin, dest, weight='weight')
+        
+    transfer_count = 0
+    edge_types = []
+        
+    for i in range(len(path) - 1):
+        u, v = path[i], path[i+1]
+        edge_data = G.get_edge_data(u, v)
+
+        rel = edge_data.get('relation')
+        if rel == 'transfer':
+            transfer_count += 1
+            
+        edge_types.append(rel)
+    
+    # CCI = (Total Time / Constant) * (1 + (Transfer Penalty * Num Transfers))
+    transfer_penalty = 1.5
+    cci = (total_travel_time / 60) * (1 + (transfer_count * transfer_penalty))
+        
+    return round(cci, 2)
