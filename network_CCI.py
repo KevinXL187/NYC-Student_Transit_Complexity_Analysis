@@ -1,129 +1,131 @@
 # %%
 # pyright: basic
+
 import os
+import osmnx as ox
 import pandas as pd
 import geopandas as gpd
 import networkx as nx
 import matplotlib.pyplot as plt
-from scipy.spatial import KDTree
-from shapely.geometry import Point, LineString
 
-# create graph with stops and travel time as edges
+from scipy.spatial import KDTree
+from shapely.geometry import Point.LineString
+
+# %%
+
+# coord_sys = (lon, lat)
+# time = seconds
+
+# create graph
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
+walk_graph = ox.graph_from_place("New York City, New York", network_type='walk')
+walk_graph = ox.utils_graph.get_undirected(walk_graph)
+boroughs = gpd.read_file("./data/Borough_Boundaries.geojson")
+nxG = nx.Graph()
+crs_code = "EPSG:4326"
+
+# %%
+# add transit stops and travel time as weighted edges to Graph
 stops_df = pd.read_csv("data/stops.csv")
 edges_df = pd.read_csv("data/stop_times.csv")
 
-nxG = nx.Graph()
 for idx, rw in stops_df.iterrows():
-    nxG.add_node(rw['stop_id'], lat=rw['stop_lat'], lon=rw['stop_lon'], type='transit')
-
+    nxG.add_node(
+        f"stop_{rw['stop_id']}", 
+        y= rw['stop_lat'], x= rw['stop_lon'], 
+        pos = (rw['stop_lon'], rw['stop_lat']),
+        type='transit')
 for idx, rw in edges_df.iterrows():
-    nxG.add_edge(rw['source_stop_id'], rw['target_stop_id'], weight=rw['travel_time'])
+    nxG.add_edge(
+        rw['source_stop_id'], 
+        rw['target_stop_id'], 
+        weight= rw['travel_time'],
+        relation ='transit')
 
-pos = {node: (data['lon'], data['lat']) for node, data in nxG.nodes(data=True)}
+# %%
+# combine the walking graph and nxG 
+nxG_final = nx.compose(walk_graph, nxG)
+for node, data in nxG_final.nodes(data=True):
+    if data.get('type') == 'transit':
+        nearest_street_node = ox.distance.nearest_nodes(walk_graph, X=data['x'], Y=data['y'])
 
-# build node and edge geomtry list
-crs_code = "EPSG:4326"
-fp = "./data/Borough_Boundaries.geojson"
-boroughs = gpd.read_file(fp)
+        ## connects the transit stop to the nearest street node
+        nxG_final.add_edge(node, nearest_street_node, weight=60, relation='transfer')
 
+# %%
+# add school nodes and walking edge to Graph
+school_gdf = gpd.read_file("./data/raw/schools/SchoolPoints_APS_2024_08_28.shp")
+for idx, rw in school_gdf.iterrows():
+    nxG_final.add_node(
+        f"school_{idx}", 
+        pos= (rw.geometry.x, rw.geometry.y), 
+        name= rw.get('Name', idx), 
+        type='school')
+
+# connect school nodes to nearest street node
+for node, data in nxG_final(data=True):
+    if data.get('type') == 'school':
+        nearest_street_node = ox.distance.nearest_nodes(walk_graph, X=data['pos'][0], Y=data['pos'][1])
+
+        ## connects the school node to the nearest street node
+        nxG_final.add_edge(node, nearest_street_node, weight=60, relation="transfer")
+
+# %%
+# add nta nodes and walking edge to Graph
+nta_gdf = gpd.read_file()
+for idx, rw in nta.gdf.iterrows():
+    centeroids = 
+
+    nxG_final.add_node(
+        f"nta_{row.get('ntacode', idx)}",
+        pos = (rw.geometry.centroid.x, rw.geometry.centroid.y),
+        name=row.get('ntaname', 'Unknown'),
+        type='origin'
+    )
+# connect nta nodes to nearest street
+for node, data in nxG_final(data=True):
+    if data.get('type') == 'origin':
+        nearest_street_node = ox.distance.nearest_nodes(walk_graph, X=data['pos'][0], Y=data['pos'][1])
+
+        ## connects the nta node to the nearest street node
+        nxG_final.add_edge(node, nearest_street_node, weight=60, relation="transfer")
+
+# %%
+# building nodes and edge geometry list
+
+# TODO : Filter the nodes into the different types so they can be represented differently on the visual
+# school, nta, transit
 nodes_data = []
-for node, data in nxG.nodes(data=True):
-    nodes_data.append({'stop_id': node, 'geometry': Point(data['lon'], data['lat'])})
+for node, data in nxG_final.nodes(data=True):
+    nodes_data.append({'stop_id': node, 'geometry': Point(data['x'], data['y'])})
 gdf_nodes = gpd.GeoDataFrame(nodes_data, crs=crs_code)
 
 gdf_nodes = gpd.sjoin(gdf_nodes, boroughs[['geometry']], predicate='within')
 valid_stops = set(gdf_nodes['stop_id'])
 
+# TODO: Filter the edges into different types so they can be represented differently on the visual
+# walking, transit
 edges_data = []
-for u, v, data in nxG.edges(data=True):
+for u, v, data in nxG_final.edges(data=True):
     if u in valid_stops and v in valid_stops:
-        line = LineString([pos[u],pos[v]])
+        u_pos = (nxG_final.nodes[u]['x'], nxG_final.nodes[u]['y'])
+        v_pos = (nxG_final.nodes[v]['x'], nxG_final.nodes[v]['y'])
         edges_data.append({
-            'geometry' : LineString([pos[u], pos[v]]),
+            'geometry' : LineString(u_pos, v_pos),
             'travel_time' : data.get('weight', 0)
             })
 gdf_edges = gpd.GeoDataFrame(edges_data, crs=crs_code)
 
 min_tk = gdf_edges['travel_time'].min()
 max_tk = gdf_edges['travel_time'].max()
-gdf_edges['thickness'] = ((gdf_edges['travel_time'] - min_tk) / (max_tk - min_tk) * 3.8) + 0.2
-#print(min_tk, max_tk)
-#print(gdf_edges)
 
-# %%
-# load and parse school point data
-school_gdf = gpd.read_file("./data/raw/schools/SchoolPoints_APS_2024_08_28.shp")
-for idx, rw in school_gdf.iterrows():
-    sch_idx = f"school_{idx}"
-    pos= (rw.geometry.x, rw.geometry.y)
-    nxG.add_node(sch_idx, pos=pos, name=rw.get('Name', idx), type='school')
-
-## connect school nodes only to nearest transit stop
-transit_nodes = [n for n, d in nxG.nodes(data=True) if d.get('type') == 'transit']
-transit_coords = [(nxG.nodes[n]['lon'], nxG.nodes[n]['lat']) for n in transit_nodes]
-
-spatIDX_tree = KDTree(transit_coords)
-for idx, rw in school_gdf.iterrows():
-    sch_id = f"school_{idx}"
-    pos = (rw.geometry.x, rw.geometry.y)
-    
-    nxG.add_node(sch_id, 
-                lon=school_lon, 
-                lat=school_lat, 
-                name=rw.get('NAME', idx), 
-                type='school')
-
-    # Find the nearest transit stop
-    # Add the edge (walking distance)
-
-    
-# %%
-# load and parse zip node data 
-
-# %%
+# %% 
 # plotting
 plt.ion()
 fig, ax = plt.subplots(figsize=(12, 12))
 boroughs.plot(ax=ax, color='#f2f2f2', edgecolor='black', linewidth=0.5)
 
-gdf_edges.plot(
-    ax=ax, 
-    column='travel_time',
-    cmap='magma_r',
-    #linewidth=gdf_edges['thickness'], 
-    linewidth=0.5,
-    alpha=0.5,
-    zorder=2, 
-    legend=True,
-    legend_kwds={
-        'label': "Travel Time (seconds)", 
-        'orientation': "horizontal",
-        'pad': 0.02, 
-        'shrink': 0.5}
-    )
-
-gdf_nodes.plot(ax=ax, markersize=0.5, color='green', alpha=0.2, label='Transit Stops')
-
-ax.set_xlim([-74.3, -73.65])
-ax.set_ylim([40.48, 40.92])
-ax.set_axis_off()
-plt.title("NYC Transit Network")
-plt.legend()
-plt.show() 
 # %%
-def calculate_cci(school_node, zip_nodes):
-    total_time = 0
-    valid_routes = 0
+# calculate CCI formula function
 
-    for node in zip_nodes :
-        try:
-            travel_time = nx.shortest_path_length(nxG, source=node, traget=school_node, weight='weight')
-            total_time += travel_time
-            valid_routes += 1
-        except nx.NetworkXNoPath: continue
-
-    if valid_routes > 0 :
-        cci = total_time /valid_routes
-
-    return total_time/valid_routes if valid_routes > 0 else None
+def calculate_CCI(origin, dest, )
