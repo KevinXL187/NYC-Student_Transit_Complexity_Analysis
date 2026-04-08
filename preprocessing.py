@@ -4,6 +4,7 @@ import glob, os
 def process_gtfs_edges(file_path):
     school_start="07:00:00"
     school_end="16:00:00"
+
     df = pd.read_csv(file_path)
     df = df[df['trip_id'].str.contains('Weekday', case=False)].copy()
     df = df[(df['arrival_time'] >= school_start) & (df['arrival_time'] <= school_end)]
@@ -60,3 +61,14 @@ if __name__ == '__main__':
     process_gtfs_edges(fp)
     concate_all_csv(fp, "stops.csv")
     process_txt(fp)
+
+
+"""
+stops.txt = stop_id, stop_name, stop_desc, stop_lat, stop_lon, zone_id, stop_url, location_type, parent_station
+stops.txt = stop_id, stop_name, stop_lat, stop_lon
+
+stop_times.txt = trip_id, arrival_time, departure_time, stop_id, stop_sequence, pickup_type, drop_off_type, timepoint
+stop_times.txt = trip_id, arrival_time, departure_time, stop_id
+
+transfers.txt = from_stop_id, to_stop_id, transfer_type, min_transfer_time
+"""
