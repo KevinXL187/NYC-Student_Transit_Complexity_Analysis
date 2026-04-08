@@ -8,39 +8,64 @@ import geopandas as gpd
 import networkx as nx
 import matplotlib.pyplot as plt
 
-from scipy.spatial import KDTree
 from shapely.geometry import Point, LineString
-
 # %%
 
 # coord_sys = (lon, lat)
-# time = seconds
+# time in seconds
 
 # create graph
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 walk_graph = ox.graph_from_place("New York City, New York", network_type='walk')
 walk_graph = ox.utils_graph.get_undirected(walk_graph)
-boroughs = gpd.read_file("./data/Borough_Boundaries.geojson")
+boroughs = gpd.read_file("./data/spatial/Borough_Boundaries.geojson")
 nxG = nx.Graph()
-crs_code = "EPSG:4326"
+crs_code = "EPSG:4326" # TO DO : update to distance instead of decimal degrees
 
 # %%
 # add transit stops and travel time as weighted edges to Graph
-stops_df = pd.read_csv("data/stops.csv")
-edges_df = pd.read_csv("data/stop_times.csv")
+## bus stops and edges
+bus_stops_df = pd.read_csv("data/spatial/bus_stops.csv")
+bus_edges_df = pd.read_csv("data/spatial/bus_stop_times.csv")
 
-for idx, rw in stops_df.iterrows():
+for idx, rw in bus_stops_df.iterrows():
     nxG.add_node(
-        f"stop_{rw['stop_id']}", 
+        f"bus_{rw['stop_id']}", 
         y= rw['stop_lat'], x= rw['stop_lon'], 
         pos = (rw['stop_lon'], rw['stop_lat']),
-        type='transit')
-for idx, rw in edges_df.iterrows():
+
+        type='bus_transit'
+        )
+for idx, rw in bus_edges_df.iterrows():
     nxG.add_edge(
         rw['source_stop_id'], 
         rw['target_stop_id'], 
         weight= rw['travel_time'],
-        relation ='transit')
+
+        relation ='bus_transit'
+        )
+
+## subways stops and edges
+sw_stops_df = pd.read_csv("data/spatial/sw_stops.csv")
+sw_edges_df = pd.read_csv("data/spatial/sw_stop_times.csv")
+
+for idx, rw in sw_stops_df.iterrows():
+    nxG.add_node(
+        f"sw_{rw['stop_id']}",
+        y = rw['stop_lat'], x = rw['stop_lon'],
+        pos = (rw['stop_lon'], rw['stop_lat']),
+
+        type='subway_transit'
+    )
+
+for idx, rw in sw_edges_df.iterrows():
+    nxG.add_edge(
+        rw['source_stop_id'], 
+        rw['target_stop_id'], 
+        weight= rw['travel_time'],
+
+        relation ='subway_transit'
+    )
 
 # %%
 # combine the walking graph and nxG 
@@ -50,11 +75,11 @@ for node, data in nxG_final.nodes(data=True):
         nearest_street_node = ox.distance.nearest_nodes(walk_graph, X=data['x'], Y=data['y'])
 
         ## connects the transit stop to the nearest street node
-        nxG_final.add_edge(node, nearest_street_node, weight=60, relation='transfer')
+        nxG_final.add_edge(node, nearest_street_node, weight=60, relation='walking')
 
 # %%
 # add school nodes and walking edge to Graph
-school_gdf = gpd.read_file("./data/raw/schools/SchoolPoints_APS_2024_08_28.shp")
+school_gdf = gpd.read_file("./data/spatial/SchoolPoints.shp")
 for idx, rw in school_gdf.iterrows():
     nxG_final.add_node(
         f"school_{idx}", 
@@ -70,7 +95,7 @@ for node, data in nxG_final(data=True):
         nearest_street_node = ox.distance.nearest_nodes(walk_graph, X=data['pos'][0], Y=data['pos'][1])
 
         ## connects the school node to the nearest street node
-        nxG_final.add_edge(node, nearest_street_node, weight=60, relation="transfer")
+        nxG_final.add_edge(node, nearest_street_node, weight=60, relation="walking")
 
 # %%
 # add nta nodes and walking edge to Graph
@@ -92,13 +117,13 @@ for node, data in nxG_final(data=True):
         nearest_street_node = ox.distance.nearest_nodes(walk_graph, X=data['pos'][0], Y=data['pos'][1])
 
         ## connects the nta node to the nearest street node
-        nxG_final.add_edge(node, nearest_street_node, weight=60, relation="transfer")
+        nxG_final.add_edge(node, nearest_street_node, weight=60, relation="walking")
 
 # %%
 # building nodes and edge geometry list
 
 ## Filter the nodes into the different types so they can be represented differently on the visual
-## school, nta, transit
+## school, nta, bus, subway
 nodes_data = []
 for node, data in nxG_final.nodes(data=True):
     nodes_data.append({
@@ -113,7 +138,7 @@ gdf_nodes = gpd.sjoin(gdf_nodes, boroughs[['geometry']], predicate='within')
 valid_stops = set(gdf_nodes['stop_id'])
 
 # Filter the edges into different types so they can be represented differently on the visual
-# transfers, transit
+# walking, bus_transit, subway_transit
 edges_data = []
 for u, v, data in nxG_final.edges(data=True):
     if u in valid_stops and v in valid_stops:
@@ -136,8 +161,8 @@ fig, ax = plt.subplots(figsize=(12, 12))
 boroughs.plot(ax=ax, color='#f2f2f2', edgecolor='black', linewidth=0.5)
 
 ## plot points
-markers = {'school' : 's', 'transit': 't', 'nta' : 'n'}
-color_nodes = {'school' : 'red', 'transit': 'blue', 'nta' : 'green'}
+markers = {'school' : 's', 'bus_transit': 'bt', "subway_transit": 'st', 'nta' : 'n'}
+color_nodes = {'school' : 'red', 'bus_transit': 'blue', "subway_transit": 'light_blue' 'nta' : 'green'}
 for n_type, df in gdf_nodes.groupby('node_type'):
     df.plot(
         ax=ax, 
@@ -151,7 +176,7 @@ for n_type, df in gdf_nodes.groupby('node_type'):
 ## plot edges
 for e_type, df in gdf_edges.groupby('edge_type'):
     cmap_options = ["magma_r",'cividis_r']
-    if e_type == "transit":
+    if e_type == "bus_transit" or e_type =="subway_transit":
         cmap = cmap_options[1],
         label = "Transit Travel Time (seconds)",
         zorder = 2
@@ -174,30 +199,3 @@ for e_type, df in gdf_edges.groupby('edge_type'):
             'shrink' : 0.5
         }
     )
-
-# %%
-# calculate Commute Complexity Index formula function
-
-def calculate_CCI(G, origin, dest):
-
-    path = nx.shortest_path(G, source=origin, target=dest, weight='weight')
-    total_travel_time = nx.shortest_path_length(G, origin, dest, weight='weight')
-        
-    transfer_count = 0
-    edge_types = []
-        
-    for i in range(len(path) - 1):
-        u, v = path[i], path[i+1]
-        edge_data = G.get_edge_data(u, v)
-
-        rel = edge_data.get('relation')
-        if rel == 'transfer':
-            transfer_count += 1
-            
-        edge_types.append(rel)
-    
-    # CCI = (Total Time / Constant) * (1 + (Transfer Penalty * Num Transfers))
-    transfer_penalty = 1.5
-    cci = (total_travel_time / 60) * (1 + (transfer_count * transfer_penalty))
-        
-    return round(cci, 2)
