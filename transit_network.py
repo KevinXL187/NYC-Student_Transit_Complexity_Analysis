@@ -9,69 +9,46 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 from shapely.geometry import Point, LineString
-# %%
 
 # coord_sys = (lon, lat)
 # time in seconds
 
-# create graph
+crs_code = "EPSG:4326"
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
+ox.settings.bidirectional_network_types =  ['walk']
+# %%
+
+# create graph
 walk_graph = ox.graph_from_place("New York City, New York", network_type='walk')
-walk_graph = ox.utils_graph.get_undirected(walk_graph)
 boroughs = gpd.read_file("./data/spatial/Borough_Boundaries.geojson")
 nxG = nx.Graph()
-crs_code = "EPSG:4326" # TO DO : update to distance instead of decimal degrees
 
 # %%
-# add transit stops and travel time as weighted edges to Graph
-## bus stops and edges
-bus_stops_df = pd.read_csv("data/spatial/bus_stops.csv")
-bus_edges_df = pd.read_csv("data/spatial/bus_stop_times.csv")
 
-for idx, rw in bus_stops_df.iterrows():
+transit_stops_df = pd.read_csv("processed_stops_2015.csv")
+transit_edges_df = pd.read_csv("processed_edges_2015.csv")
+
+for idx, rw in transit_stops_df.iterrows():
     nxG.add_node(
-        f"bus_{rw['stop_id']}", 
-        y= rw['stop_lat'], x= rw['stop_lon'], 
-        pos = (rw['stop_lon'], rw['stop_lat']),
-
-        type='bus_transit'
-        )
-for idx, rw in bus_edges_df.iterrows():
-    nxG.add_edge(
-        rw['source_stop_id'], 
-        rw['target_stop_id'], 
-        weight= rw['travel_time'],
-
-        relation ='bus_transit'
-        )
-
-## subways stops and edges
-sw_stops_df = pd.read_csv("data/spatial/sw_stops.csv")
-sw_edges_df = pd.read_csv("data/spatial/sw_stop_times.csv")
-
-for idx, rw in sw_stops_df.iterrows():
-    nxG.add_node(
-        f"sw_{rw['stop_id']}",
-        y = rw['stop_lat'], x = rw['stop_lon'],
-        pos = (rw['stop_lon'], rw['stop_lat']),
-
-        type='subway_transit'
+        rw['stop_id'], 
+        y=rw['stop_lat'], x=rw['stop_lon'], 
+        pos=(rw['stop_lon'], rw['stop_lat']),
+        type=f"{rw['mode']}_transit" # 'subway' or 'bus'
     )
 
-for idx, rw in sw_edges_df.iterrows():
+for idx, rw in transit_edges_df.iterrows():
     nxG.add_edge(
-        rw['source_stop_id'], 
-        rw['target_stop_id'], 
-        weight= rw['travel_time'],
-
-        relation ='subway_transit'
+        rw['source'], 
+        rw['target'], 
+        weight=rw['weight'],
+        relation=rw['type'] # 'transit_travel', 'transfer', or 'spatial_transfer'
     )
 
 # %%
 # combine the walking graph and nxG 
 nxG_final = nx.compose(walk_graph, nxG)
 for node, data in nxG_final.nodes(data=True):
-    if data.get('type') == 'transit':
+    if 'transit' in str(data.get('type')):
         nearest_street_node = ox.distance.nearest_nodes(walk_graph, X=data['x'], Y=data['y'])
 
         ## connects the transit stop to the nearest street node
@@ -79,8 +56,10 @@ for node, data in nxG_final.nodes(data=True):
 
 # %%
 # add school nodes and walking edge to Graph
-school_gdf = gpd.read_file("./data/spatial/SchoolPoints.shp")
+school_gdf = gpd.read_file("./data/spatial/school_points_15.csv")
+
 for idx, rw in school_gdf.iterrows():
+    sch_node = f"school_{idx}"
     nxG_final.add_node(
         f"school_{idx}", 
         x = rw.geometry.x,
@@ -89,13 +68,8 @@ for idx, rw in school_gdf.iterrows():
         name= rw.get('Name', idx), 
         type='school')
 
-# connect school nodes to nearest street node
-for node, data in nxG_final(data=True):
-    if data.get('type') == 'school':
-        nearest_street_node = ox.distance.nearest_nodes(walk_graph, X=data['pos'][0], Y=data['pos'][1])
-
-        ## connects the school node to the nearest street node
-        nxG_final.add_edge(node, nearest_street_node, weight=60, relation="walking")
+    nearest_street_node = ox.distance.nearest_nodes(walk_graph, X=rw.geometry.x, Y=rw.geometry.y)
+    nxG_final.add_edge(sch_node, nearest_street_node, weight=60, relation="walking")
 
 # %%
 # add nta nodes and walking edge to Graph
