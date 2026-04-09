@@ -13,7 +13,7 @@ def process_gtfs_data(gtfs_dir, prefix):
     stops_df = pd.read_csv(os.path.join(gtfs_dir, "stops.txt"))
     stops_df = stops_df[['stop_id', 'stop_name', 'stop_lat', 'stop_lon']].copy()
     stops_df['stop_id'] = prefix + "_"+ stops_df['stop_id'].astype(str)
-    stops_df['mode'] = 'subway' if 'subway' in prefix else 'bus'
+    stops_df['mode'] = 'subway' if 'sub' in prefix else 'bus'
 
     # process edges (travel time)
     st_df = pd.read_csv(os.path.join(gtfs_dir, "stop_times.txt"))
