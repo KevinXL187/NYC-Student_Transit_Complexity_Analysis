@@ -46,6 +46,8 @@ for idx, rw in transit_edges_df.iterrows():
 
 # %%
 # combine the walking graph and nxG 
+# TODO : convert both graphs to be either directed or undirected
+# TODO : convert walk_graph edge to seconds instead of meters 
 nxG_final = nx.compose(walk_graph, nxG)
 for node, data in nxG_final.nodes(data=True):
     if 'transit' in str(data.get('type')):
