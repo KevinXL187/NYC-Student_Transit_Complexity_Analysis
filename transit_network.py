@@ -59,39 +59,37 @@ for node, data in nxG_final.nodes(data=True):
 school_gdf = gpd.read_file("./data/spatial/school_points_15.csv")
 
 for idx, rw in school_gdf.iterrows():
-    sch_node = f"school_{idx}"
+    sch_node = f"school_{rw['LOCATION_CODE']}"
     nxG_final.add_node(
-        f"school_{idx}", 
-        x = rw.geometry.x,
-        y = rw.geometry.y,
-        pos= (rw.geometry.x, rw.geometry.y), 
-        name= rw.get('Name', idx), 
+        sch_node, 
+        x = rw['lon'],
+        y = rw['lat'],
+        pos= (rw['lon'], rw['lat']), 
+        name= rw['LOCATION_NAME'], 
+        nta = rw['NTA_NAME'],
         type='school')
 
-    nearest_street_node = ox.distance.nearest_nodes(walk_graph, X=rw.geometry.x, Y=rw.geometry.y)
+    nearest_street_node = ox.distance.nearest_nodes(walk_graph, X=rw['lon'], Y=rw['lat'])
     nxG_final.add_edge(sch_node, nearest_street_node, weight=60, relation="walking")
 
 # %%
 # add nta nodes and walking edge to Graph
-nta_gdf = gpd.read_file()
+nta_gdf = gpd.read_file("./data/spatial/nta_2010/nynta2010.shp")
 for idx, rw in nta_gdf.iterrows():
-    centeroids = 
+    centeroid = rw.geometry.centroid
+    nta_node = f"nta_{rw.get('ntacode', idx)}"
 
     nxG_final.add_node(
-        f"nta_{row.get('ntacode', idx)}",
-        x = rw.geometry.centroid.x,
-        y = rw.geometry.centroid.y,
-        pos = (rw.geometry.centroid.x, rw.geometry.centroid.y),
+        nta_node,
+        x = centroid.x,
+        y = centroid.y,
+        pos = (centroid.x, centroid.y),
         name=row.get('ntaname', 'Unknown'),
         type='origin'
     )
-# connect nta nodes to nearest street
-for node, data in nxG_final(data=True):
-    if data.get('type') == 'origin':
-        nearest_street_node = ox.distance.nearest_nodes(walk_graph, X=data['pos'][0], Y=data['pos'][1])
 
-        ## connects the nta node to the nearest street node
-        nxG_final.add_edge(node, nearest_street_node, weight=60, relation="walking")
+    nearest_street_node = ox.distance.nearest_nodes(walk_graph, X=centroid.x, Y=centroid.y)
+    nxG_final.add_edge(node, nearest_street_node, weight=60, relation="walking")
 
 # %%
 # building nodes and edge geometry list
@@ -136,7 +134,7 @@ boroughs.plot(ax=ax, color='#f2f2f2', edgecolor='black', linewidth=0.5)
 
 ## plot points
 markers = {'school' : 's', 'bus_transit': 'bt', "subway_transit": 'st', 'nta' : 'n'}
-color_nodes = {'school' : 'red', 'bus_transit': 'blue', "subway_transit": 'light_blue' 'nta' : 'green'}
+color_nodes = {'school' : 'red', 'bus_transit': 'blue', "subway_transit": 'light_blue', 'nta' : 'green'}
 for n_type, df in gdf_nodes.groupby('node_type'):
     df.plot(
         ax=ax, 
@@ -155,7 +153,7 @@ for e_type, df in gdf_edges.groupby('edge_type'):
         label = "Transit Travel Time (seconds)",
         zorder = 2
     if e_type == "transfer":
-        camp= = cmap_options[0],
+        cmap = cmap_options[0],
         label = "Transfer Travel Time (seconds)"
         zorder = 3,
     df.plot(
