@@ -8,6 +8,17 @@ def verify_graph_results(stops_file, edges_file):
     stops = pd.read_csv(stops_file)
     edges = pd.read_csv(edges_file)
 
+    # check count of each weights
+    """
+        300 == spatial_transfer
+        180 == subway transit_transfer
+
+    """
+    top_weights = edges['weight'].value_counts().head(10)
+    print("counts of top weights")
+    print(top_weights)
+    print()
+
     # check stop mode and stop_id matches
     mismatch = (stops['mode'].str[:3] != stops['stop_id'].str[:3]).sum()
     print(f"number of mistach {mismatch}")
@@ -16,6 +27,10 @@ def verify_graph_results(stops_file, edges_file):
     self_loop = (edges['source'] == edges['target']).sum()
     print(f"number of self_loop {self_loop}")
     
+    # check number of 0 weights
+    zero = (edges['weight'] == 0.0).sum()
+    print(f"number of 0 weight edges {zero}")
+
     # check for duplicates
     duplicates = edges.duplicated(subset=['source', 'target', 'type']).sum()
     print(f"number of duplicates {duplicates}")
