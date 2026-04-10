@@ -54,6 +54,7 @@ def process_gtfs_data(gtfs_dir, prefix):
             trans_list.append({
                 'source': f"{prefix}_{row['from_stop_id']}",
                 'target': f"{prefix}_{row['to_stop_id']}",
+                # TODO
                 'weight': row['min_transfer_time'] if 'min_transfer_time' in row else 180,
                 'type': 'transfer'
             })
@@ -88,6 +89,7 @@ if __name__ == '__main__':
     final_edges = pd.concat(all_edges)
 
     # Spatial Stitching (Bus <-> Subway and Bus <-> Bus between boroughs)
+    # TODO
     tree = KDTree(final_stops[['stop_lat', 'stop_lon']].values)
     pairs = tree.query_pairs(r=0.00135) # ~150 meters
     
