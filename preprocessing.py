@@ -10,8 +10,8 @@ def convert_coords(row):
     except:
         return pd.Series({'lon': None, 'lat': None})
 
-def process_schools(input_path, output_path):
-    sch_df = pd.read_csv(input_path)
+def process_schools(input_paths, output_path):
+    sch_df = pd.read_csv(input_paths[0])
     
     coords = sch_df.apply(convert_coords, axis=1)
     sch_df = pd.concat([sch_df, coords], axis=1)
@@ -28,10 +28,21 @@ def process_schools(input_path, output_path):
                         (clean_df['LOCATION_CATEGORY_DESCRIPTION']  == 'K-12 all grades')]
     clean_df = clean_df.drop(columns=['LOCATION_CATEGORY_DESCRIPTION'])
 
-    clean_df.to_csv(output_path, index=False)
+    sch_pop = pd.read_csv(input_paths[1])
+    clean_df['size'] = sch_pop['total_students']
+
+    sch_fund = pd.read_csv(input_paths[2])
+
+    # process funding .csv to a normailization wighted value
+    # fsf + 
+
+    clean_df['funding'] = sch_fund[]
+
+    #clean_df.to_csv(output_path, index=False)
 
 if __name__ == "__main__":
-    raw_csv = "./data/spatial/school_points_15.csv"
+    raw_csv = 
     processed_csv = "processed_schools_2015.csv"
 
-    process_schools(raw_csv, processed_csv)
+    raw_csvs = ["./data/spatial/school_points_15.csv", ]
+    process_schools(raw_csvs, processed_csv)
