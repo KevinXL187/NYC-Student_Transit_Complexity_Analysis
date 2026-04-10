@@ -14,7 +14,7 @@ def verify_graph_results(stops_file, edges_file):
         180 == subway transit_transfer
 
     """
-    top_weights = edges['weight'].value_counts().head(10)
+    top_weights = edges['weight'].value_counts().head(5)
     print("counts of top weights")
     print(top_weights)
     print()
