@@ -29,14 +29,14 @@ def process_schools(input_paths, output_path):
     clean_df = clean_df.drop(columns=['LOCATION_CATEGORY_DESCRIPTION'])
 
     sch_pop = pd.read_csv(input_paths[1])
-    clean_df['size'] = sch_pop['total_students']
+    clean_df['size'] = if sch_pop[''] == sch_pop['total_students']
 
     sch_fund = pd.read_csv(input_paths[2])
 
-    # process funding .csv to a normailization wighted value
+    # process funding .csv to a normailization weighted value
     # fsf + 
-
-    clean_df['funding'] = sch_fund[]
+    clean_df['LOCATION_CODE'] == sch_fund['Location']
+    clean_df['funding'] = sch_fund["S4: Label d: FY14 FSF Initial"]
 
     #clean_df.to_csv(output_path, index=False)
 
