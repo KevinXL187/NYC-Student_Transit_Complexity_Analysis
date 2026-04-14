@@ -1,0 +1,194 @@
+LOCATION_CODE,size,budget,LOCATION_NAME,lon,lat,LOCATION_TYPE_DESCRIPTION,NTA_NAME,grad_rate,adv_regents_rate
+K036,,,P.S. 36,-73.8871957335021,40.66046568725015,Special Education,East New York,,
+K053,,,P.S. K053,-73.98874366793626,40.660805905065324,Special Education,Sunset Park West,,
+K077,,,P.S. K077,-73.976648432263,40.678809820488965,Special Education,Park Slope-Gowanus,,
+K141,,,P.S. K141,-73.95157536009955,40.6564238274755,Special Education,Prospect Lefferts Gardens-Wingate,,
+K356,,,Achievement First Crown Heights Charter School,-73.9363138057756,40.662092596299686,General Academic,Prospect Lefferts Gardens-Wingate,88.0,0.0
+K357,,,KIPP AMP Charter School,-73.9376018520105,40.67229015293464,General Academic,Crown Heights North,91.3,30.4
+K358,,,Achievement First East New York Charter School,-73.89332812698039,40.66406720078261,General Academic,East New York (Pennsylvania Ave),,
+K359,,,The Uft Charter School,-73.89331968161828,40.671601612007464,General Academic,East New York (Pennsylvania Ave),77.8,11.1
+K368,,,P.S. 368,-73.94755756841683,40.696698891018094,Special Education,Bedford,,
+K369,,,P.S. K369  - Coy L. Cox School,-73.98331248578076,40.68743230945372,Special Education,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill,,
+K370,,,P.S. 370,-73.96987286520994,40.57770942335385,Special Education,West Brighton,,
+K371,,,P.S. 371 - Lillian L. Rashkis,-74.00516811003631,40.65430669943561,Special Education,Sunset Park West,,
+K373,,,P.S. 373 - Brooklyn Transition Center,-73.94521142276815,40.69921474993596,Special Education,Bedford,,
+K395,,,Roads Charter School I,-73.90414394406683,40.677528878278245,Transfer School,Ocean Hill,3.8,0.0
+K396,,,P.S. K396,-73.91178853039338,40.66823294399037,Special Education,Brownsville,,
+K417,,,Urban Dove Charter School,-73.95071471823624,40.68957486556752,Transfer School,Bedford,10.5,0.0
+K473,,,Williamsburg Charter High School,-73.93596749637241,40.70369492691728,General Academic,Bushwick South,74.7,7.5
+K486,,,New Dawn Charter High School,-73.99029031498243,40.682901492073306,Transfer School,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill,16.8,0.0
+K489,,1024966.0,W.E.B. Dubois Academic High School,-73.9551886523501,40.669561804901484,Transfer School,Crown Heights South,8.0,0.0
+K495,,3990611.0,Sheepshead Bay High School,-73.9366352006193,40.59315736834059,General Academic,Sheepshead Bay-Gerritsen Beach-Manhattan Beach,50.4,3.7
+K508,,,Achievement First Endeavor Charter School,-73.96592801121585,40.682422011661295,General Academic,Clinton Hill,72.4,0.0
+K529,,1593742.0,West Brooklyn Community High School,-73.99215190231835,40.6426192601858,Transfer School,Sunset Park East,13.6,0.0
+K538,,,Achievement First Bushwick Charter School,-73.91908818182594,40.697898329985534,General Academic,Bushwick North,96.2,0.0
+K544,,386817.0,International Arts Business School,-73.94383907633218,40.658671030784284,General Academic,Prospect Lefferts Gardens-Wingate,70.6,0.0
+K553,,1437425.0,Brooklyn Academy High School,-73.94787351818734,40.684654983551205,Transfer School,Bedford,25.7,1.4
+K564,,2228434.0,Bushwick Community High School,-73.91521754525205,40.69587539404184,Transfer School,Bushwick North,9.2,0.0
+K568,,1582681.0,Brownsville Academy High School,-73.92388107591536,40.666251616341164,Transfer School,Brownsville,26.3,0.0
+K575,,1166422.0,Bedford Stuyvesant Preparatory High School,-73.94787351818734,40.684654983551205,Transfer School,Bedford,18.3,0.0
+K578,,1457947.0,Brooklyn Bridge Academy,-73.91692770115233,40.6344512276233,Transfer School,Canarsie,14.3,0.0
+K592,97.0,1242975.0,Khalil Gibran International Academy,-73.97982969841556,40.686147198880136,General Academic,DUMBO-Vinegar Hill-Downtown Brooklyn-Boerum Hill,,
+K593,,,Excellence Boys Charter School,-73.92585171673447,40.683446179589716,General Academic,Stuyvesant Heights,,
+K611,85.0,1278198.0,Origins High School,-73.9366352006193,40.59315736834059,General Academic,Sheepshead Bay-Gerritsen Beach-Manhattan Beach,,
+K616,,1666059.0,Brooklyn High School for Leadership and Community,-73.95818098309017,40.69201517658531,Transfer School,Clinton Hill,4.2,0.0
+K630,,1431145.0,Professional Pathways High School,-73.9366352006193,40.59315736834059,Transfer School,Sheepshead Bay-Gerritsen Beach-Manhattan Beach,20.4,0.0
+K635,,1402913.0,Olympus Academy,-73.8864997412078,40.652203205147934,Transfer School,Starrett City,11.9,0.0
+K643,,1578527.0,Brooklyn Democracy Academy,-73.90666218819632,40.65564407960312,Transfer School,Brownsville,13.8,0.0
+K646,,1832583.0,Aspirations Diploma Plus High School,-73.90414394406683,40.677528878278245,Transfer School,Ocean Hill,14.6,0.0
+K647,,1349787.0,Metropolitan Diploma Plus High School,-73.90666218819632,40.65564407960312,Transfer School,Brownsville,20.8,0.0
+K652,,,Brooklyn Ascend Charter School,-73.92044018710038,40.66194547375231,General Academic,Brownsville,,
+K669,,1671527.0,Research and Service High School,-73.93160407079579,40.67847895733553,Transfer School,Crown Heights North,18.5,0.0
+K673,,1415442.0,East Brooklyn Community High School,-73.92065886654896,40.65991448716652,Transfer School,Rugby-Remsen Village,20.8,0.0
+K693,,,Northside Charter High School,-73.94793259700836,40.71981820725507,General Academic,Greenpoint,75.3,2.2
+K698,,1213898.0,South Brooklyn Community High School,-74.01424794891875,40.677776528205634,Transfer School,Carroll Gardens-Columbia Street-Red Hook,3.4,0.0
+K712,,,Excellence Girls Charter School,-73.92442224638827,40.6881003833579,General Academic,Stuyvesant Heights,,
+K721,,,P.S. K721 - Brooklyn Occupational Training Center,-73.98192595527715,40.58807083424705,Special Education,Gravesend,,
+K728,,1300875.0,Liberation Diploma Plus,-73.9854135727824,40.576976840315034,Transfer School,Seagate-Coney Island,12.2,0.0
+K733,,,"Math, Engineering, and Science Academy Charter Hig",-73.91521754525205,40.69587539404184,General Academic,Bushwick North,,
+K737,,,Brownsville Ascend Charter School,-73.91812160115478,40.66859993644669,General Academic,Brownsville,,
+K738,,,New Visions Charter High School for Advanced Math,-73.9366352006193,40.59315736834059,General Academic,Sheepshead Bay-Gerritsen Beach-Manhattan Beach,,
+K739,,,New Visions Charter High School for the Humanities,-73.9366352006193,40.59315736834059,General Academic,Sheepshead Bay-Gerritsen Beach-Manhattan Beach,,
+K745,170.0,1724873.0,Brooklyn Institute for Liberal Arts,-73.94383907633218,40.658671030784284,General Academic,Prospect Lefferts Gardens-Wingate,,
+K753,,,P.S. K753 - School for Career Development,-73.969248606891,40.68257665425976,Special Education,Fort Greene,,
+K764,,758973.0,The Urban Assembly School for Collaborative Health,-73.86930502891809,40.693002554917015,General Academic,park-cemetery-etc-Brooklyn,,
+K765,,865347.0,Nelson Mandela High School,-73.93160407079579,40.67847895733553,General Academic,Crown Heights North,,
+K769,,,Hyde Leadership Charter School- Brooklyn,-73.8982495172861,40.66798571491574,General Academic,East New York (Pennsylvania Ave),,
+K771,,,P.S. K771,-73.95585696683547,40.58026030466613,Special Education,Brighton Beach,,
+K772,,,Success Academy Charter School - Bensonhurst - New,-73.98498539063023,40.60813574747413,General Academic,Bensonhurst East,,
+K774,,,Achievement First Apollo Charter School,-73.88421129788195,40.677112553038874,General Academic,East New York,,
+K781,,,Success Academy Charter School - Bergen Beach - Ne,-73.91291420024879,40.6205376570534,General Academic,Georgetown-Marine Park-Bergen Beach-Mill Basin,,
+K784,,,Achievement First North Brooklyn Prep Charter Scho,-73.91515920822735,40.69354229700681,General Academic,Bushwick South,,
+K792,,,The Cultural Arts Academy at Spring Creek Charter,-73.90833962997046,40.65451183330136,General Academic,Brownsville,,
+K793,,,Bushwick Ascend Charter School,-73.90892036519375,40.693748875953254,General Academic,Bushwick North,,
+M035,,,P.S. 035,-73.98589963481119,40.76412939487712,Special Education,Clinton,,
+M068,,,KIPP Washington Heights Middle School,-73.93581544821178,40.839139485123226,General Academic,Washington Heights South,,
+M135,116.0,1519496.0,The Urban Assembly School for Emergency Management,-74.00164842829555,40.71131297639915,Career Technical,Chinatown,,
+M138,,,P.S. 138,-73.9354612354868,40.80565373169684,Special Education,East Harlem North,,
+M139,85.0,1491605.0,Stephen T. Mather Building Arts & Craftsmanship Hi,-73.99031825140895,40.76365501054409,Career Technical,Clinton,,
+M157,82.0,1270052.0,The Urban Assembly School for Global Commerce,-73.93871454976768,40.80701963535607,General Academic,Central Harlem North-Polo Grounds,,
+M169,,,P.S. M169 - Robert F. Kennedy,-73.95559403260064,40.78079873382592,Special Education,Upper East Side-Carnegie Hill,,
+M202,,,Great Oaks Charter School,-73.99653720448764,40.71158192281979,General Academic,Chinatown,,
+M211,,744575.0,Inwood Early College for Health and Information Te,-73.92546427888867,40.865556525562006,General Academic,Marble Hill-Inwood,,
+M226,,,P.S. M226,-73.98259033850427,40.732665892243425,Special Education,Gramercy,,
+M265,,,Success Academy Charter School - Washington Height,-73.93554768429095,40.85812995319484,General Academic,Washington Heights North,,
+M280,,738520.0,Manhattan Early College School for Advertising,-74.00164842829555,40.71131297639915,General Academic,Chinatown,,
+M282,,916308.0,Urban Assembly Maker Academy,-74.00164842829555,40.71131297639915,General Academic,Chinatown,,
+M283,,602010.0,Manhattan Theatre Lab High School,-73.98560851538744,40.77489148390452,General Academic,Lincoln Square,49.2,0.0
+M284,,,Harlem Children's Zone Promise Academy 1 Charter S,-73.94815995468392,40.812469800335634,General Academic,Central Harlem North-Polo Grounds,,
+M285,,1716997.0,Harlem Renaissance High School,-73.93997461852219,40.80769275579538,Transfer School,Central Harlem North-Polo Grounds,22.9,0.0
+M313,,1786960.0,"James Baldwin School, The: A School for Expedition",-74.0025405964067,40.74340739611675,Transfer School,Hudson Yards-Chelsea-Flatiron-Union Square,43.0,0.0
+M336,,,KIPP Infinity Charter School,-73.95681447771112,40.81979353549829,General Academic,Manhattanville,79.6,40.7
+M394,,1859368.0,EMMA LAZARUS HIGH SCHOOL,-73.99360781073425,40.716231423166526,Transfer School,Chinatown,52.5,25.4
+M401,,,Hospital Schools,-73.82764212256468,40.83182917208936,Special Education,Schuylerville-Throgs Neck-Edgewater Park,,
+M404,,1434662.0,Innovation Diploma Plus,-73.97448384262418,40.786134738338646,Transfer School,Upper West Side,3.2,0.0
+M429,,416331.0,Legacy School for Integrated Studies,-73.99573123549789,40.73641646267875,General Academic,West Village,63.2,0.0
+M433,,,Renaissance Charter High School for Innovation,-73.9421543953133,40.78510749447079,General Academic,East Harlem South,45.9,0.0
+M442,,885073.0,"Ballet Tech, NYC Public School for Dance",-73.98948111442047,40.738521286612766,General Academic,Hudson Yards-Chelsea-Flatiron-Union Square,,
+M458,,1489562.0,Forsyth Satellite Academy,-73.99046854907381,40.72241514894943,Transfer School,Chinatown,14.9,0.0
+M460,,912484.0,Washington Irving High School,-73.98706400797131,40.735361830024786,General Academic,Gramercy,50.6,0.0
+M483,,,New York French American Charter School,-73.9542288133819,40.807537357570524,General Academic,Central Harlem South,,
+M501,,,Home Instruction,-74.00615528947367,40.72905220135397,Home School,West Village,,
+M505,,3968944.0,Edward A. Reynolds West Side High School,-73.9667794501533,40.797136400624204,Transfer School,Upper West Side,16.2,0.0
+M515,,3917355.0,Lower East Side Preparatory High School,-73.98603883388186,40.72004048075178,Transfer School,Chinatown,39.8,21.6
+M522,,,Broome Street Academy Charter School,-74.00469006920437,40.723903106760524,General Academic,SoHo-TriBeCa-Civic Center-Little Italy,34.6,2.6
+M533,223.0,2236189.0,Union Square Academy for Health Sciences,-73.98706400797131,40.735361830024786,General Academic,Gramercy,,
+M534,232.0,2157429.0,Harvest Collegiate High School,-73.99573123549789,40.73641646267875,General Academic,West Village,,
+M544,,2159494.0,Independence High School,-73.98861005207706,40.76784881917819,Transfer School,Clinton,8.3,0.8
+M546,241.0,2301172.0,Academy for Software Engineering,-73.98706400797131,40.735361830024786,General Academic,Gramercy,,
+M550,,2732975.0,Liberty High School Academy for Newcomers,-74.0002381752417,40.74182095806602,Transfer School,Hudson Yards-Chelsea-Flatiron-Union Square,40.7,0.0
+M560,,4223100.0,High School M560 - City As School,-74.00615528947367,40.72905220135397,Transfer School,West Village,35.7,0.0
+M565,,1346457.0,Urban Academy Laboratory High School,-73.95977730844515,40.76563833390985,Transfer School,Lenox Hill-Roosevelt Island,43.8,0.0
+M570,,1705891.0,Satellite Academy High School,-73.99056241433883,40.747425350720675,Transfer School,Midtown-Midtown South,29.6,0.0
+M575,,5164343.0,Manhattan Comprehensive Night and Day High School,-73.98433310098058,40.7326990795894,Transfer School,Gramercy,22.2,1.3
+M586,,763007.0,Harvey Milk High School,-73.99234370241156,40.72966144708587,Transfer School,West Village,25.8,0.0
+M625,,2336043.0,High School of Graphic Communication Arts,-73.99031825140895,40.76365501054409,Career Technical,Clinton,41.3,0.0
+M645,,,School for Cooperative Technical Education,-73.94564710483688,40.784112856179284,Alternative,East Harlem South,,
+M650,,1350549.0,Cascades High School,-73.99046854907381,40.72241514894943,Transfer School,Chinatown,26.6,0.0
+M685,,973009.0,Bread & Roses Integrated Arts High School,-73.94715188772422,40.817228688678604,General Academic,Central Harlem North-Polo Grounds,34.9,0.0
+M707,,,John V. Lindsay Wildcat Academy Charter School,-74.01583726250252,40.70560553576339,Transfer School,Battery Park City-Lower Manhattan,7.6,0.0
+M721,,,P.S. M721 - Manhattan Occupational Training Center,-74.00615528947367,40.72905220135397,Special Education,West Village,,
+M726,,,KIPP STAR College Prep Charter School,-73.95572213108923,40.81079318258024,General Academic,Morningside Heights,81.6,34.2
+M751,,,Manhattan School for Career Development,-73.98779102459913,40.725892504044864,Special Education,East Village,,
+Q004,,,P.S. Q004,-73.77811827379855,40.74170054589317,Special Education,Fresh Meadows-Utopia,,
+Q009,,,P.S. 009,-73.91245827000787,40.71823493019577,Special Education,Maspeth,,
+Q023,,,P.S. Q023 @ Queens Children Center,-73.72364407092809,40.747914884008644,Special Education,Bellerose,,
+Q075,,,Robert E. Peary School,-73.90488887710426,40.69869992334074,Special Education,Ridgewood,,
+Q177,,,P.S. Q177,-73.78741973920016,40.74340062720069,Special Education,Auburndale,,
+Q233,,,P.S. Q233,-73.85554326311141,40.70843092338625,Special Education,Forest Hills,,
+Q236,50.0,1000724.0,International High School for Health Sciences,-73.87412983278175,40.74082444931987,General Academic,Elmhurst,,
+Q240,124.0,1593579.0,Veritas Academy,-73.82681177556493,40.764892127738975,General Academic,Flushing,,
+Q241,70.0,1075562.0,Queens High School for Language Studies,-73.82681177556493,40.764892127738975,General Academic,Flushing,,
+Q243,82.0,1300587.0,Institute for Health Professions at Cambria Height,-73.74633003535914,40.69878630479974,General Academic,Cambria Heights,,
+Q255,,,P.S. Q255,-73.80938016972459,40.72419555168421,Special Education,Kew Gardens Hills,,
+Q258,119.0,1555135.0,Energy Tech High School,-73.93262849822806,40.75647193549368,Career Technical,Queensbridge-Ravenswood-Long Island City,,
+Q261,,1532697.0,Voyages Prep - South Queens,-73.7826841608836,40.67394906965331,Transfer School,Springfield Gardens North,13.0,0.0
+Q313,,915539.0,Benjamin Franklin High School for Finance & Inform,-73.74633003535914,40.69878630479974,General Academic,Cambria Heights,,
+Q314,,695016.0,Epic High School - South,-73.81673093820822,40.67502116551469,General Academic,South Ozone Park,,
+Q315,,904369.0,Business Technology Early College High School,-73.73972671955778,40.73388818146922,General Academic,Bellerose,,
+Q334,,695016.0,Epic High School - North,-73.82940736531533,40.69300522519155,General Academic,Richmond Hill,,
+Q337,,,Success Academy Charter School - Rosedale - New Yo,-73.73822670923789,40.65555149877033,General Academic,Rosedale,,
+Q338,,1609165.0,Queens Satellite High School for Opportunity,-73.79953215853894,40.708204278581015,Transfer School,Jamaica,2.3,0.0
+Q339,,,Success Academy Charter School - Springfield Garde,-73.7527724468886,40.68188149592902,General Academic,St. Albans,,
+Q494,,1013167.0,"Law, Government and Community Service High School",-73.74633003535914,40.69878630479974,General Academic,Cambria Heights,63.9,2.8
+Q496,,894351.0,"Business, Computer Applications & Entrepreneurship",-73.74633003535914,40.69878630479974,General Academic,Cambria Heights,53.1,4.7
+Q540,,2407279.0,Queens Academy High School,-73.82827914641985,40.76562442685881,Transfer School,Flushing,10.8,0.6
+Q705,,,Renaissance Charter School,-73.88481738457435,40.749934486494425,General Academic,Jackson Heights,72.5,5.9
+Q721,,,John F. Kennedy Jr. School,-73.86788273969485,40.735613396092596,Special Education,Elmhurst,,
+Q744,,1473868.0,VOYAGES Preparatory,-73.87150530474914,40.743228700042536,Transfer School,Elmhurst,13.0,0.0
+Q752,,,Queens Transition Center,-73.8008756648733,40.68347344425695,Special Education,Baisley Park,,
+Q792,,1451357.0,North Queens Community High School,-73.81966486374564,40.72058628595552,Transfer School,Kew Gardens Hills,13.4,0.0
+Q811,,,P.S. Q811,-73.72841281025113,40.75648164398081,Special Education,Douglas Manor-Douglaston-Little Neck,,
+Q993,,,P.S. Q993,-73.70861787557624,40.7342665547681,Special Education,Glen Oaks-Floral Park-New Hyde Park,,
+R025,,,South Richmond High School I.S./P.S. 25,-74.2186883466404,40.512019331660696,Special Education,Annadale-Huguenot-Prince's Bay-Eltingville,,
+R037,,,P.S. R037,-74.15136807345276,40.56410096065301,Special Education,Great Kills,,
+R470,,1420326.0,Concord High School,-74.08707286306135,40.610620724550195,Transfer School,Grymes Hill-Clifton-Fox Hills,21.7,0.0
+X010,,,P.S. X010,-73.82921177581069,40.82708039873294,Special Education,Schuylerville-Throgs Neck-Edgewater Park,,
+X012,,,P.S. X012 Lewis and Clark School,-73.84468502672641,40.84062549245887,Special Education,Van Nest-Morris Park-Westchester Square,,
+X168,,,P.S. 168,-73.92599562839361,40.813681850104544,Special Education,Mott Haven-Port Morris,,
+X176,,,P.S. X176,-73.83166930594669,40.874035001702964,Special Education,Co-op City,,
+X185,,,Bronx Lighthouse Charter School,-73.89739429514674,40.82322804052004,General Academic,Longwood,72.5,41.2
+X186,,,P186X Walter J. Damrosch School,-73.89779727200604,40.83138844085297,Special Education,Morrisania-Melrose,,
+X188,,,P.S. X188,-73.88387752125671,40.8501683005825,Special Education,Belmont,,
+X200,,,ROADS Charter School II,-73.89826521848029,40.82312451288156,Transfer School,Longwood,6.3,0.0
+X202,,,New Visions Charter High School for Advanced Math,-73.90289206632193,40.821723206162616,General Academic,Morrisania-Melrose,,
+X208,,,New Visions Charter High School for the Humanities,-73.90752851638509,40.81067128011219,General Academic,Mott Haven-Port Morris,0.0,0.0
+X259,126.0,1845656.0,"H.E.R.O. High (Health, Education, and Research Occ",-73.90752851638509,40.81067128011219,Career Technical,Mott Haven-Port Morris,,
+X264,112.0,1715099.0,Bronx Academy for Software Engineering (BASE),-73.88248751510241,40.85539281183038,Career Technical,Belmont,,
+X295,,701929.0,Gateway School for Environmental Research and Tech,-73.8559307051322,40.82121847122302,General Academic,Soundview-Castle Hill-Clason Point-Harding Park,48.7,0.0
+X319,,1764663.0,Providing Urban Learners Success In Education High,-73.89374460394545,40.848385517590685,Transfer School,East Tremont,11.1,0.0
+X320,95.0,1540838.0,Pelham Lab High School,-73.83958399261853,40.839775883862245,General Academic,Schuylerville-Throgs Neck-Edgewater Park,,
+X321,,1064279.0,Crotona Academy High School,-73.91201408768593,40.81696294923816,Transfer School,Melrose South-Mott Haven North,11.4,0.0
+X345,,,Hyde Leadership Charter School,-73.88528499012874,40.81582784182597,General Academic,Hunts Point,88.4,15.9
+X347,,,International Leadership Charter High School,-73.90618688859267,40.87574175182525,General Academic,Spuyten Duyvil-Kingsbridge,93.3,0.0
+X348,95.0,1277954.0,Schuylerville Preparatory High School,-73.83958399261853,40.839775883862245,General Academic,Schuylerville-Throgs Neck-Edgewater Park,,
+X349,101.0,1367210.0,Bronx River High School,-73.83958399261853,40.839775883862245,General Academic,Schuylerville-Throgs Neck-Edgewater Park,,
+X351,90.0,1438532.0,Bronx Collaborative High School,-73.88901114459546,40.87995882758119,General Academic,Van Cortlandt Village,,
+X353,71.0,1059070.0,World View High School,-73.88901114459546,40.87995882758119,General Academic,Van Cortlandt Village,,
+X377,,1346409.0,Bronx Community High School,-73.8559307051322,40.82121847122302,Transfer School,Soundview-Castle Hill-Clason Point-Harding Park,17.3,0.0
+X379,,1384949.0,Jill Chaifetz Transfer High School,-73.90538936502954,40.81870334596813,Transfer School,Melrose South-Mott Haven North,19.5,0.0
+X381,,1428269.0,Bronx Haven High School,-73.91994936765848,40.81864575558572,Transfer School,Melrose South-Mott Haven North,11.5,0.0
+X393,,,University Prep Charter High School,-73.91203854694886,40.81485776666893,General Academic,Melrose South-Mott Haven North,97.6,24.7
+X395,,,"NYC Charter High School for Architecture, Engineer",-73.91042171899662,40.8216826411834,General Academic,Melrose South-Mott Haven North,87.5,1.0
+X397,,2327822.0,English Language Learners and International Suppor,-73.91268628037135,40.87737994424815,Transfer School,Marble Hill-Inwood,20.7,0.0
+X414,,1854114.0,Jonathan Levin High School for Media and Communica,-73.91136654119627,40.83930718418132,General Academic,East Concourse-Concourse Village,41.2,1.2
+X446,,1526612.0,Arturo A. Schomburg Satellite Academy Bronx,-73.89826521848029,40.82312451288156,Transfer School,Longwood,16.5,0.0
+X461,,,Metropolitan Lighthouse Charter School,-73.92979571742296,40.834590736428574,General Academic,Highbridge,,
+X464,,,Success Academy Charter School - Bronx 4 - New Yor,-73.85999899493277,40.82292520925037,General Academic,Soundview-Castle Hill-Clason Point-Harding Park,,
+X465,,,Boys Preparatory Charter School of New York,-73.86873559430896,40.81922187840062,General Academic,Soundview-Castle Hill-Clason Point-Harding Park,,
+X480,,1671022.0,Bronx Regional High School,-73.89826521848029,40.82312451288156,Transfer School,Longwood,7.5,0.0
+X537,,1525177.0,Bronx Arena High School,-73.88118705956552,40.8204869735435,Transfer School,Soundview-Castle Hill-Clason Point-Harding Park,3.6,0.0
+X539,,,New Visions Charter High School for Advanced Math,-73.91268628037135,40.87737994424815,General Academic,Marble Hill-Inwood,87.9,2.6
+X553,,,New Visions Charter High School for the Humanities,-73.91268628037135,40.87737994424815,General Academic,Marble Hill-Inwood,65.7,3.8
+X557,,2176595.0,Mott Haven Community High School,-73.90752851638509,40.81067128011219,Transfer School,Mott Haven-Port Morris,15.0,0.0
+X558,251.0,2522206.0,Westchester Square Academy,-73.83958399261853,40.839775883862245,General Academic,Schuylerville-Throgs Neck-Edgewater Park,,
+X559,161.0,1886477.0,School for Tourism and Hospitality,-73.90289206632193,40.821723206162616,General Academic,Morrisania-Melrose,,
+X561,195.0,2162308.0,Bronx Compass High School,-73.8559307051322,40.82121847122302,General Academic,Soundview-Castle Hill-Clason Point-Harding Park,,
+X564,171.0,1910276.0,Claremont International HS,-73.91136654119627,40.83930718418132,General Academic,East Concourse-Concourse Village,,
+X565,211.0,2162030.0,High School for Energy and Technology,-73.88248751510241,40.85539281183038,Career Technical,Belmont,,
+X650,,1211141.0,Jane Addams High School for Academic Careers,-73.90289206632193,40.821723206162616,Career Technical,Morrisania-Melrose,55.2,0.0
+X655,,783677.0,Samuel Gompers Career and Technical Education High,-73.90752851638509,40.81067128011219,Career Technical,Mott Haven-Port Morris,46.8,4.8
+X660,,1526397.0,Grace Dodge Career and Technical Education High Sc,-73.88248751510241,40.85539281183038,Career Technical,Belmont,51.0,0.0
+X704,,,KIPP Academy Charter School,-73.92114057671384,40.82257426918312,General Academic,East Concourse-Concourse Village,90.0,58.3
+X723,,,P.S. 723,-73.83185640742506,40.882980236225784,Special Education,Co-op City,,
+X754,,,J. M. Rapport School Career Development,-73.90936312361755,40.81105150886687,Special Education,Mott Haven-Port Morris,,
