@@ -87,23 +87,6 @@ if __name__ == '__main__':
 
     final_stops = pd.concat(all_stops)
     final_edges = pd.concat(all_edges)
-
-    # Spatial Stitching (Bus <-> Subway and Bus <-> Bus between boroughs)
-    # TODO
-    tree = KDTree(final_stops[['stop_lat', 'stop_lon']].values)
-    pairs = tree.query_pairs(r=0.00135) # ~150 meters
-    
-    spatial_edges = []
-    for i, j in pairs:
-        s1, s2 = final_stops.iloc[i], final_stops.iloc[j]
-
-        if s1['stop_id'] != s2['stop_id']:
-            spatial_edges.append({
-                'source': s1['stop_id'], 'target': s2['stop_id'],
-                'weight': 300, 'type': 'spatial_transfer'
-            })
-
-    final_edges = pd.concat([final_edges, pd.DataFrame(spatial_edges)])
     
     # Save the master files
     final_stops.to_csv("processed_stops_2015.csv", index=False)
