@@ -1,7 +1,8 @@
 # pyright: basic
+from matplotlib.pyplot import axis
 import pandas as pd
-import pyproj
-import os
+import pyproj, os
+
 def convert_coords(row):
     transformer = pyproj.Transformer.from_crs("EPSG:2263", "EPSG:4326", always_xy=True)
     try:   # transform() expects (X, Y)
@@ -22,27 +23,98 @@ def process_schools(input_paths, output_path):
         'LOCATION_TYPE_DESCRIPTION', 'NTA_NAME', 'LOCATION_CATEGORY_DESCRIPTION'
     ]
     clean_df = sch_df[output_cols].copy()
-    clean_df['NTA_NAME'] = clean_df['NTA_NAME'].str.strip()
     #print(clean_df['LOCATION_CATEGORY_DESCRIPTION'].value_counts())
+
+    # filter for High schools and K-12
     clean_df = clean_df[(clean_df['LOCATION_CATEGORY_DESCRIPTION']  == 'High school') | 
                         (clean_df['LOCATION_CATEGORY_DESCRIPTION']  == 'K-12 all grades')]
     clean_df = clean_df.drop(columns=['LOCATION_CATEGORY_DESCRIPTION'])
+    clean_df['NTA_NAME'] = clean_df['NTA_NAME'].str.strip()
+    print("after HS filter", str(clean_df.notna().all(axis=1).sum()))
 
-    sch_pop = pd.read_csv(input_paths[1])
-    clean_df['size'] = if sch_pop[''] == sch_pop['total_students']
+    clean_df_key = 'LOCATION_CODE'
 
+    # process school funding
     sch_fund = pd.read_csv(input_paths[2])
+    sch_fund[clean_df_key] = sch_fund['Location']
+    sch_fund['budget'] = (
+        sch_fund['S4: Label d: FY14 FSF Initial']
+        .replace(r'[$,]', '', regex=True)
+        .astype(float)
+    )
+    fund_subset = sch_fund[[clean_df_key, 'budget']].copy()
+    clean_df = pd.merge(
+        fund_subset, clean_df, on=clean_df_key, how="outer")
+    print("after funding addition" , str(clean_df.notna().all(axis=1).sum()))
 
-    # process funding .csv to a normailization weighted value
-    # fsf + 
-    clean_df['LOCATION_CODE'] == sch_fund['Location']
-    clean_df['funding'] = sch_fund["S4: Label d: FY14 FSF Initial"]
+    # process school population
+    sch_pop = pd.read_csv(input_paths[1])
+    sch_pop[clean_df_key] = sch_pop['dbn'].astype(str).str[-4:]
+    sch_pop['total_students'] = pd.to_numeric(
+        sch_pop['total_students'].str.replace(r'[^\d-]', '', regex=True),
+        errors='coerce'
+    )
+    pop_subset = sch_pop[[clean_df_key, 'total_students']].copy()
+    pop_subset.rename(columns={'total_students': 'size'}, inplace=True)
+    clean_df = pd.merge(
+        pop_subset, clean_df, on=clean_df_key, how="outer")
+    print("after population addition" , str(clean_df.notna().all(axis=1).sum()))
 
-    #clean_df.to_csv(output_path, index=False)
+    # process school grad_results
+    grad_df = pd.read_csv(input_paths[3], low_memory=False)
+    grad_df = grad_df[
+        (grad_df['Report Category'].isin(['School', 'Charter School'])) &
+        (grad_df['Category'] == 'All Students') &
+        (grad_df['Cohort Year'] == 2011) &
+        (grad_df['Cohort'] == '4 year June')
+    ]
+    grad_df[clean_df_key] = grad_df['Geographic Subdivision'].astype(str).str[-4:]
+    grad_df['% Grads'] = pd.to_numeric(grad_df['% Grads'], errors='coerce')
+    grad_df['% Advanced Regents of Cohort'] = pd.to_numeric(grad_df['% Advanced Regents of Cohort'], errors='coerce')
+    grad_subset = grad_df[[clean_df_key, '% Grads', '% Advanced Regents of Cohort']].copy()
+    grad_subset.rename(columns={'% Grads': 'grad_rate', '% Advanced Regents of Cohort': 'adv_regents_rate'}, inplace=True)
+    clean_df = pd.merge(
+        clean_df, grad_subset, on=clean_df_key, how="outer"
+    )
+    print('after grad results', clean_df.notna().all(axis=1).sum())
+
+    # drop cols based on shape_point df
+    clean_df.dropna(subset=['LOCATION_NAME'], inplace=True)
+    print('after dropping on location_name', clean_df.notna().all(axis=1).sum())
+
+    # look at missing data
+    print('number of nan rows', clean_df.isna().any(axis=1).sum())
+    missing_schools = clean_df[clean_df.isna().any(axis=1)]['LOCATION_CODE']
+    missing_schools = pd.merge(clean_df, missing_schools, on=clean_df_key, how="right")
+    missing_schools.to_csv('missing_school.csv', index=False)
+    # mostly full of k-12 and charter school
+    print(clean_df.shape)
+
+    # fill in missing data
+    med_pop = clean_df['size'].median()
+    clean_df['size'] = clean_df['size'].fillna(med_pop)
+    med_fund = clean_df['budget'].median()
+    clean_df['budget'] = clean_df['budget'].fillna(med_fund)
+    med_grad = clean_df['grad_rate'].median()
+    clean_df['grad_rate'] = clean_df['grad_rate'].fillna(med_grad)
+    med_agrad = clean_df['adv_regents_rate'].median()
+    clean_df['adv_regents_rate'] = clean_df['adv_regents_rate'].fillna(med_agrad)
+
+    print('number of nan rows', clean_df.isna().any(axis=1).sum())
+
+    # normalize/weight and fill in missing data
+    clean_df['funding_per_student'] = clean_df['budget']/clean_df['size']
+    clean_df['weighted_accessibility'] = clean_df['funding_per_student']*clean_df['grad_rate']
+    clean_df['weighted_accessibility_adv'] = clean_df['funding_per_student']*clean_df['adv_regents_rate']
+
+    clean_df.to_csv(output_path, index=False)
 
 if __name__ == "__main__":
-    raw_csv = 
-    processed_csv = "processed_schools_2015.csv"
+    processed_sch_csv = "processed_schools_2015.csv"
+    raw_sch_csvs = [
+        "./data/spatial/school_points_15.csv", 
+        "./data/other/school_info_15.csv", 
+        "./data/other/school_budget_15.csv",
+        "./data/raw/grad_results_1-15.csv"]
 
-    raw_csvs = ["./data/spatial/school_points_15.csv", ]
-    process_schools(raw_csvs, processed_csv)
+    process_schools(raw_sch_csvs, processed_sch_csv)
