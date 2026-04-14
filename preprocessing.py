@@ -1,7 +1,7 @@
 # pyright: basic
-from matplotlib.pyplot import axis
+import numpy as np
 import pandas as pd
-import pyproj, os
+import pyproj
 
 def convert_coords(row):
     transformer = pyproj.Transformer.from_crs("EPSG:2263", "EPSG:4326", always_xy=True)
@@ -12,6 +12,7 @@ def convert_coords(row):
         return pd.Series({'lon': None, 'lat': None})
 
 def process_schools(input_paths, output_path):
+    print("Processing school csvs")
     sch_df = pd.read_csv(input_paths[0])
     
     coords = sch_df.apply(convert_coords, axis=1)
@@ -86,7 +87,7 @@ def process_schools(input_paths, output_path):
     print('number of nan rows', clean_df.isna().any(axis=1).sum())
     missing_schools = clean_df[clean_df.isna().any(axis=1)]['LOCATION_CODE']
     missing_schools = pd.merge(clean_df, missing_schools, on=clean_df_key, how="right")
-    missing_schools.to_csv('missing_school.csv', index=False)
+    missing_schools.to_csv('missing_school_15.csv', index=False)
     # mostly full of k-12 and charter school
     print(clean_df.shape)
 
@@ -109,6 +110,60 @@ def process_schools(input_paths, output_path):
 
     clean_df.to_csv(output_path, index=False)
 
+def process_acs(output_path):
+    print("Processing nta_acs csvs")
+
+    files = {
+        'dem' : "./data/other/acs_nta/demo_2016acs5yr_nta.csv",
+        'econ' : "./data/other/acs_nta/econ_2016acs5yr_nta.csv",
+        'hous' : "./data/other/acs_nta/hous_2016acs5yr_nta.csv",
+        'soc' : "./data/other/acs_nta/soc_2016acs5yr_nta.csv"
+    }
+
+    cols = ['GeoID', 'GeogName', 'Borough']
+    mappings = {
+        'econ': {
+            'PBwPvP': 'poverty_rate_pct',
+            'MdHHIncE': 'median_income_estimate',
+            'CvLFUEm2P': 'unemployment_rate_pct'
+        },
+        'dem': {
+            'Pop15t19P': 'pop_15_to_19_pct'
+        },
+        'hous': {
+            'GRPI35plP': 'rent_burdened_35plus_pct'
+        },
+        'soc': {
+            'EA_BchDHP': 'bachelors_deg_or_higher_pct',
+            'LgOEnLEP1P': 'limited_english_proficiency_pct'
+        }
+    }
+
+    main_df = pd.read_csv(files['econ'])
+    main_df = main_df[cols + list(mappings['econ'].keys())]
+    
+    main_df = main_df.rename(columns=mappings['econ'])
+    for key in ['dem', 'hous', 'soc']:
+        df = pd.read_csv(files[key])
+        cols_nd = ['GeoID'] + [c for c in mappings[key].keys() if c in df.columns]
+        df_subset = df[cols_nd].rename(columns=mappings[key])
+        main_df = pd.merge(main_df, df_subset, on="GeoID", how='outer')
+
+    # missing data
+    missing_ntas = main_df[main_df.isna().any(axis=1)]['GeoID']
+    missing_ntas = pd.merge(missing_ntas, main_df, on='GeoID', how='right')
+    missing_ntas.to_csv('missing_ntas_15.csv', index=False)
+
+    # fill in data
+    numeric_cols = main_df.select_dtypes(include=np.number).columns
+    print(numeric_cols)
+    main_df[numeric_cols] = main_df[numeric_cols].fillna(main_df[numeric_cols].median())
+
+    main_df.to_csv(output_path, index=False)
+    print('number of nan rows', main_df.isna().any(axis=1).sum())
+    print("ACS df shape:", main_df.shape)
+    print("cols:", main_df.columns.to_list())
+
 if __name__ == "__main__":
     processed_sch_csv = "processed_schools_2015.csv"
     raw_sch_csvs = [
@@ -118,3 +173,6 @@ if __name__ == "__main__":
         "./data/raw/grad_results_1-15.csv"]
 
     process_schools(raw_sch_csvs, processed_sch_csv)
+
+    processed_acs_csv = "nta_SE_indicators_2015.csv"
+    process_acs(processed_acs_csv)
