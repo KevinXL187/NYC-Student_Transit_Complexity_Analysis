@@ -1,1483 +1,1483 @@
 stop_id,stop_name,stop_lat,stop_lon,mode
-sub_101,Van Cortlandt Park - 242 St,40.889248,-73.898583,bus
-sub_101N,Van Cortlandt Park - 242 St,40.889248,-73.898583,bus
-sub_101S,Van Cortlandt Park - 242 St,40.889248,-73.898583,bus
-sub_103,238 St,40.884667,-73.90087,bus
-sub_103N,238 St,40.884667,-73.90087,bus
-sub_103S,238 St,40.884667,-73.90087,bus
-sub_104,231 St,40.878856,-73.904834,bus
-sub_104N,231 St,40.878856,-73.904834,bus
-sub_104S,231 St,40.878856,-73.904834,bus
-sub_106,Marble Hill - 225 St,40.874561,-73.909831,bus
-sub_106N,Marble Hill - 225 St,40.874561,-73.909831,bus
-sub_106S,Marble Hill - 225 St,40.874561,-73.909831,bus
-sub_107,215 St,40.869444,-73.915279,bus
-sub_107N,215 St,40.869444,-73.915279,bus
-sub_107S,215 St,40.869444,-73.915279,bus
-sub_108,207 St,40.864621,-73.918822,bus
-sub_108N,207 St,40.864621,-73.918822,bus
-sub_108S,207 St,40.864621,-73.918822,bus
-sub_109,Dyckman St,40.860531,-73.925536,bus
-sub_109N,Dyckman St,40.860531,-73.925536,bus
-sub_109S,Dyckman St,40.860531,-73.925536,bus
-sub_110,191 St,40.855225,-73.929412,bus
-sub_110N,191 St,40.855225,-73.929412,bus
-sub_110S,191 St,40.855225,-73.929412,bus
-sub_111,181 St,40.849505,-73.933596,bus
-sub_111N,181 St,40.849505,-73.933596,bus
-sub_111S,181 St,40.849505,-73.933596,bus
-sub_112,168 St - Washington Hts,40.840556,-73.940133,bus
-sub_112N,168 St - Washington Hts,40.840556,-73.940133,bus
-sub_112S,168 St - Washington Hts,40.840556,-73.940133,bus
-sub_113,157 St,40.834041,-73.94489,bus
-sub_113N,157 St,40.834041,-73.94489,bus
-sub_113S,157 St,40.834041,-73.94489,bus
-sub_114,145 St,40.826551,-73.95036,bus
-sub_114N,145 St,40.826551,-73.95036,bus
-sub_114S,145 St,40.826551,-73.95036,bus
-sub_115,137 St - City College,40.822008,-73.953676,bus
-sub_115N,137 St - City College,40.822008,-73.953676,bus
-sub_115S,137 St - City College,40.822008,-73.953676,bus
-sub_116,125 St,40.815581,-73.958372,bus
-sub_116N,125 St,40.815581,-73.958372,bus
-sub_116S,125 St,40.815581,-73.958372,bus
-sub_117,116 St - Columbia University,40.807722,-73.96411,bus
-sub_117N,116 St - Columbia University,40.807722,-73.96411,bus
-sub_117S,116 St - Columbia University,40.807722,-73.96411,bus
-sub_118,Cathedral Pkwy,40.803967,-73.966847,bus
-sub_118N,Cathedral Pkwy,40.803967,-73.966847,bus
-sub_118S,Cathedral Pkwy,40.803967,-73.966847,bus
-sub_119,103 St,40.799446,-73.968379,bus
-sub_119N,103 St,40.799446,-73.968379,bus
-sub_119S,103 St,40.799446,-73.968379,bus
-sub_120,96 St,40.793919,-73.972323,bus
-sub_120N,96 St,40.793919,-73.972323,bus
-sub_120S,96 St,40.793919,-73.972323,bus
-sub_121,86 St,40.788644,-73.976218,bus
-sub_121N,86 St,40.788644,-73.976218,bus
-sub_121S,86 St,40.788644,-73.976218,bus
-sub_122,79 St,40.783934,-73.979917,bus
-sub_122N,79 St,40.783934,-73.979917,bus
-sub_122S,79 St,40.783934,-73.979917,bus
-sub_123,72 St,40.778453,-73.98197,bus
-sub_123N,72 St,40.778453,-73.98197,bus
-sub_123S,72 St,40.778453,-73.98197,bus
-sub_124,66 St - Lincoln Center,40.77344,-73.982209,bus
-sub_124N,66 St - Lincoln Center,40.77344,-73.982209,bus
-sub_124S,66 St - Lincoln Center,40.77344,-73.982209,bus
-sub_125,59 St - Columbus Circle,40.768247,-73.981929,bus
-sub_125N,59 St - Columbus Circle,40.768247,-73.981929,bus
-sub_125S,59 St - Columbus Circle,40.768247,-73.981929,bus
-sub_126,50 St,40.761728,-73.983849,bus
-sub_126N,50 St,40.761728,-73.983849,bus
-sub_126S,50 St,40.761728,-73.983849,bus
-sub_127,Times Sq - 42 St,40.75529,-73.987495,bus
-sub_127N,Times Sq - 42 St,40.75529,-73.987495,bus
-sub_127S,Times Sq - 42 St,40.75529,-73.987495,bus
-sub_128,34 St - Penn Station,40.750373,-73.991057,bus
-sub_128N,34 St - Penn Station,40.750373,-73.991057,bus
-sub_128S,34 St - Penn Station,40.750373,-73.991057,bus
-sub_129,28 St,40.747215,-73.993365,bus
-sub_129N,28 St,40.747215,-73.993365,bus
-sub_129S,28 St,40.747215,-73.993365,bus
-sub_130,23 St,40.744081,-73.995657,bus
-sub_130N,23 St,40.744081,-73.995657,bus
-sub_130S,23 St,40.744081,-73.995657,bus
-sub_131,18 St,40.74104,-73.997871,bus
-sub_131N,18 St,40.74104,-73.997871,bus
-sub_131S,18 St,40.74104,-73.997871,bus
-sub_132,14 St,40.737826,-74.000201,bus
-sub_132N,14 St,40.737826,-74.000201,bus
-sub_132S,14 St,40.737826,-74.000201,bus
-sub_133,Christopher St - Sheridan Sq,40.733422,-74.002906,bus
-sub_133N,Christopher St - Sheridan Sq,40.733422,-74.002906,bus
-sub_133S,Christopher St - Sheridan Sq,40.733422,-74.002906,bus
-sub_134,Houston St,40.728251,-74.005367,bus
-sub_134N,Houston St,40.728251,-74.005367,bus
-sub_134S,Houston St,40.728251,-74.005367,bus
-sub_135,Canal St,40.722854,-74.006277,bus
-sub_135N,Canal St,40.722854,-74.006277,bus
-sub_135S,Canal St,40.722854,-74.006277,bus
-sub_136,Franklin St,40.719318,-74.006886,bus
-sub_136N,Franklin St,40.719318,-74.006886,bus
-sub_136S,Franklin St,40.719318,-74.006886,bus
-sub_137,Chambers St,40.715478,-74.009266,bus
-sub_137N,Chambers St,40.715478,-74.009266,bus
-sub_137S,Chambers St,40.715478,-74.009266,bus
-sub_138,Cortlandt St,40.711835,-74.012188,bus
-sub_138N,Cortlandt St,40.711835,-74.012188,bus
-sub_138S,Cortlandt St,40.711835,-74.012188,bus
-sub_139,Rector St,40.707513,-74.013783,bus
-sub_139N,Rector St,40.707513,-74.013783,bus
-sub_139S,Rector St,40.707513,-74.013783,bus
-sub_140,South Ferry Loop,40.701411,-74.013205,bus
-sub_140N,South Ferry Loop,40.701411,-74.013205,bus
-sub_140S,South Ferry Loop,40.701411,-74.013205,bus
-sub_201,Wakefield - 241 St,40.903125,-73.85062,bus
-sub_201N,Wakefield - 241 St,40.903125,-73.85062,bus
-sub_201S,Wakefield - 241 St,40.903125,-73.85062,bus
-sub_204,Nereid Av,40.898379,-73.854376,bus
-sub_204N,Nereid Av,40.898379,-73.854376,bus
-sub_204S,Nereid Av,40.898379,-73.854376,bus
-sub_205,233 St,40.893193,-73.857473,bus
-sub_205N,233 St,40.893193,-73.857473,bus
-sub_205S,233 St,40.893193,-73.857473,bus
-sub_206,225 St,40.888022,-73.860341,bus
-sub_206N,225 St,40.888022,-73.860341,bus
-sub_206S,225 St,40.888022,-73.860341,bus
-sub_207,219 St,40.883895,-73.862633,bus
-sub_207N,219 St,40.883895,-73.862633,bus
-sub_207S,219 St,40.883895,-73.862633,bus
-sub_208,Gun Hill Rd,40.87785,-73.866256,bus
-sub_208N,Gun Hill Rd,40.87785,-73.866256,bus
-sub_208S,Gun Hill Rd,40.87785,-73.866256,bus
-sub_209,Burke Av,40.871356,-73.867164,bus
-sub_209N,Burke Av,40.871356,-73.867164,bus
-sub_209S,Burke Av,40.871356,-73.867164,bus
-sub_210,Allerton Av,40.865462,-73.867352,bus
-sub_210N,Allerton Av,40.865462,-73.867352,bus
-sub_210S,Allerton Av,40.865462,-73.867352,bus
-sub_211,Pelham Pkwy,40.857192,-73.867615,bus
-sub_211N,Pelham Pkwy,40.857192,-73.867615,bus
-sub_211S,Pelham Pkwy,40.857192,-73.867615,bus
-sub_212,Bronx Park East,40.848828,-73.868457,bus
-sub_212N,Bronx Park East,40.848828,-73.868457,bus
-sub_212S,Bronx Park East,40.848828,-73.868457,bus
-sub_213,E 180 St,40.841894,-73.873488,bus
-sub_213N,E 180 St,40.841894,-73.873488,bus
-sub_213S,E 180 St,40.841894,-73.873488,bus
-sub_214,West Farms Sq - E Tremont Av,40.840295,-73.880049,bus
-sub_214N,West Farms Sq - E Tremont Av,40.840295,-73.880049,bus
-sub_214S,West Farms Sq - E Tremont Av,40.840295,-73.880049,bus
-sub_215,174 St,40.837288,-73.887734,bus
-sub_215N,174 St,40.837288,-73.887734,bus
-sub_215S,174 St,40.837288,-73.887734,bus
-sub_216,Freeman St,40.829993,-73.891865,bus
-sub_216N,Freeman St,40.829993,-73.891865,bus
-sub_216S,Freeman St,40.829993,-73.891865,bus
-sub_217,Simpson St,40.824073,-73.893064,bus
-sub_217N,Simpson St,40.824073,-73.893064,bus
-sub_217S,Simpson St,40.824073,-73.893064,bus
-sub_218,Intervale Av,40.822181,-73.896736,bus
-sub_218N,Intervale Av,40.822181,-73.896736,bus
-sub_218S,Intervale Av,40.822181,-73.896736,bus
-sub_219,Prospect Av,40.819585,-73.90177,bus
-sub_219N,Prospect Av,40.819585,-73.90177,bus
-sub_219S,Prospect Av,40.819585,-73.90177,bus
-sub_220,Jackson Av,40.81649,-73.907807,bus
-sub_220N,Jackson Av,40.81649,-73.907807,bus
-sub_220S,Jackson Av,40.81649,-73.907807,bus
-sub_221,3 Av - 149 St,40.816109,-73.917757,bus
-sub_221N,3 Av - 149 St,40.816109,-73.917757,bus
-sub_221S,3 Av - 149 St,40.816109,-73.917757,bus
-sub_222,149 St - Grand Concourse,40.81841,-73.926718,bus
-sub_222N,149 St - Grand Concourse,40.81841,-73.926718,bus
-sub_222S,149 St - Grand Concourse,40.81841,-73.926718,bus
-sub_224,135 St,40.814229,-73.94077,bus
-sub_224N,135 St,40.814229,-73.94077,bus
-sub_224S,135 St,40.814229,-73.94077,bus
-sub_225,125 St,40.807754,-73.945495,bus
-sub_225N,125 St,40.807754,-73.945495,bus
-sub_225S,125 St,40.807754,-73.945495,bus
-sub_226,116 St,40.802098,-73.949625,bus
-sub_226N,116 St,40.802098,-73.949625,bus
-sub_226S,116 St,40.802098,-73.949625,bus
-sub_227,Central Park North (110 St),40.799075,-73.951822,bus
-sub_227N,Central Park North (110 St),40.799075,-73.951822,bus
-sub_227S,Central Park North (110 St),40.799075,-73.951822,bus
-sub_228,Park Pl,40.713051,-74.008811,bus
-sub_228N,Park Pl,40.713051,-74.008811,bus
-sub_228S,Park Pl,40.713051,-74.008811,bus
-sub_229,Fulton St,40.709416,-74.006571,bus
-sub_229N,Fulton St,40.709416,-74.006571,bus
-sub_229S,Fulton St,40.709416,-74.006571,bus
-sub_230,Wall St,40.706821,-74.0091,bus
-sub_230N,Wall St,40.706821,-74.0091,bus
-sub_230S,Wall St,40.706821,-74.0091,bus
-sub_231,Clark St,40.697466,-73.993086,bus
-sub_231N,Clark St,40.697466,-73.993086,bus
-sub_231S,Clark St,40.697466,-73.993086,bus
-sub_232,Borough Hall,40.693219,-73.989998,bus
-sub_232N,Borough Hall,40.693219,-73.989998,bus
-sub_232S,Borough Hall,40.693219,-73.989998,bus
-sub_233,Hoyt St,40.690545,-73.985065,bus
-sub_233N,Hoyt St,40.690545,-73.985065,bus
-sub_233S,Hoyt St,40.690545,-73.985065,bus
-sub_234,Nevins St,40.688246,-73.980492,bus
-sub_234N,Nevins St,40.688246,-73.980492,bus
-sub_234S,Nevins St,40.688246,-73.980492,bus
-sub_235,Atlantic Av - Barclays Ctr,40.684359,-73.977666,bus
-sub_235N,Atlantic Av - Barclays Ctr,40.684359,-73.977666,bus
-sub_235S,Atlantic Av - Barclays Ctr,40.684359,-73.977666,bus
-sub_236,Bergen St,40.680829,-73.975098,bus
-sub_236N,Bergen St,40.680829,-73.975098,bus
-sub_236S,Bergen St,40.680829,-73.975098,bus
-sub_237,Grand Army Plaza,40.675235,-73.971046,bus
-sub_237N,Grand Army Plaza,40.675235,-73.971046,bus
-sub_237S,Grand Army Plaza,40.675235,-73.971046,bus
-sub_238,Eastern Pkwy - Brooklyn Museum,40.671987,-73.964375,bus
-sub_238N,Eastern Pkwy - Brooklyn Museum,40.671987,-73.964375,bus
-sub_238S,Eastern Pkwy - Brooklyn Museum,40.671987,-73.964375,bus
-sub_239,Franklin Av,40.670682,-73.958131,bus
-sub_239N,Franklin Av,40.670682,-73.958131,bus
-sub_239S,Franklin Av,40.670682,-73.958131,bus
-sub_241,President St,40.667883,-73.950683,bus
-sub_241N,President St,40.667883,-73.950683,bus
-sub_241S,President St,40.667883,-73.950683,bus
-sub_242,Sterling St,40.662742,-73.95085,bus
-sub_242N,Sterling St,40.662742,-73.95085,bus
-sub_242S,Sterling St,40.662742,-73.95085,bus
-sub_243,Winthrop St,40.656652,-73.9502,bus
-sub_243N,Winthrop St,40.656652,-73.9502,bus
-sub_243S,Winthrop St,40.656652,-73.9502,bus
-sub_244,Church Av,40.650843,-73.949575,bus
-sub_244N,Church Av,40.650843,-73.949575,bus
-sub_244S,Church Av,40.650843,-73.949575,bus
-sub_245,Beverly Rd,40.645098,-73.948959,bus
-sub_245N,Beverly Rd,40.645098,-73.948959,bus
-sub_245S,Beverly Rd,40.645098,-73.948959,bus
-sub_246,Newkirk Av,40.639967,-73.948411,bus
-sub_246N,Newkirk Av,40.639967,-73.948411,bus
-sub_246S,Newkirk Av,40.639967,-73.948411,bus
-sub_247,Flatbush Av - Brooklyn College,40.632836,-73.947642,bus
-sub_247N,Flatbush Av - Brooklyn College,40.632836,-73.947642,bus
-sub_247S,Flatbush Av - Brooklyn College,40.632836,-73.947642,bus
-sub_248,Nostrand Av,40.669847,-73.950466,bus
-sub_248N,Nostrand Av,40.669847,-73.950466,bus
-sub_248S,Nostrand Av,40.669847,-73.950466,bus
-sub_249,Kingston Av,40.669399,-73.942161,bus
-sub_249N,Kingston Av,40.669399,-73.942161,bus
-sub_249S,Kingston Av,40.669399,-73.942161,bus
-sub_250,Crown Hts - Utica Av,40.668897,-73.932942,bus
-sub_250N,Crown Hts - Utica Av,40.668897,-73.932942,bus
-sub_250S,Crown Hts - Utica Av,40.668897,-73.932942,bus
-sub_251,Sutter Av - Rutland Rd,40.664717,-73.92261,bus
-sub_251N,Sutter Av - Rutland Rd,40.664717,-73.92261,bus
-sub_251S,Sutter Av - Rutland Rd,40.664717,-73.92261,bus
-sub_252,Saratoga Av,40.661453,-73.916327,bus
-sub_252N,Saratoga Av,40.661453,-73.916327,bus
-sub_252S,Saratoga Av,40.661453,-73.916327,bus
-sub_253,Rockaway Av,40.662549,-73.908946,bus
-sub_253N,Rockaway Av,40.662549,-73.908946,bus
-sub_253S,Rockaway Av,40.662549,-73.908946,bus
-sub_254,Junius St,40.663515,-73.902447,bus
-sub_254N,Junius St,40.663515,-73.902447,bus
-sub_254S,Junius St,40.663515,-73.902447,bus
-sub_255,Pennsylvania Av,40.664635,-73.894895,bus
-sub_255N,Pennsylvania Av,40.664635,-73.894895,bus
-sub_255S,Pennsylvania Av,40.664635,-73.894895,bus
-sub_256,Van Siclen Av,40.665449,-73.889395,bus
-sub_256N,Van Siclen Av,40.665449,-73.889395,bus
-sub_256S,Van Siclen Av,40.665449,-73.889395,bus
-sub_257,New Lots Av,40.666235,-73.884079,bus
-sub_257N,New Lots Av,40.666235,-73.884079,bus
-sub_257S,New Lots Av,40.666235,-73.884079,bus
-sub_301,Harlem - 148 St,40.82388,-73.93647,bus
-sub_301N,Harlem - 148 St,40.82388,-73.93647,bus
-sub_301S,Harlem - 148 St,40.82388,-73.93647,bus
-sub_302,145 St,40.820421,-73.936245,bus
-sub_302N,145 St,40.820421,-73.936245,bus
-sub_302S,145 St,40.820421,-73.936245,bus
-sub_401,Woodlawn,40.886037,-73.878751,bus
-sub_401N,Woodlawn,40.886037,-73.878751,bus
-sub_401S,Woodlawn,40.886037,-73.878751,bus
-sub_402,Mosholu Pkwy,40.87975,-73.884655,bus
-sub_402N,Mosholu Pkwy,40.87975,-73.884655,bus
-sub_402S,Mosholu Pkwy,40.87975,-73.884655,bus
-sub_405,Bedford Park Blvd - Lehman College,40.873412,-73.890064,bus
-sub_405N,Bedford Park Blvd - Lehman College,40.873412,-73.890064,bus
-sub_405S,Bedford Park Blvd - Lehman College,40.873412,-73.890064,bus
-sub_406,Kingsbridge Rd,40.86776,-73.897174,bus
-sub_406N,Kingsbridge Rd,40.86776,-73.897174,bus
-sub_406S,Kingsbridge Rd,40.86776,-73.897174,bus
-sub_407,Fordham Rd,40.862803,-73.901034,bus
-sub_407N,Fordham Rd,40.862803,-73.901034,bus
-sub_407S,Fordham Rd,40.862803,-73.901034,bus
-sub_408,183 St,40.858407,-73.903879,bus
-sub_408N,183 St,40.858407,-73.903879,bus
-sub_408S,183 St,40.858407,-73.903879,bus
-sub_409,Burnside Av,40.853453,-73.907684,bus
-sub_409N,Burnside Av,40.853453,-73.907684,bus
-sub_409S,Burnside Av,40.853453,-73.907684,bus
-sub_410,176 St,40.84848,-73.911794,bus
-sub_410N,176 St,40.84848,-73.911794,bus
-sub_410S,176 St,40.84848,-73.911794,bus
-sub_411,Mt Eden Av,40.844434,-73.914685,bus
-sub_411N,Mt Eden Av,40.844434,-73.914685,bus
-sub_411S,Mt Eden Av,40.844434,-73.914685,bus
-sub_412,170 St,40.840075,-73.917791,bus
-sub_412N,170 St,40.840075,-73.917791,bus
-sub_412S,170 St,40.840075,-73.917791,bus
-sub_413,167 St,40.835537,-73.9214,bus
-sub_413N,167 St,40.835537,-73.9214,bus
-sub_413S,167 St,40.835537,-73.9214,bus
-sub_414,161 St - Yankee Stadium,40.827994,-73.925831,bus
-sub_414N,161 St - Yankee Stadium,40.827994,-73.925831,bus
-sub_414S,161 St - Yankee Stadium,40.827994,-73.925831,bus
-sub_415,149 St - Grand Concourse,40.818375,-73.927351,bus
-sub_415N,149 St - Grand Concourse,40.818375,-73.927351,bus
-sub_415S,149 St - Grand Concourse,40.818375,-73.927351,bus
-sub_416,138 St - Grand Concourse,40.813224,-73.929849,bus
-sub_416N,138 St - Grand Concourse,40.813224,-73.929849,bus
-sub_416S,138 St - Grand Concourse,40.813224,-73.929849,bus
-sub_418,Fulton St,40.710368,-74.009509,bus
-sub_418N,Fulton St,40.710368,-74.009509,bus
-sub_418S,Fulton St,40.710368,-74.009509,bus
-sub_419,Wall St,40.707557,-74.011862,bus
-sub_419N,Wall St,40.707557,-74.011862,bus
-sub_419S,Wall St,40.707557,-74.011862,bus
-sub_420,Bowling Green,40.704817,-74.014065,bus
-sub_420N,Bowling Green,40.704817,-74.014065,bus
-sub_420S,Bowling Green,40.704817,-74.014065,bus
-sub_423,Borough Hall,40.692404,-73.990151,bus
-sub_423N,Borough Hall,40.692404,-73.990151,bus
-sub_423S,Borough Hall,40.692404,-73.990151,bus
-sub_501,Eastchester - Dyre Av,40.8883,-73.830834,bus
-sub_501N,Eastchester - Dyre Av,40.8883,-73.830834,bus
-sub_501S,Eastchester - Dyre Av,40.8883,-73.830834,bus
-sub_502,Baychester Av,40.878663,-73.838591,bus
-sub_502N,Baychester Av,40.878663,-73.838591,bus
-sub_502S,Baychester Av,40.878663,-73.838591,bus
-sub_503,Gun Hill Rd,40.869526,-73.846384,bus
-sub_503N,Gun Hill Rd,40.869526,-73.846384,bus
-sub_503S,Gun Hill Rd,40.869526,-73.846384,bus
-sub_504,Pelham Pkwy,40.858985,-73.855359,bus
-sub_504N,Pelham Pkwy,40.858985,-73.855359,bus
-sub_504S,Pelham Pkwy,40.858985,-73.855359,bus
-sub_505,Morris Park,40.854364,-73.860495,bus
-sub_505N,Morris Park,40.854364,-73.860495,bus
-sub_505S,Morris Park,40.854364,-73.860495,bus
-sub_601,Pelham Bay Park,40.852462,-73.828121,bus
-sub_601N,Pelham Bay Park,40.852462,-73.828121,bus
-sub_601S,Pelham Bay Park,40.852462,-73.828121,bus
-sub_602,Buhre Av,40.84681,-73.832569,bus
-sub_602N,Buhre Av,40.84681,-73.832569,bus
-sub_602S,Buhre Av,40.84681,-73.832569,bus
-sub_603,Middletown Rd,40.843863,-73.836322,bus
-sub_603N,Middletown Rd,40.843863,-73.836322,bus
-sub_603S,Middletown Rd,40.843863,-73.836322,bus
-sub_604,Westchester Sq - E Tremont Av,40.839892,-73.842952,bus
-sub_604N,Westchester Sq - E Tremont Av,40.839892,-73.842952,bus
-sub_604S,Westchester Sq - E Tremont Av,40.839892,-73.842952,bus
-sub_606,Zerega Av,40.836488,-73.847036,bus
-sub_606N,Zerega Av,40.836488,-73.847036,bus
-sub_606S,Zerega Av,40.836488,-73.847036,bus
-sub_607,Castle Hill Av,40.834255,-73.851222,bus
-sub_607N,Castle Hill Av,40.834255,-73.851222,bus
-sub_607S,Castle Hill Av,40.834255,-73.851222,bus
-sub_608,Parkchester,40.833226,-73.860816,bus
-sub_608N,Parkchester,40.833226,-73.860816,bus
-sub_608S,Parkchester,40.833226,-73.860816,bus
-sub_609,St Lawrence Av,40.831509,-73.867618,bus
-sub_609N,St Lawrence Av,40.831509,-73.867618,bus
-sub_609S,St Lawrence Av,40.831509,-73.867618,bus
-sub_610,Morrison Av- Sound View,40.829521,-73.874516,bus
-sub_610N,Morrison Av- Sound View,40.829521,-73.874516,bus
-sub_610S,Morrison Av- Sound View,40.829521,-73.874516,bus
-sub_611,Elder Av,40.828584,-73.879159,bus
-sub_611N,Elder Av,40.828584,-73.879159,bus
-sub_611S,Elder Av,40.828584,-73.879159,bus
-sub_612,Whitlock Av,40.826525,-73.886283,bus
-sub_612N,Whitlock Av,40.826525,-73.886283,bus
-sub_612S,Whitlock Av,40.826525,-73.886283,bus
-sub_613,Hunts Point Av,40.820948,-73.890549,bus
-sub_613N,Hunts Point Av,40.820948,-73.890549,bus
-sub_613S,Hunts Point Av,40.820948,-73.890549,bus
-sub_614,Longwood Av,40.816104,-73.896435,bus
-sub_614N,Longwood Av,40.816104,-73.896435,bus
-sub_614S,Longwood Av,40.816104,-73.896435,bus
-sub_615,E 149 St,40.812118,-73.904098,bus
-sub_615N,E 149 St,40.812118,-73.904098,bus
-sub_615S,E 149 St,40.812118,-73.904098,bus
-sub_616,E 143 St - St Mary's St,40.808719,-73.907657,bus
-sub_616N,E 143 St - St Mary's St,40.808719,-73.907657,bus
-sub_616S,E 143 St - St Mary's St,40.808719,-73.907657,bus
-sub_617,Cypress Av,40.805368,-73.914042,bus
-sub_617N,Cypress Av,40.805368,-73.914042,bus
-sub_617S,Cypress Av,40.805368,-73.914042,bus
-sub_618,Brook Av,40.807566,-73.91924,bus
-sub_618N,Brook Av,40.807566,-73.91924,bus
-sub_618S,Brook Av,40.807566,-73.91924,bus
-sub_619,3 Av - 138 St,40.810476,-73.926138,bus
-sub_619N,3 Av - 138 St,40.810476,-73.926138,bus
-sub_619S,3 Av - 138 St,40.810476,-73.926138,bus
-sub_621,125 St,40.804138,-73.937594,bus
-sub_621N,125 St,40.804138,-73.937594,bus
-sub_621S,125 St,40.804138,-73.937594,bus
-sub_622,116 St,40.798629,-73.941617,bus
-sub_622N,116 St,40.798629,-73.941617,bus
-sub_622S,116 St,40.798629,-73.941617,bus
-sub_623,110 St,40.79502,-73.94425,bus
-sub_623N,110 St,40.79502,-73.94425,bus
-sub_623S,110 St,40.79502,-73.94425,bus
-sub_624,103 St,40.7906,-73.947478,bus
-sub_624N,103 St,40.7906,-73.947478,bus
-sub_624S,103 St,40.7906,-73.947478,bus
-sub_625,96 St,40.785672,-73.95107,bus
-sub_625N,96 St,40.785672,-73.95107,bus
-sub_625S,96 St,40.785672,-73.95107,bus
-sub_626,86 St,40.779492,-73.955589,bus
-sub_626N,86 St,40.779492,-73.955589,bus
-sub_626S,86 St,40.779492,-73.955589,bus
-sub_627,77 St,40.77362,-73.959874,bus
-sub_627N,77 St,40.77362,-73.959874,bus
-sub_627S,77 St,40.77362,-73.959874,bus
-sub_628,68 St - Hunter College,40.768141,-73.96387,bus
-sub_628N,68 St - Hunter College,40.768141,-73.96387,bus
-sub_628S,68 St - Hunter College,40.768141,-73.96387,bus
-sub_629,59 St,40.762526,-73.967967,bus
-sub_629N,59 St,40.762526,-73.967967,bus
-sub_629S,59 St,40.762526,-73.967967,bus
-sub_630,51 St,40.757107,-73.97192,bus
-sub_630N,51 St,40.757107,-73.97192,bus
-sub_630S,51 St,40.757107,-73.97192,bus
-sub_631,Grand Central - 42 St,40.751776,-73.976848,bus
-sub_631N,Grand Central - 42 St,40.751776,-73.976848,bus
-sub_631S,Grand Central - 42 St,40.751776,-73.976848,bus
-sub_632,33 St,40.746081,-73.982076,bus
-sub_632N,33 St,40.746081,-73.982076,bus
-sub_632S,33 St,40.746081,-73.982076,bus
-sub_633,28 St,40.74307,-73.984264,bus
-sub_633N,28 St,40.74307,-73.984264,bus
-sub_633S,28 St,40.74307,-73.984264,bus
-sub_634,23 St,40.739864,-73.986599,bus
-sub_634N,23 St,40.739864,-73.986599,bus
-sub_634S,23 St,40.739864,-73.986599,bus
-sub_635,14 St - Union Sq,40.734673,-73.989951,bus
-sub_635N,14 St - Union Sq,40.734673,-73.989951,bus
-sub_635S,14 St - Union Sq,40.734673,-73.989951,bus
-sub_636,Astor Pl,40.730054,-73.99107,bus
-sub_636N,Astor Pl,40.730054,-73.99107,bus
-sub_636S,Astor Pl,40.730054,-73.99107,bus
-sub_637,Bleecker St,40.725915,-73.994659,bus
-sub_637N,Bleecker St,40.725915,-73.994659,bus
-sub_637S,Bleecker St,40.725915,-73.994659,bus
-sub_638,Spring St,40.722301,-73.997141,bus
-sub_638N,Spring St,40.722301,-73.997141,bus
-sub_638S,Spring St,40.722301,-73.997141,bus
-sub_639,Canal St,40.718803,-74.000193,bus
-sub_639N,Canal St,40.718803,-74.000193,bus
-sub_639S,Canal St,40.718803,-74.000193,bus
-sub_640,Brooklyn Bridge - City Hall,40.713065,-74.004131,bus
-sub_640N,Brooklyn Bridge - City Hall,40.713065,-74.004131,bus
-sub_640S,Brooklyn Bridge - City Hall,40.713065,-74.004131,bus
-sub_701,Flushing - Main St,40.7596,-73.83003,bus
-sub_701N,Flushing - Main St,40.7596,-73.83003,bus
-sub_701S,Flushing - Main St,40.7596,-73.83003,bus
-sub_702,Mets - Willets Point,40.754622,-73.845625,bus
-sub_702N,Mets - Willets Point,40.754622,-73.845625,bus
-sub_702S,Mets - Willets Point,40.754622,-73.845625,bus
-sub_705,111 St,40.75173,-73.855334,bus
-sub_705N,111 St,40.75173,-73.855334,bus
-sub_705S,111 St,40.75173,-73.855334,bus
-sub_706,103 St - Corona Plaza,40.749865,-73.8627,bus
-sub_706N,103 St - Corona Plaza,40.749865,-73.8627,bus
-sub_706S,103 St - Corona Plaza,40.749865,-73.8627,bus
-sub_707,Junction Blvd,40.749145,-73.869527,bus
-sub_707N,Junction Blvd,40.749145,-73.869527,bus
-sub_707S,Junction Blvd,40.749145,-73.869527,bus
-sub_708,90 St - Elmhurst Av,40.748408,-73.876613,bus
-sub_708N,90 St - Elmhurst Av,40.748408,-73.876613,bus
-sub_708S,90 St - Elmhurst Av,40.748408,-73.876613,bus
-sub_709,82 St - Jackson Hts,40.747659,-73.883697,bus
-sub_709N,82 St - Jackson Hts,40.747659,-73.883697,bus
-sub_709S,82 St - Jackson Hts,40.747659,-73.883697,bus
-sub_710,74 St - Broadway,40.746848,-73.891394,bus
-sub_710N,74 St - Broadway,40.746848,-73.891394,bus
-sub_710S,74 St - Broadway,40.746848,-73.891394,bus
-sub_711,69 St,40.746325,-73.896403,bus
-sub_711N,69 St,40.746325,-73.896403,bus
-sub_711S,69 St,40.746325,-73.896403,bus
-sub_712,Woodside - 61 St,40.74563,-73.902984,bus
-sub_712N,Woodside - 61 St,40.74563,-73.902984,bus
-sub_712S,Woodside - 61 St,40.74563,-73.902984,bus
-sub_713,52 St,40.744149,-73.912549,bus
-sub_713N,52 St,40.744149,-73.912549,bus
-sub_713S,52 St,40.744149,-73.912549,bus
-sub_714,46 St,40.743132,-73.918435,bus
-sub_714N,46 St,40.743132,-73.918435,bus
-sub_714S,46 St,40.743132,-73.918435,bus
-sub_715,40 St,40.743781,-73.924016,bus
-sub_715N,40 St,40.743781,-73.924016,bus
-sub_715S,40 St,40.743781,-73.924016,bus
-sub_716,33 St,40.744587,-73.930997,bus
-sub_716N,33 St,40.744587,-73.930997,bus
-sub_716S,33 St,40.744587,-73.930997,bus
-sub_718,Queensboro Plaza,40.750582,-73.940202,bus
-sub_718N,Queensboro Plaza,40.750582,-73.940202,bus
-sub_718S,Queensboro Plaza,40.750582,-73.940202,bus
-sub_719,Court Sq,40.747023,-73.945264,bus
-sub_719N,Court Sq,40.747023,-73.945264,bus
-sub_719S,Court Sq,40.747023,-73.945264,bus
-sub_720,Hunters Point Av,40.742216,-73.948916,bus
-sub_720N,Hunters Point Av,40.742216,-73.948916,bus
-sub_720S,Hunters Point Av,40.742216,-73.948916,bus
-sub_721,Vernon Blvd - Jackson Av,40.742626,-73.953581,bus
-sub_721N,Vernon Blvd - Jackson Av,40.742626,-73.953581,bus
-sub_721S,Vernon Blvd - Jackson Av,40.742626,-73.953581,bus
-sub_723,Grand Central - 42 St,40.751431,-73.976041,bus
-sub_723N,Grand Central - 42 St,40.751431,-73.976041,bus
-sub_723S,Grand Central - 42 St,40.751431,-73.976041,bus
-sub_724,5 Av,40.753821,-73.981963,bus
-sub_724N,5 Av,40.753821,-73.981963,bus
-sub_724S,5 Av,40.753821,-73.981963,bus
-sub_725,Times Sq - 42 St,40.755477,-73.987691,bus
-sub_725N,Times Sq - 42 St,40.755477,-73.987691,bus
-sub_725S,Times Sq - 42 St,40.755477,-73.987691,bus
-sub_901,Grand Central - 42 St,40.752769,-73.979189,bus
-sub_901N,Grand Central - 42 St,40.752769,-73.979189,bus
-sub_901S,Grand Central - 42 St,40.752769,-73.979189,bus
-sub_902,Times Sq - 42 St,40.755983,-73.986229,bus
-sub_902N,Times Sq - 42 St,40.755983,-73.986229,bus
-sub_902S,Times Sq - 42 St,40.755983,-73.986229,bus
-sub_A02,Inwood - 207 St,40.868072,-73.919899,bus
-sub_A02N,Inwood - 207 St,40.868072,-73.919899,bus
-sub_A02S,Inwood - 207 St,40.868072,-73.919899,bus
-sub_A03,Dyckman St,40.865491,-73.927271,bus
-sub_A03N,Dyckman St,40.865491,-73.927271,bus
-sub_A03S,Dyckman St,40.865491,-73.927271,bus
-sub_A05,190 St,40.859022,-73.93418,bus
-sub_A05N,190 St,40.859022,-73.93418,bus
-sub_A05S,190 St,40.859022,-73.93418,bus
-sub_A06,181 St,40.851695,-73.937969,bus
-sub_A06N,181 St,40.851695,-73.937969,bus
-sub_A06S,181 St,40.851695,-73.937969,bus
-sub_A07,175 St,40.847391,-73.939704,bus
-sub_A07N,175 St,40.847391,-73.939704,bus
-sub_A07S,175 St,40.847391,-73.939704,bus
-sub_A09,168 St,40.840719,-73.939561,bus
-sub_A09N,168 St,40.840719,-73.939561,bus
-sub_A09S,168 St,40.840719,-73.939561,bus
-sub_A10,163 St - Amsterdam Av,40.836013,-73.939892,bus
-sub_A10N,163 St - Amsterdam Av,40.836013,-73.939892,bus
-sub_A10S,163 St - Amsterdam Av,40.836013,-73.939892,bus
-sub_A11,155 St,40.830518,-73.941514,bus
-sub_A11N,155 St,40.830518,-73.941514,bus
-sub_A11S,155 St,40.830518,-73.941514,bus
-sub_A12,145 St,40.824783,-73.944216,bus
-sub_A12N,145 St,40.824783,-73.944216,bus
-sub_A12S,145 St,40.824783,-73.944216,bus
-sub_A14,135 St,40.817894,-73.947649,bus
-sub_A14N,135 St,40.817894,-73.947649,bus
-sub_A14S,135 St,40.817894,-73.947649,bus
-sub_A15,125 St,40.811109,-73.952343,bus
-sub_A15N,125 St,40.811109,-73.952343,bus
-sub_A15S,125 St,40.811109,-73.952343,bus
-sub_A16,116 St,40.805085,-73.954882,bus
-sub_A16N,116 St,40.805085,-73.954882,bus
-sub_A16S,116 St,40.805085,-73.954882,bus
-sub_A17,Cathedral Pkwy (110 St),40.800603,-73.958161,bus
-sub_A17N,Cathedral Pkwy (110 St),40.800603,-73.958161,bus
-sub_A17S,Cathedral Pkwy (110 St),40.800603,-73.958161,bus
-sub_A18,103 St,40.796092,-73.961454,bus
-sub_A18N,103 St,40.796092,-73.961454,bus
-sub_A18S,103 St,40.796092,-73.961454,bus
-sub_A19,96 St,40.791642,-73.964696,bus
-sub_A19N,96 St,40.791642,-73.964696,bus
-sub_A19S,96 St,40.791642,-73.964696,bus
-sub_A20,86 St,40.785868,-73.968916,bus
-sub_A20N,86 St,40.785868,-73.968916,bus
-sub_A20S,86 St,40.785868,-73.968916,bus
-sub_A21,81 St - Museum of Natural History,40.781433,-73.972143,bus
-sub_A21N,81 St - Museum of Natural History,40.781433,-73.972143,bus
-sub_A21S,81 St - Museum of Natural History,40.781433,-73.972143,bus
-sub_A22,72 St,40.775594,-73.97641,bus
-sub_A22N,72 St,40.775594,-73.97641,bus
-sub_A22S,72 St,40.775594,-73.97641,bus
-sub_A24,59 St - Columbus Circle,40.768296,-73.981736,bus
-sub_A24N,59 St - Columbus Circle,40.768296,-73.981736,bus
-sub_A24S,59 St - Columbus Circle,40.768296,-73.981736,bus
-sub_A25,50 St,40.762456,-73.985984,bus
-sub_A25N,50 St,40.762456,-73.985984,bus
-sub_A25S,50 St,40.762456,-73.985984,bus
-sub_A27,42 St - Port Authority Bus Terminal,40.757308,-73.989735,bus
-sub_A27N,42 St - Port Authority Bus Terminal,40.757308,-73.989735,bus
-sub_A27S,42 St - Port Authority Bus Terminal,40.757308,-73.989735,bus
-sub_A28,34 St - Penn Station,40.752287,-73.993391,bus
-sub_A28N,34 St - Penn Station,40.752287,-73.993391,bus
-sub_A28S,34 St - Penn Station,40.752287,-73.993391,bus
-sub_A30,23 St,40.745906,-73.998041,bus
-sub_A30N,23 St,40.745906,-73.998041,bus
-sub_A30S,23 St,40.745906,-73.998041,bus
-sub_A31,14 St,40.740893,-74.00169,bus
-sub_A31N,14 St,40.740893,-74.00169,bus
-sub_A31S,14 St,40.740893,-74.00169,bus
-sub_A32,W 4 St,40.732338,-74.000495,bus
-sub_A32N,W 4 St,40.732338,-74.000495,bus
-sub_A32S,W 4 St,40.732338,-74.000495,bus
-sub_A33,Spring St,40.726227,-74.003739,bus
-sub_A33N,Spring St,40.726227,-74.003739,bus
-sub_A33S,Spring St,40.726227,-74.003739,bus
-sub_A34,Canal St,40.720824,-74.005229,bus
-sub_A34N,Canal St,40.720824,-74.005229,bus
-sub_A34S,Canal St,40.720824,-74.005229,bus
-sub_A36,Chambers St,40.714111,-74.008585,bus
-sub_A36N,Chambers St,40.714111,-74.008585,bus
-sub_A36S,Chambers St,40.714111,-74.008585,bus
-sub_A38,Fulton St,40.710197,-74.007691,bus
-sub_A38N,Fulton St,40.710197,-74.007691,bus
-sub_A38S,Fulton St,40.710197,-74.007691,bus
-sub_A40,High St,40.699337,-73.990531,bus
-sub_A40N,High St,40.699337,-73.990531,bus
-sub_A40S,High St,40.699337,-73.990531,bus
-sub_A41,Jay St - MetroTech,40.692338,-73.987342,bus
-sub_A41N,Jay St - MetroTech,40.692338,-73.987342,bus
-sub_A41S,Jay St - MetroTech,40.692338,-73.987342,bus
-sub_A42,Hoyt - Schermerhorn Sts,40.688484,-73.985001,bus
-sub_A42N,Hoyt - Schermerhorn Sts,40.688484,-73.985001,bus
-sub_A42S,Hoyt - Schermerhorn Sts,40.688484,-73.985001,bus
-sub_A43,Lafayette Av,40.686113,-73.973946,bus
-sub_A43N,Lafayette Av,40.686113,-73.973946,bus
-sub_A43S,Lafayette Av,40.686113,-73.973946,bus
-sub_A44,Clinton - Washington Avs,40.683263,-73.965838,bus
-sub_A44N,Clinton - Washington Avs,40.683263,-73.965838,bus
-sub_A44S,Clinton - Washington Avs,40.683263,-73.965838,bus
-sub_A45,Franklin Av,40.68138,-73.956848,bus
-sub_A45N,Franklin Av,40.68138,-73.956848,bus
-sub_A45S,Franklin Av,40.68138,-73.956848,bus
-sub_A46,Nostrand Av,40.680438,-73.950426,bus
-sub_A46N,Nostrand Av,40.680438,-73.950426,bus
-sub_A46S,Nostrand Av,40.680438,-73.950426,bus
-sub_A47,Kingston - Throop Avs,40.679921,-73.940858,bus
-sub_A47N,Kingston - Throop Avs,40.679921,-73.940858,bus
-sub_A47S,Kingston - Throop Avs,40.679921,-73.940858,bus
-sub_A48,Utica Av,40.679364,-73.930729,bus
-sub_A48N,Utica Av,40.679364,-73.930729,bus
-sub_A48S,Utica Av,40.679364,-73.930729,bus
-sub_A49,Ralph Av,40.678822,-73.920786,bus
-sub_A49N,Ralph Av,40.678822,-73.920786,bus
-sub_A49S,Ralph Av,40.678822,-73.920786,bus
-sub_A50,Rockaway Av,40.67834,-73.911946,bus
-sub_A50N,Rockaway Av,40.67834,-73.911946,bus
-sub_A50S,Rockaway Av,40.67834,-73.911946,bus
-sub_A51,Broadway Jct,40.678334,-73.905316,bus
-sub_A51N,Broadway Jct,40.678334,-73.905316,bus
-sub_A51S,Broadway Jct,40.678334,-73.905316,bus
-sub_A52,Liberty Av,40.674542,-73.896548,bus
-sub_A52N,Liberty Av,40.674542,-73.896548,bus
-sub_A52S,Liberty Av,40.674542,-73.896548,bus
-sub_A53,Van Siclen Av,40.67271,-73.890358,bus
-sub_A53N,Van Siclen Av,40.67271,-73.890358,bus
-sub_A53S,Van Siclen Av,40.67271,-73.890358,bus
-sub_A54,Shepherd Av,40.67413,-73.88075,bus
-sub_A54N,Shepherd Av,40.67413,-73.88075,bus
-sub_A54S,Shepherd Av,40.67413,-73.88075,bus
-sub_A55,Euclid Av,40.675377,-73.872106,bus
-sub_A55N,Euclid Av,40.675377,-73.872106,bus
-sub_A55S,Euclid Av,40.675377,-73.872106,bus
-sub_A57,Grant Av,40.677044,-73.86505,bus
-sub_A57N,Grant Av,40.677044,-73.86505,bus
-sub_A57S,Grant Av,40.677044,-73.86505,bus
-sub_A59,80 St,40.679371,-73.858992,bus
-sub_A59N,80 St,40.679371,-73.858992,bus
-sub_A59S,80 St,40.679371,-73.858992,bus
-sub_A60,88 St,40.679843,-73.85147,bus
-sub_A60N,88 St,40.679843,-73.85147,bus
-sub_A60S,88 St,40.679843,-73.85147,bus
-sub_A61,Rockaway Blvd,40.680429,-73.843853,bus
-sub_A61N,Rockaway Blvd,40.680429,-73.843853,bus
-sub_A61S,Rockaway Blvd,40.680429,-73.843853,bus
-sub_A63,104 St,40.681711,-73.837683,bus
-sub_A63N,104 St,40.681711,-73.837683,bus
-sub_A63S,104 St,40.681711,-73.837683,bus
-sub_A64,111 St,40.684331,-73.832163,bus
-sub_A64N,111 St,40.684331,-73.832163,bus
-sub_A64S,111 St,40.684331,-73.832163,bus
-sub_A65,Ozone Park - Lefferts Blvd,40.685951,-73.825798,bus
-sub_A65N,Ozone Park - Lefferts Blvd,40.685951,-73.825798,bus
-sub_A65S,Ozone Park - Lefferts Blvd,40.685951,-73.825798,bus
-sub_B04,21 St - Queensbridge,40.754203,-73.942836,bus
-sub_B04N,21 St - Queensbridge,40.754203,-73.942836,bus
-sub_B04S,21 St - Queensbridge,40.754203,-73.942836,bus
-sub_B06,Roosevelt Island,40.759145,-73.95326,bus
-sub_B06N,Roosevelt Island,40.759145,-73.95326,bus
-sub_B06S,Roosevelt Island,40.759145,-73.95326,bus
-sub_B08,Lexington Av/63 St,40.764629,-73.966113,bus
-sub_B08N,Lexington Av/63 St,40.764629,-73.966113,bus
-sub_B08S,Lexington Av/63 St,40.764629,-73.966113,bus
-sub_B10,57 St,40.763972,-73.97745,bus
-sub_B10N,57 St,40.763972,-73.97745,bus
-sub_B10S,57 St,40.763972,-73.97745,bus
-sub_B12,9 Av,40.646292,-73.994324,bus
-sub_B12N,9 Av,40.646292,-73.994324,bus
-sub_B12S,9 Av,40.646292,-73.994324,bus
-sub_B13,Fort Hamilton Pkwy,40.640914,-73.994304,bus
-sub_B13N,Fort Hamilton Pkwy,40.640914,-73.994304,bus
-sub_B13S,Fort Hamilton Pkwy,40.640914,-73.994304,bus
-sub_B14,50 St,40.63626,-73.994791,bus
-sub_B14N,50 St,40.63626,-73.994791,bus
-sub_B14S,50 St,40.63626,-73.994791,bus
-sub_B15,55 St,40.631435,-73.995476,bus
-sub_B15N,55 St,40.631435,-73.995476,bus
-sub_B15S,55 St,40.631435,-73.995476,bus
-sub_B16,62 St,40.626472,-73.996895,bus
-sub_B16N,62 St,40.626472,-73.996895,bus
-sub_B16S,62 St,40.626472,-73.996895,bus
-sub_B17,71 St,40.619589,-73.998864,bus
-sub_B17N,71 St,40.619589,-73.998864,bus
-sub_B17S,71 St,40.619589,-73.998864,bus
-sub_B18,79 St,40.613501,-74.00061,bus
-sub_B18N,79 St,40.613501,-74.00061,bus
-sub_B18S,79 St,40.613501,-74.00061,bus
-sub_B19,18 Av,40.607954,-74.001736,bus
-sub_B19N,18 Av,40.607954,-74.001736,bus
-sub_B19S,18 Av,40.607954,-74.001736,bus
-sub_B20,20 Av,40.604556,-73.998168,bus
-sub_B20N,20 Av,40.604556,-73.998168,bus
-sub_B20S,20 Av,40.604556,-73.998168,bus
-sub_B21,Bay Pkwy,40.601875,-73.993728,bus
-sub_B21N,Bay Pkwy,40.601875,-73.993728,bus
-sub_B21S,Bay Pkwy,40.601875,-73.993728,bus
-sub_B22,25 Av,40.597704,-73.986829,bus
-sub_B22N,25 Av,40.597704,-73.986829,bus
-sub_B22S,25 Av,40.597704,-73.986829,bus
-sub_B23,Bay 50 St,40.588841,-73.983765,bus
-sub_B23N,Bay 50 St,40.588841,-73.983765,bus
-sub_B23S,Bay 50 St,40.588841,-73.983765,bus
-sub_D01,Norwood - 205 St,40.874811,-73.878855,bus
-sub_D01N,Norwood - 205 St,40.874811,-73.878855,bus
-sub_D01S,Norwood - 205 St,40.874811,-73.878855,bus
-sub_D03,Bedford Park Blvd,40.873244,-73.887138,bus
-sub_D03N,Bedford Park Blvd,40.873244,-73.887138,bus
-sub_D03S,Bedford Park Blvd,40.873244,-73.887138,bus
-sub_D04,Kingsbridge Rd,40.866978,-73.893509,bus
-sub_D04N,Kingsbridge Rd,40.866978,-73.893509,bus
-sub_D04S,Kingsbridge Rd,40.866978,-73.893509,bus
-sub_D05,Fordham Rd,40.861296,-73.897749,bus
-sub_D05N,Fordham Rd,40.861296,-73.897749,bus
-sub_D05S,Fordham Rd,40.861296,-73.897749,bus
-sub_D06,182-183 Sts,40.856093,-73.900741,bus
-sub_D06N,182-183 Sts,40.856093,-73.900741,bus
-sub_D06S,182-183 Sts,40.856093,-73.900741,bus
-sub_D07,Tremont Av,40.85041,-73.905227,bus
-sub_D07N,Tremont Av,40.85041,-73.905227,bus
-sub_D07S,Tremont Av,40.85041,-73.905227,bus
-sub_D08,174-175 Sts,40.8459,-73.910136,bus
-sub_D08N,174-175 Sts,40.8459,-73.910136,bus
-sub_D08S,174-175 Sts,40.8459,-73.910136,bus
-sub_D09,170 St,40.839306,-73.9134,bus
-sub_D09N,170 St,40.839306,-73.9134,bus
-sub_D09S,170 St,40.839306,-73.9134,bus
-sub_D10,167 St,40.833771,-73.91844,bus
-sub_D10N,167 St,40.833771,-73.91844,bus
-sub_D10S,167 St,40.833771,-73.91844,bus
-sub_D11,161 St - Yankee Stadium,40.827905,-73.925651,bus
-sub_D11N,161 St - Yankee Stadium,40.827905,-73.925651,bus
-sub_D11S,161 St - Yankee Stadium,40.827905,-73.925651,bus
-sub_D12,155 St,40.830135,-73.938209,bus
-sub_D12N,155 St,40.830135,-73.938209,bus
-sub_D12S,155 St,40.830135,-73.938209,bus
-sub_D13,145 St,40.824783,-73.944216,bus
-sub_D13N,145 St,40.824783,-73.944216,bus
-sub_D13S,145 St,40.824783,-73.944216,bus
-sub_D14,7 Av,40.762862,-73.981637,bus
-sub_D14N,7 Av,40.762862,-73.981637,bus
-sub_D14S,7 Av,40.762862,-73.981637,bus
-sub_D15,47-50 Sts - Rockefeller Ctr,40.758663,-73.981329,bus
-sub_D15N,47-50 Sts - Rockefeller Ctr,40.758663,-73.981329,bus
-sub_D15S,47-50 Sts - Rockefeller Ctr,40.758663,-73.981329,bus
-sub_D16,42 St - Bryant Pk,40.754222,-73.984569,bus
-sub_D16N,42 St - Bryant Pk,40.754222,-73.984569,bus
-sub_D16S,42 St - Bryant Pk,40.754222,-73.984569,bus
-sub_D17,34 St - Herald Sq,40.749719,-73.987823,bus
-sub_D17N,34 St - Herald Sq,40.749719,-73.987823,bus
-sub_D17S,34 St - Herald Sq,40.749719,-73.987823,bus
-sub_D18,23 St,40.742878,-73.992821,bus
-sub_D18N,23 St,40.742878,-73.992821,bus
-sub_D18S,23 St,40.742878,-73.992821,bus
-sub_D19,14 St,40.738228,-73.996209,bus
-sub_D19N,14 St,40.738228,-73.996209,bus
-sub_D19S,14 St,40.738228,-73.996209,bus
-sub_D20,W 4 St,40.732338,-74.000495,bus
-sub_D20N,W 4 St,40.732338,-74.000495,bus
-sub_D20S,W 4 St,40.732338,-74.000495,bus
-sub_D21,Broadway-Lafayette St,40.725297,-73.996204,bus
-sub_D21N,Broadway-Lafayette St,40.725297,-73.996204,bus
-sub_D21S,Broadway-Lafayette St,40.725297,-73.996204,bus
-sub_D22,Grand St,40.718267,-73.993753,bus
-sub_D22N,Grand St,40.718267,-73.993753,bus
-sub_D22S,Grand St,40.718267,-73.993753,bus
-sub_D24,Atlantic Av - Barclays Ctr,40.68446,-73.97689,bus
-sub_D24N,Atlantic Av - Barclays Ctr,40.68446,-73.97689,bus
-sub_D24S,Atlantic Av - Barclays Ctr,40.68446,-73.97689,bus
-sub_D25,7 Av,40.67705,-73.972367,bus
-sub_D25N,7 Av,40.67705,-73.972367,bus
-sub_D25S,7 Av,40.67705,-73.972367,bus
-sub_D26,Prospect Park,40.661614,-73.962246,bus
-sub_D26N,Prospect Park,40.661614,-73.962246,bus
-sub_D26S,Prospect Park,40.661614,-73.962246,bus
-sub_D27,Parkside Av,40.655292,-73.961495,bus
-sub_D27N,Parkside Av,40.655292,-73.961495,bus
-sub_D27S,Parkside Av,40.655292,-73.961495,bus
-sub_D28,Church Av,40.650527,-73.962982,bus
-sub_D28N,Church Av,40.650527,-73.962982,bus
-sub_D28S,Church Av,40.650527,-73.962982,bus
-sub_D29,Beverly Rd,40.644031,-73.964492,bus
-sub_D29N,Beverly Rd,40.644031,-73.964492,bus
-sub_D29S,Beverly Rd,40.644031,-73.964492,bus
-sub_D30,Cortelyou Rd,40.640927,-73.963891,bus
-sub_D30N,Cortelyou Rd,40.640927,-73.963891,bus
-sub_D30S,Cortelyou Rd,40.640927,-73.963891,bus
-sub_D31,Newkirk Plaza,40.635082,-73.962793,bus
-sub_D31N,Newkirk Plaza,40.635082,-73.962793,bus
-sub_D31S,Newkirk Plaza,40.635082,-73.962793,bus
-sub_D32,Avenue H,40.62927,-73.961639,bus
-sub_D32N,Avenue H,40.62927,-73.961639,bus
-sub_D32S,Avenue H,40.62927,-73.961639,bus
-sub_D33,Avenue J,40.625039,-73.960803,bus
-sub_D33N,Avenue J,40.625039,-73.960803,bus
-sub_D33S,Avenue J,40.625039,-73.960803,bus
-sub_D34,Avenue M,40.617618,-73.959399,bus
-sub_D34N,Avenue M,40.617618,-73.959399,bus
-sub_D34S,Avenue M,40.617618,-73.959399,bus
-sub_D35,Kings Hwy,40.60867,-73.957734,bus
-sub_D35N,Kings Hwy,40.60867,-73.957734,bus
-sub_D35S,Kings Hwy,40.60867,-73.957734,bus
-sub_D37,Avenue U,40.5993,-73.955929,bus
-sub_D37N,Avenue U,40.5993,-73.955929,bus
-sub_D37S,Avenue U,40.5993,-73.955929,bus
-sub_D38,Neck Rd,40.595246,-73.955161,bus
-sub_D38N,Neck Rd,40.595246,-73.955161,bus
-sub_D38S,Neck Rd,40.595246,-73.955161,bus
-sub_D39,Sheepshead Bay,40.586896,-73.954155,bus
-sub_D39N,Sheepshead Bay,40.586896,-73.954155,bus
-sub_D39S,Sheepshead Bay,40.586896,-73.954155,bus
-sub_D40,Brighton Beach,40.577621,-73.961376,bus
-sub_D40N,Brighton Beach,40.577621,-73.961376,bus
-sub_D40S,Brighton Beach,40.577621,-73.961376,bus
-sub_D41,Ocean Pkwy,40.576312,-73.968501,bus
-sub_D41N,Ocean Pkwy,40.576312,-73.968501,bus
-sub_D41S,Ocean Pkwy,40.576312,-73.968501,bus
-sub_D42,W 8 St - NY Aquarium,40.576127,-73.975939,bus
-sub_D42N,W 8 St - NY Aquarium,40.576127,-73.975939,bus
-sub_D42S,W 8 St - NY Aquarium,40.576127,-73.975939,bus
-sub_D43,Coney Island - Stillwell Av,40.577422,-73.981233,bus
-sub_D43N,Coney Island - Stillwell Av,40.577422,-73.981233,bus
-sub_D43S,Coney Island - Stillwell Av,40.577422,-73.981233,bus
-sub_E01,World Trade Center,40.712582,-74.009781,bus
-sub_E01N,World Trade Center,40.712582,-74.009781,bus
-sub_E01S,World Trade Center,40.712582,-74.009781,bus
-sub_F01,Jamaica - 179 St,40.712646,-73.783817,bus
-sub_F01N,Jamaica - 179 St,40.712646,-73.783817,bus
-sub_F01S,Jamaica - 179 St,40.712646,-73.783817,bus
-sub_F02,169 St,40.71047,-73.793604,bus
-sub_F02N,169 St,40.71047,-73.793604,bus
-sub_F02S,169 St,40.71047,-73.793604,bus
-sub_F03,Parsons Blvd,40.707564,-73.803326,bus
-sub_F03N,Parsons Blvd,40.707564,-73.803326,bus
-sub_F03S,Parsons Blvd,40.707564,-73.803326,bus
-sub_F04,Sutphin Blvd,40.70546,-73.810708,bus
-sub_F04N,Sutphin Blvd,40.70546,-73.810708,bus
-sub_F04S,Sutphin Blvd,40.70546,-73.810708,bus
-sub_F05,Briarwood - Van Wyck Blvd,40.709179,-73.820574,bus
-sub_F05N,Briarwood - Van Wyck Blvd,40.709179,-73.820574,bus
-sub_F05S,Briarwood - Van Wyck Blvd,40.709179,-73.820574,bus
-sub_F06,Kew Gardens - Union Tpke,40.714441,-73.831008,bus
-sub_F06N,Kew Gardens - Union Tpke,40.714441,-73.831008,bus
-sub_F06S,Kew Gardens - Union Tpke,40.714441,-73.831008,bus
-sub_F07,75 Av,40.718331,-73.837324,bus
-sub_F07N,75 Av,40.718331,-73.837324,bus
-sub_F07S,75 Av,40.718331,-73.837324,bus
-sub_F09,Court Sq,40.747846,-73.946,bus
-sub_F09N,Court Sq,40.747846,-73.946,bus
-sub_F09S,Court Sq,40.747846,-73.946,bus
-sub_F11,Lexington Av/53 St,40.757552,-73.969055,bus
-sub_F11N,Lexington Av/53 St,40.757552,-73.969055,bus
-sub_F11S,Lexington Av/53 St,40.757552,-73.969055,bus
-sub_F12,5 Av/53 St,40.760167,-73.975224,bus
-sub_F12N,5 Av/53 St,40.760167,-73.975224,bus
-sub_F12S,5 Av/53 St,40.760167,-73.975224,bus
-sub_F14,2 Av,40.723402,-73.989938,bus
-sub_F14N,2 Av,40.723402,-73.989938,bus
-sub_F14S,2 Av,40.723402,-73.989938,bus
-sub_F15,Delancey St,40.718611,-73.988114,bus
-sub_F15N,Delancey St,40.718611,-73.988114,bus
-sub_F15S,Delancey St,40.718611,-73.988114,bus
-sub_F16,East Broadway,40.713715,-73.990173,bus
-sub_F16N,East Broadway,40.713715,-73.990173,bus
-sub_F16S,East Broadway,40.713715,-73.990173,bus
-sub_F18,York St,40.701397,-73.986751,bus
-sub_F18N,York St,40.701397,-73.986751,bus
-sub_F18S,York St,40.701397,-73.986751,bus
-sub_F20,Bergen St,40.686145,-73.990862,bus
-sub_F20N,Bergen St,40.686145,-73.990862,bus
-sub_F20S,Bergen St,40.686145,-73.990862,bus
-sub_F21,Carroll St,40.680303,-73.995048,bus
-sub_F21N,Carroll St,40.680303,-73.995048,bus
-sub_F21S,Carroll St,40.680303,-73.995048,bus
-sub_F22,Smith - 9 Sts,40.67358,-73.995959,bus
-sub_F22N,Smith - 9 Sts,40.67358,-73.995959,bus
-sub_F22S,Smith - 9 Sts,40.67358,-73.995959,bus
-sub_F23,4 Av,40.670272,-73.989779,bus
-sub_F23N,4 Av,40.670272,-73.989779,bus
-sub_F23S,4 Av,40.670272,-73.989779,bus
-sub_F24,7 Av,40.666271,-73.980305,bus
-sub_F24N,7 Av,40.666271,-73.980305,bus
-sub_F24S,7 Av,40.666271,-73.980305,bus
-sub_F25,15 St - Prospect Park,40.660365,-73.979493,bus
-sub_F25N,15 St - Prospect Park,40.660365,-73.979493,bus
-sub_F25S,15 St - Prospect Park,40.660365,-73.979493,bus
-sub_F26,Fort Hamilton Pkwy,40.650782,-73.975776,bus
-sub_F26N,Fort Hamilton Pkwy,40.650782,-73.975776,bus
-sub_F26S,Fort Hamilton Pkwy,40.650782,-73.975776,bus
-sub_F27,Church Av,40.644041,-73.979678,bus
-sub_F27N,Church Av,40.644041,-73.979678,bus
-sub_F27S,Church Av,40.644041,-73.979678,bus
-sub_F29,Ditmas Av,40.636119,-73.978172,bus
-sub_F29N,Ditmas Av,40.636119,-73.978172,bus
-sub_F29S,Ditmas Av,40.636119,-73.978172,bus
-sub_F30,18 Av,40.629755,-73.976971,bus
-sub_F30N,18 Av,40.629755,-73.976971,bus
-sub_F30S,18 Av,40.629755,-73.976971,bus
-sub_F31,Avenue I,40.625322,-73.976127,bus
-sub_F31N,Avenue I,40.625322,-73.976127,bus
-sub_F31S,Avenue I,40.625322,-73.976127,bus
-sub_F32,Bay Pkwy,40.620769,-73.975264,bus
-sub_F32N,Bay Pkwy,40.620769,-73.975264,bus
-sub_F32S,Bay Pkwy,40.620769,-73.975264,bus
-sub_F33,Avenue N,40.61514,-73.974197,bus
-sub_F33N,Avenue N,40.61514,-73.974197,bus
-sub_F33S,Avenue N,40.61514,-73.974197,bus
-sub_F34,Avenue P,40.608944,-73.973022,bus
-sub_F34N,Avenue P,40.608944,-73.973022,bus
-sub_F34S,Avenue P,40.608944,-73.973022,bus
-sub_F35,Kings Hwy,40.603217,-73.972361,bus
-sub_F35N,Kings Hwy,40.603217,-73.972361,bus
-sub_F35S,Kings Hwy,40.603217,-73.972361,bus
-sub_F36,Avenue U,40.596063,-73.973357,bus
-sub_F36N,Avenue U,40.596063,-73.973357,bus
-sub_F36S,Avenue U,40.596063,-73.973357,bus
-sub_F38,Avenue X,40.58962,-73.97425,bus
-sub_F38N,Avenue X,40.58962,-73.97425,bus
-sub_F38S,Avenue X,40.58962,-73.97425,bus
-sub_F39,Neptune Av,40.581011,-73.974574,bus
-sub_F39N,Neptune Av,40.581011,-73.974574,bus
-sub_F39S,Neptune Av,40.581011,-73.974574,bus
-sub_G05,Jamaica Center - Parsons/Archer,40.702147,-73.801109,bus
-sub_G05N,Jamaica Center - Parsons/Archer,40.702147,-73.801109,bus
-sub_G05S,Jamaica Center - Parsons/Archer,40.702147,-73.801109,bus
-sub_G06,Sutphin Blvd - Archer Av - JFK Airport,40.700486,-73.807969,bus
-sub_G06N,Sutphin Blvd - Archer Av - JFK Airport,40.700486,-73.807969,bus
-sub_G06S,Sutphin Blvd - Archer Av - JFK Airport,40.700486,-73.807969,bus
-sub_G07,Jamaica - Van Wyck,40.702566,-73.816859,bus
-sub_G07N,Jamaica - Van Wyck,40.702566,-73.816859,bus
-sub_G07S,Jamaica - Van Wyck,40.702566,-73.816859,bus
-sub_G08,Forest Hills - 71 Av,40.721691,-73.844521,bus
-sub_G08N,Forest Hills - 71 Av,40.721691,-73.844521,bus
-sub_G08S,Forest Hills - 71 Av,40.721691,-73.844521,bus
-sub_G09,67 Av,40.726523,-73.852719,bus
-sub_G09N,67 Av,40.726523,-73.852719,bus
-sub_G09S,67 Av,40.726523,-73.852719,bus
-sub_G10,63 Dr - Rego Park,40.729846,-73.861604,bus
-sub_G10N,63 Dr - Rego Park,40.729846,-73.861604,bus
-sub_G10S,63 Dr - Rego Park,40.729846,-73.861604,bus
-sub_G11,Woodhaven Blvd,40.733106,-73.869229,bus
-sub_G11N,Woodhaven Blvd,40.733106,-73.869229,bus
-sub_G11S,Woodhaven Blvd,40.733106,-73.869229,bus
-sub_G12,Grand Av - Newtown,40.737015,-73.877223,bus
-sub_G12N,Grand Av - Newtown,40.737015,-73.877223,bus
-sub_G12S,Grand Av - Newtown,40.737015,-73.877223,bus
-sub_G13,Elmhurst Av,40.742454,-73.882017,bus
-sub_G13N,Elmhurst Av,40.742454,-73.882017,bus
-sub_G13S,Elmhurst Av,40.742454,-73.882017,bus
-sub_G14,Jackson Hts - Roosevelt Av,40.746644,-73.891338,bus
-sub_G14N,Jackson Hts - Roosevelt Av,40.746644,-73.891338,bus
-sub_G14S,Jackson Hts - Roosevelt Av,40.746644,-73.891338,bus
-sub_G15,65 St,40.749669,-73.898453,bus
-sub_G15N,65 St,40.749669,-73.898453,bus
-sub_G15S,65 St,40.749669,-73.898453,bus
-sub_G16,Northern Blvd,40.752885,-73.906006,bus
-sub_G16N,Northern Blvd,40.752885,-73.906006,bus
-sub_G16S,Northern Blvd,40.752885,-73.906006,bus
-sub_G18,46 St,40.756312,-73.913333,bus
-sub_G18N,46 St,40.756312,-73.913333,bus
-sub_G18S,46 St,40.756312,-73.913333,bus
-sub_G19,Steinway St,40.756879,-73.92074,bus
-sub_G19N,Steinway St,40.756879,-73.92074,bus
-sub_G19S,Steinway St,40.756879,-73.92074,bus
-sub_G20,36 St,40.752039,-73.928781,bus
-sub_G20N,36 St,40.752039,-73.928781,bus
-sub_G20S,36 St,40.752039,-73.928781,bus
-sub_G21,Queens Plaza,40.748973,-73.937243,bus
-sub_G21N,Queens Plaza,40.748973,-73.937243,bus
-sub_G21S,Queens Plaza,40.748973,-73.937243,bus
-sub_G22,Court Sq,40.746554,-73.943832,bus
-sub_G22N,Court Sq,40.746554,-73.943832,bus
-sub_G22S,Court Sq,40.746554,-73.943832,bus
-sub_G24,21 St,40.744065,-73.949724,bus
-sub_G24N,21 St,40.744065,-73.949724,bus
-sub_G24S,21 St,40.744065,-73.949724,bus
-sub_G26,Greenpoint Av,40.731352,-73.954449,bus
-sub_G26N,Greenpoint Av,40.731352,-73.954449,bus
-sub_G26S,Greenpoint Av,40.731352,-73.954449,bus
-sub_G28,Nassau Av,40.724635,-73.951277,bus
-sub_G28N,Nassau Av,40.724635,-73.951277,bus
-sub_G28S,Nassau Av,40.724635,-73.951277,bus
-sub_G29,Metropolitan Av,40.712792,-73.951418,bus
-sub_G29N,Metropolitan Av,40.712792,-73.951418,bus
-sub_G29S,Metropolitan Av,40.712792,-73.951418,bus
-sub_G30,Broadway,40.706092,-73.950308,bus
-sub_G30N,Broadway,40.706092,-73.950308,bus
-sub_G30S,Broadway,40.706092,-73.950308,bus
-sub_G31,Flushing Av,40.700377,-73.950234,bus
-sub_G31N,Flushing Av,40.700377,-73.950234,bus
-sub_G31S,Flushing Av,40.700377,-73.950234,bus
-sub_G32,Myrtle - Willoughby Avs,40.694568,-73.949046,bus
-sub_G32N,Myrtle - Willoughby Avs,40.694568,-73.949046,bus
-sub_G32S,Myrtle - Willoughby Avs,40.694568,-73.949046,bus
-sub_G33,Bedford - Nostrand Avs,40.689627,-73.953522,bus
-sub_G33N,Bedford - Nostrand Avs,40.689627,-73.953522,bus
-sub_G33S,Bedford - Nostrand Avs,40.689627,-73.953522,bus
-sub_G34,Classon Av,40.688873,-73.96007,bus
-sub_G34N,Classon Av,40.688873,-73.96007,bus
-sub_G34S,Classon Av,40.688873,-73.96007,bus
-sub_G35,Clinton - Washington Avs,40.688089,-73.966839,bus
-sub_G35N,Clinton - Washington Avs,40.688089,-73.966839,bus
-sub_G35S,Clinton - Washington Avs,40.688089,-73.966839,bus
-sub_G36,Fulton St,40.687119,-73.975375,bus
-sub_G36N,Fulton St,40.687119,-73.975375,bus
-sub_G36S,Fulton St,40.687119,-73.975375,bus
-sub_H01,Aqueduct Racetrack,40.668234,-73.834058,bus
-sub_H01N,Aqueduct Racetrack,40.668234,-73.834058,bus
-sub_H01S,Aqueduct Racetrack,40.668234,-73.834058,bus
-sub_H02,Aqueduct - N Conduit Av,40.668234,-73.834058,bus
-sub_H02N,Aqueduct - N Conduit Av,40.668234,-73.834058,bus
-sub_H02S,Aqueduct - N Conduit Av,40.668234,-73.834058,bus
-sub_H03,Howard Beach - JFK Airport,40.660476,-73.830301,bus
-sub_H03N,Howard Beach - JFK Airport,40.660476,-73.830301,bus
-sub_H03S,Howard Beach - JFK Airport,40.660476,-73.830301,bus
-sub_H04,Broad Channel,40.608382,-73.815925,bus
-sub_H04N,Broad Channel,40.608382,-73.815925,bus
-sub_H04S,Broad Channel,40.608382,-73.815925,bus
-sub_H06,Beach 67 St,40.590927,-73.796924,bus
-sub_H06N,Beach 67 St,40.590927,-73.796924,bus
-sub_H06S,Beach 67 St,40.590927,-73.796924,bus
-sub_H07,Beach 60 St,40.592374,-73.788522,bus
-sub_H07N,Beach 60 St,40.592374,-73.788522,bus
-sub_H07S,Beach 60 St,40.592374,-73.788522,bus
-sub_H08,Beach 44 St,40.592943,-73.776013,bus
-sub_H08N,Beach 44 St,40.592943,-73.776013,bus
-sub_H08S,Beach 44 St,40.592943,-73.776013,bus
-sub_H09,Beach 36 St,40.595398,-73.768175,bus
-sub_H09N,Beach 36 St,40.595398,-73.768175,bus
-sub_H09S,Beach 36 St,40.595398,-73.768175,bus
-sub_H10,Beach 25 St,40.600066,-73.761353,bus
-sub_H10N,Beach 25 St,40.600066,-73.761353,bus
-sub_H10S,Beach 25 St,40.600066,-73.761353,bus
-sub_H11,Far Rockaway - Mott Av,40.603995,-73.755405,bus
-sub_H11N,Far Rockaway - Mott Av,40.603995,-73.755405,bus
-sub_H11S,Far Rockaway - Mott Av,40.603995,-73.755405,bus
-sub_H12,Beach 90 St,40.588034,-73.813641,bus
-sub_H12N,Beach 90 St,40.588034,-73.813641,bus
-sub_H12S,Beach 90 St,40.588034,-73.813641,bus
-sub_H13,Beach 98 St,40.585307,-73.820558,bus
-sub_H13N,Beach 98 St,40.585307,-73.820558,bus
-sub_H13S,Beach 98 St,40.585307,-73.820558,bus
-sub_H14,Beach 105 St,40.583209,-73.827559,bus
-sub_H14N,Beach 105 St,40.583209,-73.827559,bus
-sub_H14S,Beach 105 St,40.583209,-73.827559,bus
-sub_H15,Rockaway Park - Beach 116 St,40.580903,-73.835592,bus
-sub_H15N,Rockaway Park - Beach 116 St,40.580903,-73.835592,bus
-sub_H15S,Rockaway Park - Beach 116 St,40.580903,-73.835592,bus
-sub_J12,121 St,40.700492,-73.828294,bus
-sub_J12N,121 St,40.700492,-73.828294,bus
-sub_J12S,121 St,40.700492,-73.828294,bus
-sub_J13,111 St,40.697418,-73.836345,bus
-sub_J13N,111 St,40.697418,-73.836345,bus
-sub_J13S,111 St,40.697418,-73.836345,bus
-sub_J14,104 St,40.695178,-73.84433,bus
-sub_J14N,104 St,40.695178,-73.84433,bus
-sub_J14S,104 St,40.695178,-73.84433,bus
-sub_J15,Woodhaven Blvd,40.693879,-73.851576,bus
-sub_J15N,Woodhaven Blvd,40.693879,-73.851576,bus
-sub_J15S,Woodhaven Blvd,40.693879,-73.851576,bus
-sub_J16,85 St - Forest Pkwy,40.692435,-73.86001,bus
-sub_J16N,85 St - Forest Pkwy,40.692435,-73.86001,bus
-sub_J16S,85 St - Forest Pkwy,40.692435,-73.86001,bus
-sub_J17,75 St,40.691324,-73.867139,bus
-sub_J17N,75 St,40.691324,-73.867139,bus
-sub_J17S,75 St,40.691324,-73.867139,bus
-sub_J19,Cypress Hills,40.689941,-73.87255,bus
-sub_J19N,Cypress Hills,40.689941,-73.87255,bus
-sub_J19S,Cypress Hills,40.689941,-73.87255,bus
-sub_J20,Crescent St,40.683194,-73.873785,bus
-sub_J20N,Crescent St,40.683194,-73.873785,bus
-sub_J20S,Crescent St,40.683194,-73.873785,bus
-sub_J21,Norwood Av,40.68141,-73.880039,bus
-sub_J21N,Norwood Av,40.68141,-73.880039,bus
-sub_J21S,Norwood Av,40.68141,-73.880039,bus
-sub_J22,Cleveland St,40.679947,-73.884639,bus
-sub_J22N,Cleveland St,40.679947,-73.884639,bus
-sub_J22S,Cleveland St,40.679947,-73.884639,bus
-sub_J23,Van Siclen Av,40.678024,-73.891688,bus
-sub_J23N,Van Siclen Av,40.678024,-73.891688,bus
-sub_J23S,Van Siclen Av,40.678024,-73.891688,bus
-sub_J24,Alabama Av,40.676992,-73.898654,bus
-sub_J24N,Alabama Av,40.676992,-73.898654,bus
-sub_J24S,Alabama Av,40.676992,-73.898654,bus
-sub_J27,Broadway Jct,40.679498,-73.904512,bus
-sub_J27N,Broadway Jct,40.679498,-73.904512,bus
-sub_J27S,Broadway Jct,40.679498,-73.904512,bus
-sub_J28,Chauncey St,40.682893,-73.910456,bus
-sub_J28N,Chauncey St,40.682893,-73.910456,bus
-sub_J28S,Chauncey St,40.682893,-73.910456,bus
-sub_J29,Halsey St,40.68637,-73.916559,bus
-sub_J29N,Halsey St,40.68637,-73.916559,bus
-sub_J29S,Halsey St,40.68637,-73.916559,bus
-sub_J30,Gates Av,40.68963,-73.92227,bus
-sub_J30N,Gates Av,40.68963,-73.92227,bus
-sub_J30S,Gates Av,40.68963,-73.92227,bus
-sub_J31,Kosciuszko St,40.693342,-73.928814,bus
-sub_J31N,Kosciuszko St,40.693342,-73.928814,bus
-sub_J31S,Kosciuszko St,40.693342,-73.928814,bus
-sub_L01,8 Av,40.739777,-74.002578,bus
-sub_L01N,8 Av,40.739777,-74.002578,bus
-sub_L01S,8 Av,40.739777,-74.002578,bus
-sub_L02,6 Av,40.737335,-73.996786,bus
-sub_L02N,6 Av,40.737335,-73.996786,bus
-sub_L02S,6 Av,40.737335,-73.996786,bus
-sub_L03,Union Sq - 14 St,40.734789,-73.99073,bus
-sub_L03N,Union Sq - 14 St,40.734789,-73.99073,bus
-sub_L03S,Union Sq - 14 St,40.734789,-73.99073,bus
-sub_L05,3 Av,40.732849,-73.986122,bus
-sub_L05N,3 Av,40.732849,-73.986122,bus
-sub_L05S,3 Av,40.732849,-73.986122,bus
-sub_L06,1 Av,40.730953,-73.981628,bus
-sub_L06N,1 Av,40.730953,-73.981628,bus
-sub_L06S,1 Av,40.730953,-73.981628,bus
-sub_L08,Bedford Av,40.717304,-73.956872,bus
-sub_L08N,Bedford Av,40.717304,-73.956872,bus
-sub_L08S,Bedford Av,40.717304,-73.956872,bus
-sub_L10,Lorimer St,40.714063,-73.950275,bus
-sub_L10N,Lorimer St,40.714063,-73.950275,bus
-sub_L10S,Lorimer St,40.714063,-73.950275,bus
-sub_L11,Graham Av,40.714565,-73.944053,bus
-sub_L11N,Graham Av,40.714565,-73.944053,bus
-sub_L11S,Graham Av,40.714565,-73.944053,bus
-sub_L12,Grand St,40.711926,-73.94067,bus
-sub_L12N,Grand St,40.711926,-73.94067,bus
-sub_L12S,Grand St,40.711926,-73.94067,bus
-sub_L13,Montrose Av,40.707739,-73.93985,bus
-sub_L13N,Montrose Av,40.707739,-73.93985,bus
-sub_L13S,Montrose Av,40.707739,-73.93985,bus
-sub_L14,Morgan Av,40.706152,-73.933147,bus
-sub_L14N,Morgan Av,40.706152,-73.933147,bus
-sub_L14S,Morgan Av,40.706152,-73.933147,bus
-sub_L15,Jefferson St,40.706607,-73.922913,bus
-sub_L15N,Jefferson St,40.706607,-73.922913,bus
-sub_L15S,Jefferson St,40.706607,-73.922913,bus
-sub_L16,DeKalb Av,40.703811,-73.918425,bus
-sub_L16N,DeKalb Av,40.703811,-73.918425,bus
-sub_L16S,DeKalb Av,40.703811,-73.918425,bus
-sub_L17,Myrtle - Wyckoff Avs,40.699814,-73.911586,bus
-sub_L17N,Myrtle - Wyckoff Avs,40.699814,-73.911586,bus
-sub_L17S,Myrtle - Wyckoff Avs,40.699814,-73.911586,bus
-sub_L19,Halsey St,40.695602,-73.904084,bus
-sub_L19N,Halsey St,40.695602,-73.904084,bus
-sub_L19S,Halsey St,40.695602,-73.904084,bus
-sub_L20,Wilson Av,40.688764,-73.904046,bus
-sub_L20N,Wilson Av,40.688764,-73.904046,bus
-sub_L20S,Wilson Av,40.688764,-73.904046,bus
-sub_L21,Bushwick Av - Aberdeen St,40.682829,-73.905249,bus
-sub_L21N,Bushwick Av - Aberdeen St,40.682829,-73.905249,bus
-sub_L21S,Bushwick Av - Aberdeen St,40.682829,-73.905249,bus
-sub_L22,Broadway Jct,40.678856,-73.90324,bus
-sub_L22N,Broadway Jct,40.678856,-73.90324,bus
-sub_L22S,Broadway Jct,40.678856,-73.90324,bus
-sub_L24,Atlantic Av,40.675345,-73.903097,bus
-sub_L24N,Atlantic Av,40.675345,-73.903097,bus
-sub_L24S,Atlantic Av,40.675345,-73.903097,bus
-sub_L25,Sutter Av,40.669367,-73.901975,bus
-sub_L25N,Sutter Av,40.669367,-73.901975,bus
-sub_L25S,Sutter Av,40.669367,-73.901975,bus
-sub_L26,Livonia Av,40.664038,-73.900571,bus
-sub_L26N,Livonia Av,40.664038,-73.900571,bus
-sub_L26S,Livonia Av,40.664038,-73.900571,bus
-sub_L27,New Lots Av,40.658733,-73.899232,bus
-sub_L27N,New Lots Av,40.658733,-73.899232,bus
-sub_L27S,New Lots Av,40.658733,-73.899232,bus
-sub_L28,E 105 St,40.650573,-73.899485,bus
-sub_L28N,E 105 St,40.650573,-73.899485,bus
-sub_L28S,E 105 St,40.650573,-73.899485,bus
-sub_L29,Canarsie - Rockaway Pkwy,40.646654,-73.90185,bus
-sub_L29N,Canarsie - Rockaway Pkwy,40.646654,-73.90185,bus
-sub_L29S,Canarsie - Rockaway Pkwy,40.646654,-73.90185,bus
-sub_M01,Middle Village - Metropolitan Av,40.711396,-73.889601,bus
-sub_M01N,Middle Village - Metropolitan Av,40.711396,-73.889601,bus
-sub_M01S,Middle Village - Metropolitan Av,40.711396,-73.889601,bus
-sub_M04,Fresh Pond Rd,40.706186,-73.895877,bus
-sub_M04N,Fresh Pond Rd,40.706186,-73.895877,bus
-sub_M04S,Fresh Pond Rd,40.706186,-73.895877,bus
-sub_M05,Forest Av,40.704423,-73.903077,bus
-sub_M05N,Forest Av,40.704423,-73.903077,bus
-sub_M05S,Forest Av,40.704423,-73.903077,bus
-sub_M06,Seneca Av,40.702762,-73.90774,bus
-sub_M06N,Seneca Av,40.702762,-73.90774,bus
-sub_M06S,Seneca Av,40.702762,-73.90774,bus
-sub_M08,Myrtle - Wyckoff Avs,40.69943,-73.912385,bus
-sub_M08N,Myrtle - Wyckoff Avs,40.69943,-73.912385,bus
-sub_M08S,Myrtle - Wyckoff Avs,40.69943,-73.912385,bus
-sub_M09,Knickerbocker Av,40.698664,-73.919711,bus
-sub_M09N,Knickerbocker Av,40.698664,-73.919711,bus
-sub_M09S,Knickerbocker Av,40.698664,-73.919711,bus
-sub_M10,Central Av,40.697857,-73.927397,bus
-sub_M10N,Central Av,40.697857,-73.927397,bus
-sub_M10S,Central Av,40.697857,-73.927397,bus
-sub_M11,Myrtle Av,40.697207,-73.935657,bus
-sub_M11N,Myrtle Av,40.697207,-73.935657,bus
-sub_M11S,Myrtle Av,40.697207,-73.935657,bus
-sub_M12,Flushing Av,40.70026,-73.941126,bus
-sub_M12N,Flushing Av,40.70026,-73.941126,bus
-sub_M12S,Flushing Av,40.70026,-73.941126,bus
-sub_M13,Lorimer St,40.703869,-73.947408,bus
-sub_M13N,Lorimer St,40.703869,-73.947408,bus
-sub_M13S,Lorimer St,40.703869,-73.947408,bus
-sub_M14,Hewes St,40.70687,-73.953431,bus
-sub_M14N,Hewes St,40.70687,-73.953431,bus
-sub_M14S,Hewes St,40.70687,-73.953431,bus
-sub_M16,Marcy Av,40.708359,-73.957757,bus
-sub_M16N,Marcy Av,40.708359,-73.957757,bus
-sub_M16S,Marcy Av,40.708359,-73.957757,bus
-sub_M18,Essex St,40.718315,-73.987437,bus
-sub_M18N,Essex St,40.718315,-73.987437,bus
-sub_M18S,Essex St,40.718315,-73.987437,bus
-sub_M19,Bowery,40.72028,-73.993915,bus
-sub_M19N,Bowery,40.72028,-73.993915,bus
-sub_M19S,Bowery,40.72028,-73.993915,bus
-sub_M20,Canal St,40.718092,-73.999892,bus
-sub_M20N,Canal St,40.718092,-73.999892,bus
-sub_M20S,Canal St,40.718092,-73.999892,bus
-sub_M21,Chambers St,40.713243,-74.003401,bus
-sub_M21N,Chambers St,40.713243,-74.003401,bus
-sub_M21S,Chambers St,40.713243,-74.003401,bus
-sub_M22,Fulton St,40.710374,-74.007582,bus
-sub_M22N,Fulton St,40.710374,-74.007582,bus
-sub_M22S,Fulton St,40.710374,-74.007582,bus
-sub_M23,Broad St,40.706476,-74.011056,bus
-sub_M23N,Broad St,40.706476,-74.011056,bus
-sub_M23S,Broad St,40.706476,-74.011056,bus
-sub_N02,8 Av,40.635064,-74.011719,bus
-sub_N02N,8 Av,40.635064,-74.011719,bus
-sub_N02S,8 Av,40.635064,-74.011719,bus
-sub_N03,Fort Hamilton Pkwy,40.631386,-74.005351,bus
-sub_N03N,Fort Hamilton Pkwy,40.631386,-74.005351,bus
-sub_N03S,Fort Hamilton Pkwy,40.631386,-74.005351,bus
-sub_N04,New Utrecht Av,40.624842,-73.996353,bus
-sub_N04N,New Utrecht Av,40.624842,-73.996353,bus
-sub_N04S,New Utrecht Av,40.624842,-73.996353,bus
-sub_N05,18 Av,40.620671,-73.990414,bus
-sub_N05N,18 Av,40.620671,-73.990414,bus
-sub_N05S,18 Av,40.620671,-73.990414,bus
-sub_N06,20 Av,40.61741,-73.985026,bus
-sub_N06N,20 Av,40.61741,-73.985026,bus
-sub_N06S,20 Av,40.61741,-73.985026,bus
-sub_N07,Bay Pkwy,40.611815,-73.981848,bus
-sub_N07N,Bay Pkwy,40.611815,-73.981848,bus
-sub_N07S,Bay Pkwy,40.611815,-73.981848,bus
-sub_N08,Kings Hwy,40.603923,-73.980353,bus
-sub_N08N,Kings Hwy,40.603923,-73.980353,bus
-sub_N08S,Kings Hwy,40.603923,-73.980353,bus
-sub_N09,Avenue U,40.597473,-73.979137,bus
-sub_N09N,Avenue U,40.597473,-73.979137,bus
-sub_N09S,Avenue U,40.597473,-73.979137,bus
-sub_N10,86 St,40.592721,-73.97823,bus
-sub_N10N,86 St,40.592721,-73.97823,bus
-sub_N10S,86 St,40.592721,-73.97823,bus
-sub_Q01,Canal St,40.718383,-74.00046,bus
-sub_Q01N,Canal St,40.718383,-74.00046,bus
-sub_Q01S,Canal St,40.718383,-74.00046,bus
-sub_R01,Astoria - Ditmars Blvd,40.775036,-73.912034,bus
-sub_R01N,Astoria - Ditmars Blvd,40.775036,-73.912034,bus
-sub_R01S,Astoria - Ditmars Blvd,40.775036,-73.912034,bus
-sub_R03,Astoria Blvd,40.770258,-73.917843,bus
-sub_R03N,Astoria Blvd,40.770258,-73.917843,bus
-sub_R03S,Astoria Blvd,40.770258,-73.917843,bus
-sub_R04,30 Av,40.766779,-73.921479,bus
-sub_R04N,30 Av,40.766779,-73.921479,bus
-sub_R04S,30 Av,40.766779,-73.921479,bus
-sub_R05,Broadway,40.76182,-73.925508,bus
-sub_R05N,Broadway,40.76182,-73.925508,bus
-sub_R05S,Broadway,40.76182,-73.925508,bus
-sub_R06,36 Av,40.756804,-73.929575,bus
-sub_R06N,36 Av,40.756804,-73.929575,bus
-sub_R06S,36 Av,40.756804,-73.929575,bus
-sub_R08,39 Av,40.752882,-73.932755,bus
-sub_R08N,39 Av,40.752882,-73.932755,bus
-sub_R08S,39 Av,40.752882,-73.932755,bus
-sub_R09,Queensboro Plaza,40.750582,-73.940202,bus
-sub_R09N,Queensboro Plaza,40.750582,-73.940202,bus
-sub_R09S,Queensboro Plaza,40.750582,-73.940202,bus
-sub_R11,Lexington Av/59 St,40.76266,-73.967258,bus
-sub_R11N,Lexington Av/59 St,40.76266,-73.967258,bus
-sub_R11S,Lexington Av/59 St,40.76266,-73.967258,bus
-sub_R13,5 Av/59 St,40.764811,-73.973347,bus
-sub_R13N,5 Av/59 St,40.764811,-73.973347,bus
-sub_R13S,5 Av/59 St,40.764811,-73.973347,bus
-sub_R14,57 St - 7 Av,40.764664,-73.980658,bus
-sub_R14N,57 St - 7 Av,40.764664,-73.980658,bus
-sub_R14S,57 St - 7 Av,40.764664,-73.980658,bus
-sub_R15,49 St,40.759901,-73.984139,bus
-sub_R15N,49 St,40.759901,-73.984139,bus
-sub_R15S,49 St,40.759901,-73.984139,bus
-sub_R16,Times Sq - 42 St,40.754672,-73.986754,bus
-sub_R16N,Times Sq - 42 St,40.754672,-73.986754,bus
-sub_R16S,Times Sq - 42 St,40.754672,-73.986754,bus
-sub_R17,34 St - Herald Sq,40.749567,-73.98795,bus
-sub_R17N,34 St - Herald Sq,40.749567,-73.98795,bus
-sub_R17S,34 St - Herald Sq,40.749567,-73.98795,bus
-sub_R18,28 St,40.745494,-73.988691,bus
-sub_R18N,28 St,40.745494,-73.988691,bus
-sub_R18S,28 St,40.745494,-73.988691,bus
-sub_R19,23 St,40.741303,-73.989344,bus
-sub_R19N,23 St,40.741303,-73.989344,bus
-sub_R19S,23 St,40.741303,-73.989344,bus
-sub_R20,14 St - Union Sq,40.735736,-73.990568,bus
-sub_R20N,14 St - Union Sq,40.735736,-73.990568,bus
-sub_R20S,14 St - Union Sq,40.735736,-73.990568,bus
-sub_R21,8 St - NYU,40.730328,-73.992629,bus
-sub_R21N,8 St - NYU,40.730328,-73.992629,bus
-sub_R21S,8 St - NYU,40.730328,-73.992629,bus
-sub_R22,Prince St,40.724329,-73.997702,bus
-sub_R22N,Prince St,40.724329,-73.997702,bus
-sub_R22S,Prince St,40.724329,-73.997702,bus
-sub_R23,Canal St,40.719527,-74.001775,bus
-sub_R23N,Canal St,40.719527,-74.001775,bus
-sub_R23S,Canal St,40.719527,-74.001775,bus
-sub_R24,City Hall,40.713282,-74.006978,bus
-sub_R24N,City Hall,40.713282,-74.006978,bus
-sub_R24S,City Hall,40.713282,-74.006978,bus
-sub_R25,Cortlandt St,40.710668,-74.011029,bus
-sub_R25N,Cortlandt St,40.710668,-74.011029,bus
-sub_R25S,Cortlandt St,40.710668,-74.011029,bus
-sub_R26,Rector St,40.70722,-74.013342,bus
-sub_R26N,Rector St,40.70722,-74.013342,bus
-sub_R26S,Rector St,40.70722,-74.013342,bus
-sub_R27,Whitehall St,40.703087,-74.012994,bus
-sub_R27N,Whitehall St,40.703087,-74.012994,bus
-sub_R27S,Whitehall St,40.703087,-74.012994,bus
-sub_R28,Court St,40.6941,-73.991777,bus
-sub_R28N,Court St,40.6941,-73.991777,bus
-sub_R28S,Court St,40.6941,-73.991777,bus
-sub_R29,Jay St - MetroTech,40.69218,-73.985942,bus
-sub_R29N,Jay St - MetroTech,40.69218,-73.985942,bus
-sub_R29S,Jay St - MetroTech,40.69218,-73.985942,bus
-sub_R30,DeKalb Av,40.690635,-73.981824,bus
-sub_R30N,DeKalb Av,40.690635,-73.981824,bus
-sub_R30S,DeKalb Av,40.690635,-73.981824,bus
-sub_R31,Atlantic Av - Barclays Ctr,40.683666,-73.97881,bus
-sub_R31N,Atlantic Av - Barclays Ctr,40.683666,-73.97881,bus
-sub_R31S,Atlantic Av - Barclays Ctr,40.683666,-73.97881,bus
-sub_R32,Union St,40.677316,-73.98311,bus
-sub_R32N,Union St,40.677316,-73.98311,bus
-sub_R32S,Union St,40.677316,-73.98311,bus
-sub_R33,9 St,40.670847,-73.988302,bus
-sub_R33N,9 St,40.670847,-73.988302,bus
-sub_R33S,9 St,40.670847,-73.988302,bus
-sub_R34,Prospect Av,40.665414,-73.992872,bus
-sub_R34N,Prospect Av,40.665414,-73.992872,bus
-sub_R34S,Prospect Av,40.665414,-73.992872,bus
-sub_R35,25 St,40.660397,-73.998091,bus
-sub_R35N,25 St,40.660397,-73.998091,bus
-sub_R35S,25 St,40.660397,-73.998091,bus
-sub_R36,36 St,40.655144,-74.003549,bus
-sub_R36N,36 St,40.655144,-74.003549,bus
-sub_R36S,36 St,40.655144,-74.003549,bus
-sub_R39,45 St,40.648939,-74.010006,bus
-sub_R39N,45 St,40.648939,-74.010006,bus
-sub_R39S,45 St,40.648939,-74.010006,bus
-sub_R40,53 St,40.645069,-74.014034,bus
-sub_R40N,53 St,40.645069,-74.014034,bus
-sub_R40S,53 St,40.645069,-74.014034,bus
-sub_R41,59 St,40.641362,-74.017881,bus
-sub_R41N,59 St,40.641362,-74.017881,bus
-sub_R41S,59 St,40.641362,-74.017881,bus
-sub_R42,Bay Ridge Av,40.634967,-74.023377,bus
-sub_R42N,Bay Ridge Av,40.634967,-74.023377,bus
-sub_R42S,Bay Ridge Av,40.634967,-74.023377,bus
-sub_R43,77 St,40.629742,-74.02551,bus
-sub_R43N,77 St,40.629742,-74.02551,bus
-sub_R43S,77 St,40.629742,-74.02551,bus
-sub_R44,86 St,40.622687,-74.028398,bus
-sub_R44N,86 St,40.622687,-74.028398,bus
-sub_R44S,86 St,40.622687,-74.028398,bus
-sub_R45,Bay Ridge - 95 St,40.616622,-74.030876,bus
-sub_R45N,Bay Ridge - 95 St,40.616622,-74.030876,bus
-sub_R45S,Bay Ridge - 95 St,40.616622,-74.030876,bus
-sub_S01,Franklin Av,40.680596,-73.955827,bus
-sub_S01N,Franklin Av,40.680596,-73.955827,bus
-sub_S01S,Franklin Av,40.680596,-73.955827,bus
-sub_S03,Park Pl,40.674772,-73.957624,bus
-sub_S03N,Park Pl,40.674772,-73.957624,bus
-sub_S03S,Park Pl,40.674772,-73.957624,bus
-sub_S04,Botanic Garden,40.670343,-73.959245,bus
-sub_S04N,Botanic Garden,40.670343,-73.959245,bus
-sub_S04S,Botanic Garden,40.670343,-73.959245,bus
-sub_S09,Tottenville,40.512764,-74.251961,bus
-sub_S09N,Tottenville,40.512764,-74.251961,bus
-sub_S09S,Tottenville,40.512764,-74.251961,bus
-sub_S10,Atlantic,40.515401,-74.245689,bus
-sub_S10N,Atlantic,40.515401,-74.245689,bus
-sub_S10S,Atlantic,40.515401,-74.245689,bus
-sub_S12,Nassau,40.517812,-74.238373,bus
-sub_S12N,Nassau,40.517812,-74.238373,bus
-sub_S12S,Nassau,40.517812,-74.238373,bus
-sub_S13,Richmond Valley,40.519631,-74.229141,bus
-sub_S13N,Richmond Valley,40.519631,-74.229141,bus
-sub_S13S,Richmond Valley,40.519631,-74.229141,bus
-sub_S14,Pleasant Plains,40.52241,-74.217847,bus
-sub_S14N,Pleasant Plains,40.52241,-74.217847,bus
-sub_S14S,Pleasant Plains,40.52241,-74.217847,bus
-sub_S15,Prince's Bay,40.525507,-74.200064,bus
-sub_S15N,Prince's Bay,40.525507,-74.200064,bus
-sub_S15S,Prince's Bay,40.525507,-74.200064,bus
-sub_S16,Huguenot,40.533674,-74.191794,bus
-sub_S16N,Huguenot,40.533674,-74.191794,bus
-sub_S16S,Huguenot,40.533674,-74.191794,bus
-sub_S17,Annadale,40.54046,-74.178217,bus
-sub_S17N,Annadale,40.54046,-74.178217,bus
-sub_S17S,Annadale,40.54046,-74.178217,bus
-sub_S18,Eltingville,40.544601,-74.16457,bus
-sub_S18N,Eltingville,40.544601,-74.16457,bus
-sub_S18S,Eltingville,40.544601,-74.16457,bus
-sub_S19,Great Kills,40.551231,-74.151399,bus
-sub_S19N,Great Kills,40.551231,-74.151399,bus
-sub_S19S,Great Kills,40.551231,-74.151399,bus
-sub_S20,Bay Terrace,40.5564,-74.136907,bus
-sub_S20N,Bay Terrace,40.5564,-74.136907,bus
-sub_S20S,Bay Terrace,40.5564,-74.136907,bus
-sub_S21,Oakwood Heights,40.56511,-74.12632,bus
-sub_S21N,Oakwood Heights,40.56511,-74.12632,bus
-sub_S21S,Oakwood Heights,40.56511,-74.12632,bus
-sub_S22,New Dorp,40.57348,-74.11721,bus
-sub_S22N,New Dorp,40.57348,-74.11721,bus
-sub_S22S,New Dorp,40.57348,-74.11721,bus
-sub_S23,Grant City,40.578965,-74.109704,bus
-sub_S23N,Grant City,40.578965,-74.109704,bus
-sub_S23S,Grant City,40.578965,-74.109704,bus
-sub_S24,Jefferson Av,40.583591,-74.103338,bus
-sub_S24N,Jefferson Av,40.583591,-74.103338,bus
-sub_S24S,Jefferson Av,40.583591,-74.103338,bus
-sub_S25,Dongan Hills,40.588849,-74.09609,bus
-sub_S25N,Dongan Hills,40.588849,-74.09609,bus
-sub_S25S,Dongan Hills,40.588849,-74.09609,bus
-sub_S26,Old Town,40.596612,-74.087368,bus
-sub_S26N,Old Town,40.596612,-74.087368,bus
-sub_S26S,Old Town,40.596612,-74.087368,bus
-sub_S27,Grasmere,40.603117,-74.084087,bus
-sub_S27N,Grasmere,40.603117,-74.084087,bus
-sub_S27S,Grasmere,40.603117,-74.084087,bus
-sub_S28,Clifton,40.621319,-74.071402,bus
-sub_S28N,Clifton,40.621319,-74.071402,bus
-sub_S28S,Clifton,40.621319,-74.071402,bus
-sub_S29,Stapleton,40.627915,-74.075162,bus
-sub_S29N,Stapleton,40.627915,-74.075162,bus
-sub_S29S,Stapleton,40.627915,-74.075162,bus
-sub_S30,Tompkinsville,40.636949,-74.074835,bus
-sub_S30N,Tompkinsville,40.636949,-74.074835,bus
-sub_S30S,Tompkinsville,40.636949,-74.074835,bus
-sub_S31,St George,40.643748,-74.073643,bus
-sub_S31N,St George,40.643748,-74.073643,bus
-sub_S31S,St George,40.643748,-74.073643,bus
+sub_101,Van Cortlandt Park - 242 St,40.889248,-73.898583,subway
+sub_101N,Van Cortlandt Park - 242 St,40.889248,-73.898583,subway
+sub_101S,Van Cortlandt Park - 242 St,40.889248,-73.898583,subway
+sub_103,238 St,40.884667,-73.90087,subway
+sub_103N,238 St,40.884667,-73.90087,subway
+sub_103S,238 St,40.884667,-73.90087,subway
+sub_104,231 St,40.878856,-73.904834,subway
+sub_104N,231 St,40.878856,-73.904834,subway
+sub_104S,231 St,40.878856,-73.904834,subway
+sub_106,Marble Hill - 225 St,40.874561,-73.909831,subway
+sub_106N,Marble Hill - 225 St,40.874561,-73.909831,subway
+sub_106S,Marble Hill - 225 St,40.874561,-73.909831,subway
+sub_107,215 St,40.869444,-73.915279,subway
+sub_107N,215 St,40.869444,-73.915279,subway
+sub_107S,215 St,40.869444,-73.915279,subway
+sub_108,207 St,40.864621,-73.918822,subway
+sub_108N,207 St,40.864621,-73.918822,subway
+sub_108S,207 St,40.864621,-73.918822,subway
+sub_109,Dyckman St,40.860531,-73.925536,subway
+sub_109N,Dyckman St,40.860531,-73.925536,subway
+sub_109S,Dyckman St,40.860531,-73.925536,subway
+sub_110,191 St,40.855225,-73.929412,subway
+sub_110N,191 St,40.855225,-73.929412,subway
+sub_110S,191 St,40.855225,-73.929412,subway
+sub_111,181 St,40.849505,-73.933596,subway
+sub_111N,181 St,40.849505,-73.933596,subway
+sub_111S,181 St,40.849505,-73.933596,subway
+sub_112,168 St - Washington Hts,40.840556,-73.940133,subway
+sub_112N,168 St - Washington Hts,40.840556,-73.940133,subway
+sub_112S,168 St - Washington Hts,40.840556,-73.940133,subway
+sub_113,157 St,40.834041,-73.94489,subway
+sub_113N,157 St,40.834041,-73.94489,subway
+sub_113S,157 St,40.834041,-73.94489,subway
+sub_114,145 St,40.826551,-73.95036,subway
+sub_114N,145 St,40.826551,-73.95036,subway
+sub_114S,145 St,40.826551,-73.95036,subway
+sub_115,137 St - City College,40.822008,-73.953676,subway
+sub_115N,137 St - City College,40.822008,-73.953676,subway
+sub_115S,137 St - City College,40.822008,-73.953676,subway
+sub_116,125 St,40.815581,-73.958372,subway
+sub_116N,125 St,40.815581,-73.958372,subway
+sub_116S,125 St,40.815581,-73.958372,subway
+sub_117,116 St - Columbia University,40.807722,-73.96411,subway
+sub_117N,116 St - Columbia University,40.807722,-73.96411,subway
+sub_117S,116 St - Columbia University,40.807722,-73.96411,subway
+sub_118,Cathedral Pkwy,40.803967,-73.966847,subway
+sub_118N,Cathedral Pkwy,40.803967,-73.966847,subway
+sub_118S,Cathedral Pkwy,40.803967,-73.966847,subway
+sub_119,103 St,40.799446,-73.968379,subway
+sub_119N,103 St,40.799446,-73.968379,subway
+sub_119S,103 St,40.799446,-73.968379,subway
+sub_120,96 St,40.793919,-73.972323,subway
+sub_120N,96 St,40.793919,-73.972323,subway
+sub_120S,96 St,40.793919,-73.972323,subway
+sub_121,86 St,40.788644,-73.976218,subway
+sub_121N,86 St,40.788644,-73.976218,subway
+sub_121S,86 St,40.788644,-73.976218,subway
+sub_122,79 St,40.783934,-73.979917,subway
+sub_122N,79 St,40.783934,-73.979917,subway
+sub_122S,79 St,40.783934,-73.979917,subway
+sub_123,72 St,40.778453,-73.98197,subway
+sub_123N,72 St,40.778453,-73.98197,subway
+sub_123S,72 St,40.778453,-73.98197,subway
+sub_124,66 St - Lincoln Center,40.77344,-73.982209,subway
+sub_124N,66 St - Lincoln Center,40.77344,-73.982209,subway
+sub_124S,66 St - Lincoln Center,40.77344,-73.982209,subway
+sub_125,59 St - Columbus Circle,40.768247,-73.981929,subway
+sub_125N,59 St - Columbus Circle,40.768247,-73.981929,subway
+sub_125S,59 St - Columbus Circle,40.768247,-73.981929,subway
+sub_126,50 St,40.761728,-73.983849,subway
+sub_126N,50 St,40.761728,-73.983849,subway
+sub_126S,50 St,40.761728,-73.983849,subway
+sub_127,Times Sq - 42 St,40.75529,-73.987495,subway
+sub_127N,Times Sq - 42 St,40.75529,-73.987495,subway
+sub_127S,Times Sq - 42 St,40.75529,-73.987495,subway
+sub_128,34 St - Penn Station,40.750373,-73.991057,subway
+sub_128N,34 St - Penn Station,40.750373,-73.991057,subway
+sub_128S,34 St - Penn Station,40.750373,-73.991057,subway
+sub_129,28 St,40.747215,-73.993365,subway
+sub_129N,28 St,40.747215,-73.993365,subway
+sub_129S,28 St,40.747215,-73.993365,subway
+sub_130,23 St,40.744081,-73.995657,subway
+sub_130N,23 St,40.744081,-73.995657,subway
+sub_130S,23 St,40.744081,-73.995657,subway
+sub_131,18 St,40.74104,-73.997871,subway
+sub_131N,18 St,40.74104,-73.997871,subway
+sub_131S,18 St,40.74104,-73.997871,subway
+sub_132,14 St,40.737826,-74.000201,subway
+sub_132N,14 St,40.737826,-74.000201,subway
+sub_132S,14 St,40.737826,-74.000201,subway
+sub_133,Christopher St - Sheridan Sq,40.733422,-74.002906,subway
+sub_133N,Christopher St - Sheridan Sq,40.733422,-74.002906,subway
+sub_133S,Christopher St - Sheridan Sq,40.733422,-74.002906,subway
+sub_134,Houston St,40.728251,-74.005367,subway
+sub_134N,Houston St,40.728251,-74.005367,subway
+sub_134S,Houston St,40.728251,-74.005367,subway
+sub_135,Canal St,40.722854,-74.006277,subway
+sub_135N,Canal St,40.722854,-74.006277,subway
+sub_135S,Canal St,40.722854,-74.006277,subway
+sub_136,Franklin St,40.719318,-74.006886,subway
+sub_136N,Franklin St,40.719318,-74.006886,subway
+sub_136S,Franklin St,40.719318,-74.006886,subway
+sub_137,Chambers St,40.715478,-74.009266,subway
+sub_137N,Chambers St,40.715478,-74.009266,subway
+sub_137S,Chambers St,40.715478,-74.009266,subway
+sub_138,Cortlandt St,40.711835,-74.012188,subway
+sub_138N,Cortlandt St,40.711835,-74.012188,subway
+sub_138S,Cortlandt St,40.711835,-74.012188,subway
+sub_139,Rector St,40.707513,-74.013783,subway
+sub_139N,Rector St,40.707513,-74.013783,subway
+sub_139S,Rector St,40.707513,-74.013783,subway
+sub_140,South Ferry Loop,40.701411,-74.013205,subway
+sub_140N,South Ferry Loop,40.701411,-74.013205,subway
+sub_140S,South Ferry Loop,40.701411,-74.013205,subway
+sub_201,Wakefield - 241 St,40.903125,-73.85062,subway
+sub_201N,Wakefield - 241 St,40.903125,-73.85062,subway
+sub_201S,Wakefield - 241 St,40.903125,-73.85062,subway
+sub_204,Nereid Av,40.898379,-73.854376,subway
+sub_204N,Nereid Av,40.898379,-73.854376,subway
+sub_204S,Nereid Av,40.898379,-73.854376,subway
+sub_205,233 St,40.893193,-73.857473,subway
+sub_205N,233 St,40.893193,-73.857473,subway
+sub_205S,233 St,40.893193,-73.857473,subway
+sub_206,225 St,40.888022,-73.860341,subway
+sub_206N,225 St,40.888022,-73.860341,subway
+sub_206S,225 St,40.888022,-73.860341,subway
+sub_207,219 St,40.883895,-73.862633,subway
+sub_207N,219 St,40.883895,-73.862633,subway
+sub_207S,219 St,40.883895,-73.862633,subway
+sub_208,Gun Hill Rd,40.87785,-73.866256,subway
+sub_208N,Gun Hill Rd,40.87785,-73.866256,subway
+sub_208S,Gun Hill Rd,40.87785,-73.866256,subway
+sub_209,Burke Av,40.871356,-73.867164,subway
+sub_209N,Burke Av,40.871356,-73.867164,subway
+sub_209S,Burke Av,40.871356,-73.867164,subway
+sub_210,Allerton Av,40.865462,-73.867352,subway
+sub_210N,Allerton Av,40.865462,-73.867352,subway
+sub_210S,Allerton Av,40.865462,-73.867352,subway
+sub_211,Pelham Pkwy,40.857192,-73.867615,subway
+sub_211N,Pelham Pkwy,40.857192,-73.867615,subway
+sub_211S,Pelham Pkwy,40.857192,-73.867615,subway
+sub_212,Bronx Park East,40.848828,-73.868457,subway
+sub_212N,Bronx Park East,40.848828,-73.868457,subway
+sub_212S,Bronx Park East,40.848828,-73.868457,subway
+sub_213,E 180 St,40.841894,-73.873488,subway
+sub_213N,E 180 St,40.841894,-73.873488,subway
+sub_213S,E 180 St,40.841894,-73.873488,subway
+sub_214,West Farms Sq - E Tremont Av,40.840295,-73.880049,subway
+sub_214N,West Farms Sq - E Tremont Av,40.840295,-73.880049,subway
+sub_214S,West Farms Sq - E Tremont Av,40.840295,-73.880049,subway
+sub_215,174 St,40.837288,-73.887734,subway
+sub_215N,174 St,40.837288,-73.887734,subway
+sub_215S,174 St,40.837288,-73.887734,subway
+sub_216,Freeman St,40.829993,-73.891865,subway
+sub_216N,Freeman St,40.829993,-73.891865,subway
+sub_216S,Freeman St,40.829993,-73.891865,subway
+sub_217,Simpson St,40.824073,-73.893064,subway
+sub_217N,Simpson St,40.824073,-73.893064,subway
+sub_217S,Simpson St,40.824073,-73.893064,subway
+sub_218,Intervale Av,40.822181,-73.896736,subway
+sub_218N,Intervale Av,40.822181,-73.896736,subway
+sub_218S,Intervale Av,40.822181,-73.896736,subway
+sub_219,Prospect Av,40.819585,-73.90177,subway
+sub_219N,Prospect Av,40.819585,-73.90177,subway
+sub_219S,Prospect Av,40.819585,-73.90177,subway
+sub_220,Jackson Av,40.81649,-73.907807,subway
+sub_220N,Jackson Av,40.81649,-73.907807,subway
+sub_220S,Jackson Av,40.81649,-73.907807,subway
+sub_221,3 Av - 149 St,40.816109,-73.917757,subway
+sub_221N,3 Av - 149 St,40.816109,-73.917757,subway
+sub_221S,3 Av - 149 St,40.816109,-73.917757,subway
+sub_222,149 St - Grand Concourse,40.81841,-73.926718,subway
+sub_222N,149 St - Grand Concourse,40.81841,-73.926718,subway
+sub_222S,149 St - Grand Concourse,40.81841,-73.926718,subway
+sub_224,135 St,40.814229,-73.94077,subway
+sub_224N,135 St,40.814229,-73.94077,subway
+sub_224S,135 St,40.814229,-73.94077,subway
+sub_225,125 St,40.807754,-73.945495,subway
+sub_225N,125 St,40.807754,-73.945495,subway
+sub_225S,125 St,40.807754,-73.945495,subway
+sub_226,116 St,40.802098,-73.949625,subway
+sub_226N,116 St,40.802098,-73.949625,subway
+sub_226S,116 St,40.802098,-73.949625,subway
+sub_227,Central Park North (110 St),40.799075,-73.951822,subway
+sub_227N,Central Park North (110 St),40.799075,-73.951822,subway
+sub_227S,Central Park North (110 St),40.799075,-73.951822,subway
+sub_228,Park Pl,40.713051,-74.008811,subway
+sub_228N,Park Pl,40.713051,-74.008811,subway
+sub_228S,Park Pl,40.713051,-74.008811,subway
+sub_229,Fulton St,40.709416,-74.006571,subway
+sub_229N,Fulton St,40.709416,-74.006571,subway
+sub_229S,Fulton St,40.709416,-74.006571,subway
+sub_230,Wall St,40.706821,-74.0091,subway
+sub_230N,Wall St,40.706821,-74.0091,subway
+sub_230S,Wall St,40.706821,-74.0091,subway
+sub_231,Clark St,40.697466,-73.993086,subway
+sub_231N,Clark St,40.697466,-73.993086,subway
+sub_231S,Clark St,40.697466,-73.993086,subway
+sub_232,Borough Hall,40.693219,-73.989998,subway
+sub_232N,Borough Hall,40.693219,-73.989998,subway
+sub_232S,Borough Hall,40.693219,-73.989998,subway
+sub_233,Hoyt St,40.690545,-73.985065,subway
+sub_233N,Hoyt St,40.690545,-73.985065,subway
+sub_233S,Hoyt St,40.690545,-73.985065,subway
+sub_234,Nevins St,40.688246,-73.980492,subway
+sub_234N,Nevins St,40.688246,-73.980492,subway
+sub_234S,Nevins St,40.688246,-73.980492,subway
+sub_235,Atlantic Av - Barclays Ctr,40.684359,-73.977666,subway
+sub_235N,Atlantic Av - Barclays Ctr,40.684359,-73.977666,subway
+sub_235S,Atlantic Av - Barclays Ctr,40.684359,-73.977666,subway
+sub_236,Bergen St,40.680829,-73.975098,subway
+sub_236N,Bergen St,40.680829,-73.975098,subway
+sub_236S,Bergen St,40.680829,-73.975098,subway
+sub_237,Grand Army Plaza,40.675235,-73.971046,subway
+sub_237N,Grand Army Plaza,40.675235,-73.971046,subway
+sub_237S,Grand Army Plaza,40.675235,-73.971046,subway
+sub_238,Eastern Pkwy - Brooklyn Museum,40.671987,-73.964375,subway
+sub_238N,Eastern Pkwy - Brooklyn Museum,40.671987,-73.964375,subway
+sub_238S,Eastern Pkwy - Brooklyn Museum,40.671987,-73.964375,subway
+sub_239,Franklin Av,40.670682,-73.958131,subway
+sub_239N,Franklin Av,40.670682,-73.958131,subway
+sub_239S,Franklin Av,40.670682,-73.958131,subway
+sub_241,President St,40.667883,-73.950683,subway
+sub_241N,President St,40.667883,-73.950683,subway
+sub_241S,President St,40.667883,-73.950683,subway
+sub_242,Sterling St,40.662742,-73.95085,subway
+sub_242N,Sterling St,40.662742,-73.95085,subway
+sub_242S,Sterling St,40.662742,-73.95085,subway
+sub_243,Winthrop St,40.656652,-73.9502,subway
+sub_243N,Winthrop St,40.656652,-73.9502,subway
+sub_243S,Winthrop St,40.656652,-73.9502,subway
+sub_244,Church Av,40.650843,-73.949575,subway
+sub_244N,Church Av,40.650843,-73.949575,subway
+sub_244S,Church Av,40.650843,-73.949575,subway
+sub_245,Beverly Rd,40.645098,-73.948959,subway
+sub_245N,Beverly Rd,40.645098,-73.948959,subway
+sub_245S,Beverly Rd,40.645098,-73.948959,subway
+sub_246,Newkirk Av,40.639967,-73.948411,subway
+sub_246N,Newkirk Av,40.639967,-73.948411,subway
+sub_246S,Newkirk Av,40.639967,-73.948411,subway
+sub_247,Flatbush Av - Brooklyn College,40.632836,-73.947642,subway
+sub_247N,Flatbush Av - Brooklyn College,40.632836,-73.947642,subway
+sub_247S,Flatbush Av - Brooklyn College,40.632836,-73.947642,subway
+sub_248,Nostrand Av,40.669847,-73.950466,subway
+sub_248N,Nostrand Av,40.669847,-73.950466,subway
+sub_248S,Nostrand Av,40.669847,-73.950466,subway
+sub_249,Kingston Av,40.669399,-73.942161,subway
+sub_249N,Kingston Av,40.669399,-73.942161,subway
+sub_249S,Kingston Av,40.669399,-73.942161,subway
+sub_250,Crown Hts - Utica Av,40.668897,-73.932942,subway
+sub_250N,Crown Hts - Utica Av,40.668897,-73.932942,subway
+sub_250S,Crown Hts - Utica Av,40.668897,-73.932942,subway
+sub_251,Sutter Av - Rutland Rd,40.664717,-73.92261,subway
+sub_251N,Sutter Av - Rutland Rd,40.664717,-73.92261,subway
+sub_251S,Sutter Av - Rutland Rd,40.664717,-73.92261,subway
+sub_252,Saratoga Av,40.661453,-73.916327,subway
+sub_252N,Saratoga Av,40.661453,-73.916327,subway
+sub_252S,Saratoga Av,40.661453,-73.916327,subway
+sub_253,Rockaway Av,40.662549,-73.908946,subway
+sub_253N,Rockaway Av,40.662549,-73.908946,subway
+sub_253S,Rockaway Av,40.662549,-73.908946,subway
+sub_254,Junius St,40.663515,-73.902447,subway
+sub_254N,Junius St,40.663515,-73.902447,subway
+sub_254S,Junius St,40.663515,-73.902447,subway
+sub_255,Pennsylvania Av,40.664635,-73.894895,subway
+sub_255N,Pennsylvania Av,40.664635,-73.894895,subway
+sub_255S,Pennsylvania Av,40.664635,-73.894895,subway
+sub_256,Van Siclen Av,40.665449,-73.889395,subway
+sub_256N,Van Siclen Av,40.665449,-73.889395,subway
+sub_256S,Van Siclen Av,40.665449,-73.889395,subway
+sub_257,New Lots Av,40.666235,-73.884079,subway
+sub_257N,New Lots Av,40.666235,-73.884079,subway
+sub_257S,New Lots Av,40.666235,-73.884079,subway
+sub_301,Harlem - 148 St,40.82388,-73.93647,subway
+sub_301N,Harlem - 148 St,40.82388,-73.93647,subway
+sub_301S,Harlem - 148 St,40.82388,-73.93647,subway
+sub_302,145 St,40.820421,-73.936245,subway
+sub_302N,145 St,40.820421,-73.936245,subway
+sub_302S,145 St,40.820421,-73.936245,subway
+sub_401,Woodlawn,40.886037,-73.878751,subway
+sub_401N,Woodlawn,40.886037,-73.878751,subway
+sub_401S,Woodlawn,40.886037,-73.878751,subway
+sub_402,Mosholu Pkwy,40.87975,-73.884655,subway
+sub_402N,Mosholu Pkwy,40.87975,-73.884655,subway
+sub_402S,Mosholu Pkwy,40.87975,-73.884655,subway
+sub_405,Bedford Park Blvd - Lehman College,40.873412,-73.890064,subway
+sub_405N,Bedford Park Blvd - Lehman College,40.873412,-73.890064,subway
+sub_405S,Bedford Park Blvd - Lehman College,40.873412,-73.890064,subway
+sub_406,Kingsbridge Rd,40.86776,-73.897174,subway
+sub_406N,Kingsbridge Rd,40.86776,-73.897174,subway
+sub_406S,Kingsbridge Rd,40.86776,-73.897174,subway
+sub_407,Fordham Rd,40.862803,-73.901034,subway
+sub_407N,Fordham Rd,40.862803,-73.901034,subway
+sub_407S,Fordham Rd,40.862803,-73.901034,subway
+sub_408,183 St,40.858407,-73.903879,subway
+sub_408N,183 St,40.858407,-73.903879,subway
+sub_408S,183 St,40.858407,-73.903879,subway
+sub_409,Burnside Av,40.853453,-73.907684,subway
+sub_409N,Burnside Av,40.853453,-73.907684,subway
+sub_409S,Burnside Av,40.853453,-73.907684,subway
+sub_410,176 St,40.84848,-73.911794,subway
+sub_410N,176 St,40.84848,-73.911794,subway
+sub_410S,176 St,40.84848,-73.911794,subway
+sub_411,Mt Eden Av,40.844434,-73.914685,subway
+sub_411N,Mt Eden Av,40.844434,-73.914685,subway
+sub_411S,Mt Eden Av,40.844434,-73.914685,subway
+sub_412,170 St,40.840075,-73.917791,subway
+sub_412N,170 St,40.840075,-73.917791,subway
+sub_412S,170 St,40.840075,-73.917791,subway
+sub_413,167 St,40.835537,-73.9214,subway
+sub_413N,167 St,40.835537,-73.9214,subway
+sub_413S,167 St,40.835537,-73.9214,subway
+sub_414,161 St - Yankee Stadium,40.827994,-73.925831,subway
+sub_414N,161 St - Yankee Stadium,40.827994,-73.925831,subway
+sub_414S,161 St - Yankee Stadium,40.827994,-73.925831,subway
+sub_415,149 St - Grand Concourse,40.818375,-73.927351,subway
+sub_415N,149 St - Grand Concourse,40.818375,-73.927351,subway
+sub_415S,149 St - Grand Concourse,40.818375,-73.927351,subway
+sub_416,138 St - Grand Concourse,40.813224,-73.929849,subway
+sub_416N,138 St - Grand Concourse,40.813224,-73.929849,subway
+sub_416S,138 St - Grand Concourse,40.813224,-73.929849,subway
+sub_418,Fulton St,40.710368,-74.009509,subway
+sub_418N,Fulton St,40.710368,-74.009509,subway
+sub_418S,Fulton St,40.710368,-74.009509,subway
+sub_419,Wall St,40.707557,-74.011862,subway
+sub_419N,Wall St,40.707557,-74.011862,subway
+sub_419S,Wall St,40.707557,-74.011862,subway
+sub_420,Bowling Green,40.704817,-74.014065,subway
+sub_420N,Bowling Green,40.704817,-74.014065,subway
+sub_420S,Bowling Green,40.704817,-74.014065,subway
+sub_423,Borough Hall,40.692404,-73.990151,subway
+sub_423N,Borough Hall,40.692404,-73.990151,subway
+sub_423S,Borough Hall,40.692404,-73.990151,subway
+sub_501,Eastchester - Dyre Av,40.8883,-73.830834,subway
+sub_501N,Eastchester - Dyre Av,40.8883,-73.830834,subway
+sub_501S,Eastchester - Dyre Av,40.8883,-73.830834,subway
+sub_502,Baychester Av,40.878663,-73.838591,subway
+sub_502N,Baychester Av,40.878663,-73.838591,subway
+sub_502S,Baychester Av,40.878663,-73.838591,subway
+sub_503,Gun Hill Rd,40.869526,-73.846384,subway
+sub_503N,Gun Hill Rd,40.869526,-73.846384,subway
+sub_503S,Gun Hill Rd,40.869526,-73.846384,subway
+sub_504,Pelham Pkwy,40.858985,-73.855359,subway
+sub_504N,Pelham Pkwy,40.858985,-73.855359,subway
+sub_504S,Pelham Pkwy,40.858985,-73.855359,subway
+sub_505,Morris Park,40.854364,-73.860495,subway
+sub_505N,Morris Park,40.854364,-73.860495,subway
+sub_505S,Morris Park,40.854364,-73.860495,subway
+sub_601,Pelham Bay Park,40.852462,-73.828121,subway
+sub_601N,Pelham Bay Park,40.852462,-73.828121,subway
+sub_601S,Pelham Bay Park,40.852462,-73.828121,subway
+sub_602,Buhre Av,40.84681,-73.832569,subway
+sub_602N,Buhre Av,40.84681,-73.832569,subway
+sub_602S,Buhre Av,40.84681,-73.832569,subway
+sub_603,Middletown Rd,40.843863,-73.836322,subway
+sub_603N,Middletown Rd,40.843863,-73.836322,subway
+sub_603S,Middletown Rd,40.843863,-73.836322,subway
+sub_604,Westchester Sq - E Tremont Av,40.839892,-73.842952,subway
+sub_604N,Westchester Sq - E Tremont Av,40.839892,-73.842952,subway
+sub_604S,Westchester Sq - E Tremont Av,40.839892,-73.842952,subway
+sub_606,Zerega Av,40.836488,-73.847036,subway
+sub_606N,Zerega Av,40.836488,-73.847036,subway
+sub_606S,Zerega Av,40.836488,-73.847036,subway
+sub_607,Castle Hill Av,40.834255,-73.851222,subway
+sub_607N,Castle Hill Av,40.834255,-73.851222,subway
+sub_607S,Castle Hill Av,40.834255,-73.851222,subway
+sub_608,Parkchester,40.833226,-73.860816,subway
+sub_608N,Parkchester,40.833226,-73.860816,subway
+sub_608S,Parkchester,40.833226,-73.860816,subway
+sub_609,St Lawrence Av,40.831509,-73.867618,subway
+sub_609N,St Lawrence Av,40.831509,-73.867618,subway
+sub_609S,St Lawrence Av,40.831509,-73.867618,subway
+sub_610,Morrison Av- Sound View,40.829521,-73.874516,subway
+sub_610N,Morrison Av- Sound View,40.829521,-73.874516,subway
+sub_610S,Morrison Av- Sound View,40.829521,-73.874516,subway
+sub_611,Elder Av,40.828584,-73.879159,subway
+sub_611N,Elder Av,40.828584,-73.879159,subway
+sub_611S,Elder Av,40.828584,-73.879159,subway
+sub_612,Whitlock Av,40.826525,-73.886283,subway
+sub_612N,Whitlock Av,40.826525,-73.886283,subway
+sub_612S,Whitlock Av,40.826525,-73.886283,subway
+sub_613,Hunts Point Av,40.820948,-73.890549,subway
+sub_613N,Hunts Point Av,40.820948,-73.890549,subway
+sub_613S,Hunts Point Av,40.820948,-73.890549,subway
+sub_614,Longwood Av,40.816104,-73.896435,subway
+sub_614N,Longwood Av,40.816104,-73.896435,subway
+sub_614S,Longwood Av,40.816104,-73.896435,subway
+sub_615,E 149 St,40.812118,-73.904098,subway
+sub_615N,E 149 St,40.812118,-73.904098,subway
+sub_615S,E 149 St,40.812118,-73.904098,subway
+sub_616,E 143 St - St Mary's St,40.808719,-73.907657,subway
+sub_616N,E 143 St - St Mary's St,40.808719,-73.907657,subway
+sub_616S,E 143 St - St Mary's St,40.808719,-73.907657,subway
+sub_617,Cypress Av,40.805368,-73.914042,subway
+sub_617N,Cypress Av,40.805368,-73.914042,subway
+sub_617S,Cypress Av,40.805368,-73.914042,subway
+sub_618,Brook Av,40.807566,-73.91924,subway
+sub_618N,Brook Av,40.807566,-73.91924,subway
+sub_618S,Brook Av,40.807566,-73.91924,subway
+sub_619,3 Av - 138 St,40.810476,-73.926138,subway
+sub_619N,3 Av - 138 St,40.810476,-73.926138,subway
+sub_619S,3 Av - 138 St,40.810476,-73.926138,subway
+sub_621,125 St,40.804138,-73.937594,subway
+sub_621N,125 St,40.804138,-73.937594,subway
+sub_621S,125 St,40.804138,-73.937594,subway
+sub_622,116 St,40.798629,-73.941617,subway
+sub_622N,116 St,40.798629,-73.941617,subway
+sub_622S,116 St,40.798629,-73.941617,subway
+sub_623,110 St,40.79502,-73.94425,subway
+sub_623N,110 St,40.79502,-73.94425,subway
+sub_623S,110 St,40.79502,-73.94425,subway
+sub_624,103 St,40.7906,-73.947478,subway
+sub_624N,103 St,40.7906,-73.947478,subway
+sub_624S,103 St,40.7906,-73.947478,subway
+sub_625,96 St,40.785672,-73.95107,subway
+sub_625N,96 St,40.785672,-73.95107,subway
+sub_625S,96 St,40.785672,-73.95107,subway
+sub_626,86 St,40.779492,-73.955589,subway
+sub_626N,86 St,40.779492,-73.955589,subway
+sub_626S,86 St,40.779492,-73.955589,subway
+sub_627,77 St,40.77362,-73.959874,subway
+sub_627N,77 St,40.77362,-73.959874,subway
+sub_627S,77 St,40.77362,-73.959874,subway
+sub_628,68 St - Hunter College,40.768141,-73.96387,subway
+sub_628N,68 St - Hunter College,40.768141,-73.96387,subway
+sub_628S,68 St - Hunter College,40.768141,-73.96387,subway
+sub_629,59 St,40.762526,-73.967967,subway
+sub_629N,59 St,40.762526,-73.967967,subway
+sub_629S,59 St,40.762526,-73.967967,subway
+sub_630,51 St,40.757107,-73.97192,subway
+sub_630N,51 St,40.757107,-73.97192,subway
+sub_630S,51 St,40.757107,-73.97192,subway
+sub_631,Grand Central - 42 St,40.751776,-73.976848,subway
+sub_631N,Grand Central - 42 St,40.751776,-73.976848,subway
+sub_631S,Grand Central - 42 St,40.751776,-73.976848,subway
+sub_632,33 St,40.746081,-73.982076,subway
+sub_632N,33 St,40.746081,-73.982076,subway
+sub_632S,33 St,40.746081,-73.982076,subway
+sub_633,28 St,40.74307,-73.984264,subway
+sub_633N,28 St,40.74307,-73.984264,subway
+sub_633S,28 St,40.74307,-73.984264,subway
+sub_634,23 St,40.739864,-73.986599,subway
+sub_634N,23 St,40.739864,-73.986599,subway
+sub_634S,23 St,40.739864,-73.986599,subway
+sub_635,14 St - Union Sq,40.734673,-73.989951,subway
+sub_635N,14 St - Union Sq,40.734673,-73.989951,subway
+sub_635S,14 St - Union Sq,40.734673,-73.989951,subway
+sub_636,Astor Pl,40.730054,-73.99107,subway
+sub_636N,Astor Pl,40.730054,-73.99107,subway
+sub_636S,Astor Pl,40.730054,-73.99107,subway
+sub_637,Bleecker St,40.725915,-73.994659,subway
+sub_637N,Bleecker St,40.725915,-73.994659,subway
+sub_637S,Bleecker St,40.725915,-73.994659,subway
+sub_638,Spring St,40.722301,-73.997141,subway
+sub_638N,Spring St,40.722301,-73.997141,subway
+sub_638S,Spring St,40.722301,-73.997141,subway
+sub_639,Canal St,40.718803,-74.000193,subway
+sub_639N,Canal St,40.718803,-74.000193,subway
+sub_639S,Canal St,40.718803,-74.000193,subway
+sub_640,Brooklyn Bridge - City Hall,40.713065,-74.004131,subway
+sub_640N,Brooklyn Bridge - City Hall,40.713065,-74.004131,subway
+sub_640S,Brooklyn Bridge - City Hall,40.713065,-74.004131,subway
+sub_701,Flushing - Main St,40.7596,-73.83003,subway
+sub_701N,Flushing - Main St,40.7596,-73.83003,subway
+sub_701S,Flushing - Main St,40.7596,-73.83003,subway
+sub_702,Mets - Willets Point,40.754622,-73.845625,subway
+sub_702N,Mets - Willets Point,40.754622,-73.845625,subway
+sub_702S,Mets - Willets Point,40.754622,-73.845625,subway
+sub_705,111 St,40.75173,-73.855334,subway
+sub_705N,111 St,40.75173,-73.855334,subway
+sub_705S,111 St,40.75173,-73.855334,subway
+sub_706,103 St - Corona Plaza,40.749865,-73.8627,subway
+sub_706N,103 St - Corona Plaza,40.749865,-73.8627,subway
+sub_706S,103 St - Corona Plaza,40.749865,-73.8627,subway
+sub_707,Junction Blvd,40.749145,-73.869527,subway
+sub_707N,Junction Blvd,40.749145,-73.869527,subway
+sub_707S,Junction Blvd,40.749145,-73.869527,subway
+sub_708,90 St - Elmhurst Av,40.748408,-73.876613,subway
+sub_708N,90 St - Elmhurst Av,40.748408,-73.876613,subway
+sub_708S,90 St - Elmhurst Av,40.748408,-73.876613,subway
+sub_709,82 St - Jackson Hts,40.747659,-73.883697,subway
+sub_709N,82 St - Jackson Hts,40.747659,-73.883697,subway
+sub_709S,82 St - Jackson Hts,40.747659,-73.883697,subway
+sub_710,74 St - Broadway,40.746848,-73.891394,subway
+sub_710N,74 St - Broadway,40.746848,-73.891394,subway
+sub_710S,74 St - Broadway,40.746848,-73.891394,subway
+sub_711,69 St,40.746325,-73.896403,subway
+sub_711N,69 St,40.746325,-73.896403,subway
+sub_711S,69 St,40.746325,-73.896403,subway
+sub_712,Woodside - 61 St,40.74563,-73.902984,subway
+sub_712N,Woodside - 61 St,40.74563,-73.902984,subway
+sub_712S,Woodside - 61 St,40.74563,-73.902984,subway
+sub_713,52 St,40.744149,-73.912549,subway
+sub_713N,52 St,40.744149,-73.912549,subway
+sub_713S,52 St,40.744149,-73.912549,subway
+sub_714,46 St,40.743132,-73.918435,subway
+sub_714N,46 St,40.743132,-73.918435,subway
+sub_714S,46 St,40.743132,-73.918435,subway
+sub_715,40 St,40.743781,-73.924016,subway
+sub_715N,40 St,40.743781,-73.924016,subway
+sub_715S,40 St,40.743781,-73.924016,subway
+sub_716,33 St,40.744587,-73.930997,subway
+sub_716N,33 St,40.744587,-73.930997,subway
+sub_716S,33 St,40.744587,-73.930997,subway
+sub_718,Queensboro Plaza,40.750582,-73.940202,subway
+sub_718N,Queensboro Plaza,40.750582,-73.940202,subway
+sub_718S,Queensboro Plaza,40.750582,-73.940202,subway
+sub_719,Court Sq,40.747023,-73.945264,subway
+sub_719N,Court Sq,40.747023,-73.945264,subway
+sub_719S,Court Sq,40.747023,-73.945264,subway
+sub_720,Hunters Point Av,40.742216,-73.948916,subway
+sub_720N,Hunters Point Av,40.742216,-73.948916,subway
+sub_720S,Hunters Point Av,40.742216,-73.948916,subway
+sub_721,Vernon Blvd - Jackson Av,40.742626,-73.953581,subway
+sub_721N,Vernon Blvd - Jackson Av,40.742626,-73.953581,subway
+sub_721S,Vernon Blvd - Jackson Av,40.742626,-73.953581,subway
+sub_723,Grand Central - 42 St,40.751431,-73.976041,subway
+sub_723N,Grand Central - 42 St,40.751431,-73.976041,subway
+sub_723S,Grand Central - 42 St,40.751431,-73.976041,subway
+sub_724,5 Av,40.753821,-73.981963,subway
+sub_724N,5 Av,40.753821,-73.981963,subway
+sub_724S,5 Av,40.753821,-73.981963,subway
+sub_725,Times Sq - 42 St,40.755477,-73.987691,subway
+sub_725N,Times Sq - 42 St,40.755477,-73.987691,subway
+sub_725S,Times Sq - 42 St,40.755477,-73.987691,subway
+sub_901,Grand Central - 42 St,40.752769,-73.979189,subway
+sub_901N,Grand Central - 42 St,40.752769,-73.979189,subway
+sub_901S,Grand Central - 42 St,40.752769,-73.979189,subway
+sub_902,Times Sq - 42 St,40.755983,-73.986229,subway
+sub_902N,Times Sq - 42 St,40.755983,-73.986229,subway
+sub_902S,Times Sq - 42 St,40.755983,-73.986229,subway
+sub_A02,Inwood - 207 St,40.868072,-73.919899,subway
+sub_A02N,Inwood - 207 St,40.868072,-73.919899,subway
+sub_A02S,Inwood - 207 St,40.868072,-73.919899,subway
+sub_A03,Dyckman St,40.865491,-73.927271,subway
+sub_A03N,Dyckman St,40.865491,-73.927271,subway
+sub_A03S,Dyckman St,40.865491,-73.927271,subway
+sub_A05,190 St,40.859022,-73.93418,subway
+sub_A05N,190 St,40.859022,-73.93418,subway
+sub_A05S,190 St,40.859022,-73.93418,subway
+sub_A06,181 St,40.851695,-73.937969,subway
+sub_A06N,181 St,40.851695,-73.937969,subway
+sub_A06S,181 St,40.851695,-73.937969,subway
+sub_A07,175 St,40.847391,-73.939704,subway
+sub_A07N,175 St,40.847391,-73.939704,subway
+sub_A07S,175 St,40.847391,-73.939704,subway
+sub_A09,168 St,40.840719,-73.939561,subway
+sub_A09N,168 St,40.840719,-73.939561,subway
+sub_A09S,168 St,40.840719,-73.939561,subway
+sub_A10,163 St - Amsterdam Av,40.836013,-73.939892,subway
+sub_A10N,163 St - Amsterdam Av,40.836013,-73.939892,subway
+sub_A10S,163 St - Amsterdam Av,40.836013,-73.939892,subway
+sub_A11,155 St,40.830518,-73.941514,subway
+sub_A11N,155 St,40.830518,-73.941514,subway
+sub_A11S,155 St,40.830518,-73.941514,subway
+sub_A12,145 St,40.824783,-73.944216,subway
+sub_A12N,145 St,40.824783,-73.944216,subway
+sub_A12S,145 St,40.824783,-73.944216,subway
+sub_A14,135 St,40.817894,-73.947649,subway
+sub_A14N,135 St,40.817894,-73.947649,subway
+sub_A14S,135 St,40.817894,-73.947649,subway
+sub_A15,125 St,40.811109,-73.952343,subway
+sub_A15N,125 St,40.811109,-73.952343,subway
+sub_A15S,125 St,40.811109,-73.952343,subway
+sub_A16,116 St,40.805085,-73.954882,subway
+sub_A16N,116 St,40.805085,-73.954882,subway
+sub_A16S,116 St,40.805085,-73.954882,subway
+sub_A17,Cathedral Pkwy (110 St),40.800603,-73.958161,subway
+sub_A17N,Cathedral Pkwy (110 St),40.800603,-73.958161,subway
+sub_A17S,Cathedral Pkwy (110 St),40.800603,-73.958161,subway
+sub_A18,103 St,40.796092,-73.961454,subway
+sub_A18N,103 St,40.796092,-73.961454,subway
+sub_A18S,103 St,40.796092,-73.961454,subway
+sub_A19,96 St,40.791642,-73.964696,subway
+sub_A19N,96 St,40.791642,-73.964696,subway
+sub_A19S,96 St,40.791642,-73.964696,subway
+sub_A20,86 St,40.785868,-73.968916,subway
+sub_A20N,86 St,40.785868,-73.968916,subway
+sub_A20S,86 St,40.785868,-73.968916,subway
+sub_A21,81 St - Museum of Natural History,40.781433,-73.972143,subway
+sub_A21N,81 St - Museum of Natural History,40.781433,-73.972143,subway
+sub_A21S,81 St - Museum of Natural History,40.781433,-73.972143,subway
+sub_A22,72 St,40.775594,-73.97641,subway
+sub_A22N,72 St,40.775594,-73.97641,subway
+sub_A22S,72 St,40.775594,-73.97641,subway
+sub_A24,59 St - Columbus Circle,40.768296,-73.981736,subway
+sub_A24N,59 St - Columbus Circle,40.768296,-73.981736,subway
+sub_A24S,59 St - Columbus Circle,40.768296,-73.981736,subway
+sub_A25,50 St,40.762456,-73.985984,subway
+sub_A25N,50 St,40.762456,-73.985984,subway
+sub_A25S,50 St,40.762456,-73.985984,subway
+sub_A27,42 St - Port Authority Bus Terminal,40.757308,-73.989735,subway
+sub_A27N,42 St - Port Authority Bus Terminal,40.757308,-73.989735,subway
+sub_A27S,42 St - Port Authority Bus Terminal,40.757308,-73.989735,subway
+sub_A28,34 St - Penn Station,40.752287,-73.993391,subway
+sub_A28N,34 St - Penn Station,40.752287,-73.993391,subway
+sub_A28S,34 St - Penn Station,40.752287,-73.993391,subway
+sub_A30,23 St,40.745906,-73.998041,subway
+sub_A30N,23 St,40.745906,-73.998041,subway
+sub_A30S,23 St,40.745906,-73.998041,subway
+sub_A31,14 St,40.740893,-74.00169,subway
+sub_A31N,14 St,40.740893,-74.00169,subway
+sub_A31S,14 St,40.740893,-74.00169,subway
+sub_A32,W 4 St,40.732338,-74.000495,subway
+sub_A32N,W 4 St,40.732338,-74.000495,subway
+sub_A32S,W 4 St,40.732338,-74.000495,subway
+sub_A33,Spring St,40.726227,-74.003739,subway
+sub_A33N,Spring St,40.726227,-74.003739,subway
+sub_A33S,Spring St,40.726227,-74.003739,subway
+sub_A34,Canal St,40.720824,-74.005229,subway
+sub_A34N,Canal St,40.720824,-74.005229,subway
+sub_A34S,Canal St,40.720824,-74.005229,subway
+sub_A36,Chambers St,40.714111,-74.008585,subway
+sub_A36N,Chambers St,40.714111,-74.008585,subway
+sub_A36S,Chambers St,40.714111,-74.008585,subway
+sub_A38,Fulton St,40.710197,-74.007691,subway
+sub_A38N,Fulton St,40.710197,-74.007691,subway
+sub_A38S,Fulton St,40.710197,-74.007691,subway
+sub_A40,High St,40.699337,-73.990531,subway
+sub_A40N,High St,40.699337,-73.990531,subway
+sub_A40S,High St,40.699337,-73.990531,subway
+sub_A41,Jay St - MetroTech,40.692338,-73.987342,subway
+sub_A41N,Jay St - MetroTech,40.692338,-73.987342,subway
+sub_A41S,Jay St - MetroTech,40.692338,-73.987342,subway
+sub_A42,Hoyt - Schermerhorn Sts,40.688484,-73.985001,subway
+sub_A42N,Hoyt - Schermerhorn Sts,40.688484,-73.985001,subway
+sub_A42S,Hoyt - Schermerhorn Sts,40.688484,-73.985001,subway
+sub_A43,Lafayette Av,40.686113,-73.973946,subway
+sub_A43N,Lafayette Av,40.686113,-73.973946,subway
+sub_A43S,Lafayette Av,40.686113,-73.973946,subway
+sub_A44,Clinton - Washington Avs,40.683263,-73.965838,subway
+sub_A44N,Clinton - Washington Avs,40.683263,-73.965838,subway
+sub_A44S,Clinton - Washington Avs,40.683263,-73.965838,subway
+sub_A45,Franklin Av,40.68138,-73.956848,subway
+sub_A45N,Franklin Av,40.68138,-73.956848,subway
+sub_A45S,Franklin Av,40.68138,-73.956848,subway
+sub_A46,Nostrand Av,40.680438,-73.950426,subway
+sub_A46N,Nostrand Av,40.680438,-73.950426,subway
+sub_A46S,Nostrand Av,40.680438,-73.950426,subway
+sub_A47,Kingston - Throop Avs,40.679921,-73.940858,subway
+sub_A47N,Kingston - Throop Avs,40.679921,-73.940858,subway
+sub_A47S,Kingston - Throop Avs,40.679921,-73.940858,subway
+sub_A48,Utica Av,40.679364,-73.930729,subway
+sub_A48N,Utica Av,40.679364,-73.930729,subway
+sub_A48S,Utica Av,40.679364,-73.930729,subway
+sub_A49,Ralph Av,40.678822,-73.920786,subway
+sub_A49N,Ralph Av,40.678822,-73.920786,subway
+sub_A49S,Ralph Av,40.678822,-73.920786,subway
+sub_A50,Rockaway Av,40.67834,-73.911946,subway
+sub_A50N,Rockaway Av,40.67834,-73.911946,subway
+sub_A50S,Rockaway Av,40.67834,-73.911946,subway
+sub_A51,Broadway Jct,40.678334,-73.905316,subway
+sub_A51N,Broadway Jct,40.678334,-73.905316,subway
+sub_A51S,Broadway Jct,40.678334,-73.905316,subway
+sub_A52,Liberty Av,40.674542,-73.896548,subway
+sub_A52N,Liberty Av,40.674542,-73.896548,subway
+sub_A52S,Liberty Av,40.674542,-73.896548,subway
+sub_A53,Van Siclen Av,40.67271,-73.890358,subway
+sub_A53N,Van Siclen Av,40.67271,-73.890358,subway
+sub_A53S,Van Siclen Av,40.67271,-73.890358,subway
+sub_A54,Shepherd Av,40.67413,-73.88075,subway
+sub_A54N,Shepherd Av,40.67413,-73.88075,subway
+sub_A54S,Shepherd Av,40.67413,-73.88075,subway
+sub_A55,Euclid Av,40.675377,-73.872106,subway
+sub_A55N,Euclid Av,40.675377,-73.872106,subway
+sub_A55S,Euclid Av,40.675377,-73.872106,subway
+sub_A57,Grant Av,40.677044,-73.86505,subway
+sub_A57N,Grant Av,40.677044,-73.86505,subway
+sub_A57S,Grant Av,40.677044,-73.86505,subway
+sub_A59,80 St,40.679371,-73.858992,subway
+sub_A59N,80 St,40.679371,-73.858992,subway
+sub_A59S,80 St,40.679371,-73.858992,subway
+sub_A60,88 St,40.679843,-73.85147,subway
+sub_A60N,88 St,40.679843,-73.85147,subway
+sub_A60S,88 St,40.679843,-73.85147,subway
+sub_A61,Rockaway Blvd,40.680429,-73.843853,subway
+sub_A61N,Rockaway Blvd,40.680429,-73.843853,subway
+sub_A61S,Rockaway Blvd,40.680429,-73.843853,subway
+sub_A63,104 St,40.681711,-73.837683,subway
+sub_A63N,104 St,40.681711,-73.837683,subway
+sub_A63S,104 St,40.681711,-73.837683,subway
+sub_A64,111 St,40.684331,-73.832163,subway
+sub_A64N,111 St,40.684331,-73.832163,subway
+sub_A64S,111 St,40.684331,-73.832163,subway
+sub_A65,Ozone Park - Lefferts Blvd,40.685951,-73.825798,subway
+sub_A65N,Ozone Park - Lefferts Blvd,40.685951,-73.825798,subway
+sub_A65S,Ozone Park - Lefferts Blvd,40.685951,-73.825798,subway
+sub_B04,21 St - Queensbridge,40.754203,-73.942836,subway
+sub_B04N,21 St - Queensbridge,40.754203,-73.942836,subway
+sub_B04S,21 St - Queensbridge,40.754203,-73.942836,subway
+sub_B06,Roosevelt Island,40.759145,-73.95326,subway
+sub_B06N,Roosevelt Island,40.759145,-73.95326,subway
+sub_B06S,Roosevelt Island,40.759145,-73.95326,subway
+sub_B08,Lexington Av/63 St,40.764629,-73.966113,subway
+sub_B08N,Lexington Av/63 St,40.764629,-73.966113,subway
+sub_B08S,Lexington Av/63 St,40.764629,-73.966113,subway
+sub_B10,57 St,40.763972,-73.97745,subway
+sub_B10N,57 St,40.763972,-73.97745,subway
+sub_B10S,57 St,40.763972,-73.97745,subway
+sub_B12,9 Av,40.646292,-73.994324,subway
+sub_B12N,9 Av,40.646292,-73.994324,subway
+sub_B12S,9 Av,40.646292,-73.994324,subway
+sub_B13,Fort Hamilton Pkwy,40.640914,-73.994304,subway
+sub_B13N,Fort Hamilton Pkwy,40.640914,-73.994304,subway
+sub_B13S,Fort Hamilton Pkwy,40.640914,-73.994304,subway
+sub_B14,50 St,40.63626,-73.994791,subway
+sub_B14N,50 St,40.63626,-73.994791,subway
+sub_B14S,50 St,40.63626,-73.994791,subway
+sub_B15,55 St,40.631435,-73.995476,subway
+sub_B15N,55 St,40.631435,-73.995476,subway
+sub_B15S,55 St,40.631435,-73.995476,subway
+sub_B16,62 St,40.626472,-73.996895,subway
+sub_B16N,62 St,40.626472,-73.996895,subway
+sub_B16S,62 St,40.626472,-73.996895,subway
+sub_B17,71 St,40.619589,-73.998864,subway
+sub_B17N,71 St,40.619589,-73.998864,subway
+sub_B17S,71 St,40.619589,-73.998864,subway
+sub_B18,79 St,40.613501,-74.00061,subway
+sub_B18N,79 St,40.613501,-74.00061,subway
+sub_B18S,79 St,40.613501,-74.00061,subway
+sub_B19,18 Av,40.607954,-74.001736,subway
+sub_B19N,18 Av,40.607954,-74.001736,subway
+sub_B19S,18 Av,40.607954,-74.001736,subway
+sub_B20,20 Av,40.604556,-73.998168,subway
+sub_B20N,20 Av,40.604556,-73.998168,subway
+sub_B20S,20 Av,40.604556,-73.998168,subway
+sub_B21,Bay Pkwy,40.601875,-73.993728,subway
+sub_B21N,Bay Pkwy,40.601875,-73.993728,subway
+sub_B21S,Bay Pkwy,40.601875,-73.993728,subway
+sub_B22,25 Av,40.597704,-73.986829,subway
+sub_B22N,25 Av,40.597704,-73.986829,subway
+sub_B22S,25 Av,40.597704,-73.986829,subway
+sub_B23,Bay 50 St,40.588841,-73.983765,subway
+sub_B23N,Bay 50 St,40.588841,-73.983765,subway
+sub_B23S,Bay 50 St,40.588841,-73.983765,subway
+sub_D01,Norwood - 205 St,40.874811,-73.878855,subway
+sub_D01N,Norwood - 205 St,40.874811,-73.878855,subway
+sub_D01S,Norwood - 205 St,40.874811,-73.878855,subway
+sub_D03,Bedford Park Blvd,40.873244,-73.887138,subway
+sub_D03N,Bedford Park Blvd,40.873244,-73.887138,subway
+sub_D03S,Bedford Park Blvd,40.873244,-73.887138,subway
+sub_D04,Kingsbridge Rd,40.866978,-73.893509,subway
+sub_D04N,Kingsbridge Rd,40.866978,-73.893509,subway
+sub_D04S,Kingsbridge Rd,40.866978,-73.893509,subway
+sub_D05,Fordham Rd,40.861296,-73.897749,subway
+sub_D05N,Fordham Rd,40.861296,-73.897749,subway
+sub_D05S,Fordham Rd,40.861296,-73.897749,subway
+sub_D06,182-183 Sts,40.856093,-73.900741,subway
+sub_D06N,182-183 Sts,40.856093,-73.900741,subway
+sub_D06S,182-183 Sts,40.856093,-73.900741,subway
+sub_D07,Tremont Av,40.85041,-73.905227,subway
+sub_D07N,Tremont Av,40.85041,-73.905227,subway
+sub_D07S,Tremont Av,40.85041,-73.905227,subway
+sub_D08,174-175 Sts,40.8459,-73.910136,subway
+sub_D08N,174-175 Sts,40.8459,-73.910136,subway
+sub_D08S,174-175 Sts,40.8459,-73.910136,subway
+sub_D09,170 St,40.839306,-73.9134,subway
+sub_D09N,170 St,40.839306,-73.9134,subway
+sub_D09S,170 St,40.839306,-73.9134,subway
+sub_D10,167 St,40.833771,-73.91844,subway
+sub_D10N,167 St,40.833771,-73.91844,subway
+sub_D10S,167 St,40.833771,-73.91844,subway
+sub_D11,161 St - Yankee Stadium,40.827905,-73.925651,subway
+sub_D11N,161 St - Yankee Stadium,40.827905,-73.925651,subway
+sub_D11S,161 St - Yankee Stadium,40.827905,-73.925651,subway
+sub_D12,155 St,40.830135,-73.938209,subway
+sub_D12N,155 St,40.830135,-73.938209,subway
+sub_D12S,155 St,40.830135,-73.938209,subway
+sub_D13,145 St,40.824783,-73.944216,subway
+sub_D13N,145 St,40.824783,-73.944216,subway
+sub_D13S,145 St,40.824783,-73.944216,subway
+sub_D14,7 Av,40.762862,-73.981637,subway
+sub_D14N,7 Av,40.762862,-73.981637,subway
+sub_D14S,7 Av,40.762862,-73.981637,subway
+sub_D15,47-50 Sts - Rockefeller Ctr,40.758663,-73.981329,subway
+sub_D15N,47-50 Sts - Rockefeller Ctr,40.758663,-73.981329,subway
+sub_D15S,47-50 Sts - Rockefeller Ctr,40.758663,-73.981329,subway
+sub_D16,42 St - Bryant Pk,40.754222,-73.984569,subway
+sub_D16N,42 St - Bryant Pk,40.754222,-73.984569,subway
+sub_D16S,42 St - Bryant Pk,40.754222,-73.984569,subway
+sub_D17,34 St - Herald Sq,40.749719,-73.987823,subway
+sub_D17N,34 St - Herald Sq,40.749719,-73.987823,subway
+sub_D17S,34 St - Herald Sq,40.749719,-73.987823,subway
+sub_D18,23 St,40.742878,-73.992821,subway
+sub_D18N,23 St,40.742878,-73.992821,subway
+sub_D18S,23 St,40.742878,-73.992821,subway
+sub_D19,14 St,40.738228,-73.996209,subway
+sub_D19N,14 St,40.738228,-73.996209,subway
+sub_D19S,14 St,40.738228,-73.996209,subway
+sub_D20,W 4 St,40.732338,-74.000495,subway
+sub_D20N,W 4 St,40.732338,-74.000495,subway
+sub_D20S,W 4 St,40.732338,-74.000495,subway
+sub_D21,Broadway-Lafayette St,40.725297,-73.996204,subway
+sub_D21N,Broadway-Lafayette St,40.725297,-73.996204,subway
+sub_D21S,Broadway-Lafayette St,40.725297,-73.996204,subway
+sub_D22,Grand St,40.718267,-73.993753,subway
+sub_D22N,Grand St,40.718267,-73.993753,subway
+sub_D22S,Grand St,40.718267,-73.993753,subway
+sub_D24,Atlantic Av - Barclays Ctr,40.68446,-73.97689,subway
+sub_D24N,Atlantic Av - Barclays Ctr,40.68446,-73.97689,subway
+sub_D24S,Atlantic Av - Barclays Ctr,40.68446,-73.97689,subway
+sub_D25,7 Av,40.67705,-73.972367,subway
+sub_D25N,7 Av,40.67705,-73.972367,subway
+sub_D25S,7 Av,40.67705,-73.972367,subway
+sub_D26,Prospect Park,40.661614,-73.962246,subway
+sub_D26N,Prospect Park,40.661614,-73.962246,subway
+sub_D26S,Prospect Park,40.661614,-73.962246,subway
+sub_D27,Parkside Av,40.655292,-73.961495,subway
+sub_D27N,Parkside Av,40.655292,-73.961495,subway
+sub_D27S,Parkside Av,40.655292,-73.961495,subway
+sub_D28,Church Av,40.650527,-73.962982,subway
+sub_D28N,Church Av,40.650527,-73.962982,subway
+sub_D28S,Church Av,40.650527,-73.962982,subway
+sub_D29,Beverly Rd,40.644031,-73.964492,subway
+sub_D29N,Beverly Rd,40.644031,-73.964492,subway
+sub_D29S,Beverly Rd,40.644031,-73.964492,subway
+sub_D30,Cortelyou Rd,40.640927,-73.963891,subway
+sub_D30N,Cortelyou Rd,40.640927,-73.963891,subway
+sub_D30S,Cortelyou Rd,40.640927,-73.963891,subway
+sub_D31,Newkirk Plaza,40.635082,-73.962793,subway
+sub_D31N,Newkirk Plaza,40.635082,-73.962793,subway
+sub_D31S,Newkirk Plaza,40.635082,-73.962793,subway
+sub_D32,Avenue H,40.62927,-73.961639,subway
+sub_D32N,Avenue H,40.62927,-73.961639,subway
+sub_D32S,Avenue H,40.62927,-73.961639,subway
+sub_D33,Avenue J,40.625039,-73.960803,subway
+sub_D33N,Avenue J,40.625039,-73.960803,subway
+sub_D33S,Avenue J,40.625039,-73.960803,subway
+sub_D34,Avenue M,40.617618,-73.959399,subway
+sub_D34N,Avenue M,40.617618,-73.959399,subway
+sub_D34S,Avenue M,40.617618,-73.959399,subway
+sub_D35,Kings Hwy,40.60867,-73.957734,subway
+sub_D35N,Kings Hwy,40.60867,-73.957734,subway
+sub_D35S,Kings Hwy,40.60867,-73.957734,subway
+sub_D37,Avenue U,40.5993,-73.955929,subway
+sub_D37N,Avenue U,40.5993,-73.955929,subway
+sub_D37S,Avenue U,40.5993,-73.955929,subway
+sub_D38,Neck Rd,40.595246,-73.955161,subway
+sub_D38N,Neck Rd,40.595246,-73.955161,subway
+sub_D38S,Neck Rd,40.595246,-73.955161,subway
+sub_D39,Sheepshead Bay,40.586896,-73.954155,subway
+sub_D39N,Sheepshead Bay,40.586896,-73.954155,subway
+sub_D39S,Sheepshead Bay,40.586896,-73.954155,subway
+sub_D40,Brighton Beach,40.577621,-73.961376,subway
+sub_D40N,Brighton Beach,40.577621,-73.961376,subway
+sub_D40S,Brighton Beach,40.577621,-73.961376,subway
+sub_D41,Ocean Pkwy,40.576312,-73.968501,subway
+sub_D41N,Ocean Pkwy,40.576312,-73.968501,subway
+sub_D41S,Ocean Pkwy,40.576312,-73.968501,subway
+sub_D42,W 8 St - NY Aquarium,40.576127,-73.975939,subway
+sub_D42N,W 8 St - NY Aquarium,40.576127,-73.975939,subway
+sub_D42S,W 8 St - NY Aquarium,40.576127,-73.975939,subway
+sub_D43,Coney Island - Stillwell Av,40.577422,-73.981233,subway
+sub_D43N,Coney Island - Stillwell Av,40.577422,-73.981233,subway
+sub_D43S,Coney Island - Stillwell Av,40.577422,-73.981233,subway
+sub_E01,World Trade Center,40.712582,-74.009781,subway
+sub_E01N,World Trade Center,40.712582,-74.009781,subway
+sub_E01S,World Trade Center,40.712582,-74.009781,subway
+sub_F01,Jamaica - 179 St,40.712646,-73.783817,subway
+sub_F01N,Jamaica - 179 St,40.712646,-73.783817,subway
+sub_F01S,Jamaica - 179 St,40.712646,-73.783817,subway
+sub_F02,169 St,40.71047,-73.793604,subway
+sub_F02N,169 St,40.71047,-73.793604,subway
+sub_F02S,169 St,40.71047,-73.793604,subway
+sub_F03,Parsons Blvd,40.707564,-73.803326,subway
+sub_F03N,Parsons Blvd,40.707564,-73.803326,subway
+sub_F03S,Parsons Blvd,40.707564,-73.803326,subway
+sub_F04,Sutphin Blvd,40.70546,-73.810708,subway
+sub_F04N,Sutphin Blvd,40.70546,-73.810708,subway
+sub_F04S,Sutphin Blvd,40.70546,-73.810708,subway
+sub_F05,Briarwood - Van Wyck Blvd,40.709179,-73.820574,subway
+sub_F05N,Briarwood - Van Wyck Blvd,40.709179,-73.820574,subway
+sub_F05S,Briarwood - Van Wyck Blvd,40.709179,-73.820574,subway
+sub_F06,Kew Gardens - Union Tpke,40.714441,-73.831008,subway
+sub_F06N,Kew Gardens - Union Tpke,40.714441,-73.831008,subway
+sub_F06S,Kew Gardens - Union Tpke,40.714441,-73.831008,subway
+sub_F07,75 Av,40.718331,-73.837324,subway
+sub_F07N,75 Av,40.718331,-73.837324,subway
+sub_F07S,75 Av,40.718331,-73.837324,subway
+sub_F09,Court Sq,40.747846,-73.946,subway
+sub_F09N,Court Sq,40.747846,-73.946,subway
+sub_F09S,Court Sq,40.747846,-73.946,subway
+sub_F11,Lexington Av/53 St,40.757552,-73.969055,subway
+sub_F11N,Lexington Av/53 St,40.757552,-73.969055,subway
+sub_F11S,Lexington Av/53 St,40.757552,-73.969055,subway
+sub_F12,5 Av/53 St,40.760167,-73.975224,subway
+sub_F12N,5 Av/53 St,40.760167,-73.975224,subway
+sub_F12S,5 Av/53 St,40.760167,-73.975224,subway
+sub_F14,2 Av,40.723402,-73.989938,subway
+sub_F14N,2 Av,40.723402,-73.989938,subway
+sub_F14S,2 Av,40.723402,-73.989938,subway
+sub_F15,Delancey St,40.718611,-73.988114,subway
+sub_F15N,Delancey St,40.718611,-73.988114,subway
+sub_F15S,Delancey St,40.718611,-73.988114,subway
+sub_F16,East Broadway,40.713715,-73.990173,subway
+sub_F16N,East Broadway,40.713715,-73.990173,subway
+sub_F16S,East Broadway,40.713715,-73.990173,subway
+sub_F18,York St,40.701397,-73.986751,subway
+sub_F18N,York St,40.701397,-73.986751,subway
+sub_F18S,York St,40.701397,-73.986751,subway
+sub_F20,Bergen St,40.686145,-73.990862,subway
+sub_F20N,Bergen St,40.686145,-73.990862,subway
+sub_F20S,Bergen St,40.686145,-73.990862,subway
+sub_F21,Carroll St,40.680303,-73.995048,subway
+sub_F21N,Carroll St,40.680303,-73.995048,subway
+sub_F21S,Carroll St,40.680303,-73.995048,subway
+sub_F22,Smith - 9 Sts,40.67358,-73.995959,subway
+sub_F22N,Smith - 9 Sts,40.67358,-73.995959,subway
+sub_F22S,Smith - 9 Sts,40.67358,-73.995959,subway
+sub_F23,4 Av,40.670272,-73.989779,subway
+sub_F23N,4 Av,40.670272,-73.989779,subway
+sub_F23S,4 Av,40.670272,-73.989779,subway
+sub_F24,7 Av,40.666271,-73.980305,subway
+sub_F24N,7 Av,40.666271,-73.980305,subway
+sub_F24S,7 Av,40.666271,-73.980305,subway
+sub_F25,15 St - Prospect Park,40.660365,-73.979493,subway
+sub_F25N,15 St - Prospect Park,40.660365,-73.979493,subway
+sub_F25S,15 St - Prospect Park,40.660365,-73.979493,subway
+sub_F26,Fort Hamilton Pkwy,40.650782,-73.975776,subway
+sub_F26N,Fort Hamilton Pkwy,40.650782,-73.975776,subway
+sub_F26S,Fort Hamilton Pkwy,40.650782,-73.975776,subway
+sub_F27,Church Av,40.644041,-73.979678,subway
+sub_F27N,Church Av,40.644041,-73.979678,subway
+sub_F27S,Church Av,40.644041,-73.979678,subway
+sub_F29,Ditmas Av,40.636119,-73.978172,subway
+sub_F29N,Ditmas Av,40.636119,-73.978172,subway
+sub_F29S,Ditmas Av,40.636119,-73.978172,subway
+sub_F30,18 Av,40.629755,-73.976971,subway
+sub_F30N,18 Av,40.629755,-73.976971,subway
+sub_F30S,18 Av,40.629755,-73.976971,subway
+sub_F31,Avenue I,40.625322,-73.976127,subway
+sub_F31N,Avenue I,40.625322,-73.976127,subway
+sub_F31S,Avenue I,40.625322,-73.976127,subway
+sub_F32,Bay Pkwy,40.620769,-73.975264,subway
+sub_F32N,Bay Pkwy,40.620769,-73.975264,subway
+sub_F32S,Bay Pkwy,40.620769,-73.975264,subway
+sub_F33,Avenue N,40.61514,-73.974197,subway
+sub_F33N,Avenue N,40.61514,-73.974197,subway
+sub_F33S,Avenue N,40.61514,-73.974197,subway
+sub_F34,Avenue P,40.608944,-73.973022,subway
+sub_F34N,Avenue P,40.608944,-73.973022,subway
+sub_F34S,Avenue P,40.608944,-73.973022,subway
+sub_F35,Kings Hwy,40.603217,-73.972361,subway
+sub_F35N,Kings Hwy,40.603217,-73.972361,subway
+sub_F35S,Kings Hwy,40.603217,-73.972361,subway
+sub_F36,Avenue U,40.596063,-73.973357,subway
+sub_F36N,Avenue U,40.596063,-73.973357,subway
+sub_F36S,Avenue U,40.596063,-73.973357,subway
+sub_F38,Avenue X,40.58962,-73.97425,subway
+sub_F38N,Avenue X,40.58962,-73.97425,subway
+sub_F38S,Avenue X,40.58962,-73.97425,subway
+sub_F39,Neptune Av,40.581011,-73.974574,subway
+sub_F39N,Neptune Av,40.581011,-73.974574,subway
+sub_F39S,Neptune Av,40.581011,-73.974574,subway
+sub_G05,Jamaica Center - Parsons/Archer,40.702147,-73.801109,subway
+sub_G05N,Jamaica Center - Parsons/Archer,40.702147,-73.801109,subway
+sub_G05S,Jamaica Center - Parsons/Archer,40.702147,-73.801109,subway
+sub_G06,Sutphin Blvd - Archer Av - JFK Airport,40.700486,-73.807969,subway
+sub_G06N,Sutphin Blvd - Archer Av - JFK Airport,40.700486,-73.807969,subway
+sub_G06S,Sutphin Blvd - Archer Av - JFK Airport,40.700486,-73.807969,subway
+sub_G07,Jamaica - Van Wyck,40.702566,-73.816859,subway
+sub_G07N,Jamaica - Van Wyck,40.702566,-73.816859,subway
+sub_G07S,Jamaica - Van Wyck,40.702566,-73.816859,subway
+sub_G08,Forest Hills - 71 Av,40.721691,-73.844521,subway
+sub_G08N,Forest Hills - 71 Av,40.721691,-73.844521,subway
+sub_G08S,Forest Hills - 71 Av,40.721691,-73.844521,subway
+sub_G09,67 Av,40.726523,-73.852719,subway
+sub_G09N,67 Av,40.726523,-73.852719,subway
+sub_G09S,67 Av,40.726523,-73.852719,subway
+sub_G10,63 Dr - Rego Park,40.729846,-73.861604,subway
+sub_G10N,63 Dr - Rego Park,40.729846,-73.861604,subway
+sub_G10S,63 Dr - Rego Park,40.729846,-73.861604,subway
+sub_G11,Woodhaven Blvd,40.733106,-73.869229,subway
+sub_G11N,Woodhaven Blvd,40.733106,-73.869229,subway
+sub_G11S,Woodhaven Blvd,40.733106,-73.869229,subway
+sub_G12,Grand Av - Newtown,40.737015,-73.877223,subway
+sub_G12N,Grand Av - Newtown,40.737015,-73.877223,subway
+sub_G12S,Grand Av - Newtown,40.737015,-73.877223,subway
+sub_G13,Elmhurst Av,40.742454,-73.882017,subway
+sub_G13N,Elmhurst Av,40.742454,-73.882017,subway
+sub_G13S,Elmhurst Av,40.742454,-73.882017,subway
+sub_G14,Jackson Hts - Roosevelt Av,40.746644,-73.891338,subway
+sub_G14N,Jackson Hts - Roosevelt Av,40.746644,-73.891338,subway
+sub_G14S,Jackson Hts - Roosevelt Av,40.746644,-73.891338,subway
+sub_G15,65 St,40.749669,-73.898453,subway
+sub_G15N,65 St,40.749669,-73.898453,subway
+sub_G15S,65 St,40.749669,-73.898453,subway
+sub_G16,Northern Blvd,40.752885,-73.906006,subway
+sub_G16N,Northern Blvd,40.752885,-73.906006,subway
+sub_G16S,Northern Blvd,40.752885,-73.906006,subway
+sub_G18,46 St,40.756312,-73.913333,subway
+sub_G18N,46 St,40.756312,-73.913333,subway
+sub_G18S,46 St,40.756312,-73.913333,subway
+sub_G19,Steinway St,40.756879,-73.92074,subway
+sub_G19N,Steinway St,40.756879,-73.92074,subway
+sub_G19S,Steinway St,40.756879,-73.92074,subway
+sub_G20,36 St,40.752039,-73.928781,subway
+sub_G20N,36 St,40.752039,-73.928781,subway
+sub_G20S,36 St,40.752039,-73.928781,subway
+sub_G21,Queens Plaza,40.748973,-73.937243,subway
+sub_G21N,Queens Plaza,40.748973,-73.937243,subway
+sub_G21S,Queens Plaza,40.748973,-73.937243,subway
+sub_G22,Court Sq,40.746554,-73.943832,subway
+sub_G22N,Court Sq,40.746554,-73.943832,subway
+sub_G22S,Court Sq,40.746554,-73.943832,subway
+sub_G24,21 St,40.744065,-73.949724,subway
+sub_G24N,21 St,40.744065,-73.949724,subway
+sub_G24S,21 St,40.744065,-73.949724,subway
+sub_G26,Greenpoint Av,40.731352,-73.954449,subway
+sub_G26N,Greenpoint Av,40.731352,-73.954449,subway
+sub_G26S,Greenpoint Av,40.731352,-73.954449,subway
+sub_G28,Nassau Av,40.724635,-73.951277,subway
+sub_G28N,Nassau Av,40.724635,-73.951277,subway
+sub_G28S,Nassau Av,40.724635,-73.951277,subway
+sub_G29,Metropolitan Av,40.712792,-73.951418,subway
+sub_G29N,Metropolitan Av,40.712792,-73.951418,subway
+sub_G29S,Metropolitan Av,40.712792,-73.951418,subway
+sub_G30,Broadway,40.706092,-73.950308,subway
+sub_G30N,Broadway,40.706092,-73.950308,subway
+sub_G30S,Broadway,40.706092,-73.950308,subway
+sub_G31,Flushing Av,40.700377,-73.950234,subway
+sub_G31N,Flushing Av,40.700377,-73.950234,subway
+sub_G31S,Flushing Av,40.700377,-73.950234,subway
+sub_G32,Myrtle - Willoughby Avs,40.694568,-73.949046,subway
+sub_G32N,Myrtle - Willoughby Avs,40.694568,-73.949046,subway
+sub_G32S,Myrtle - Willoughby Avs,40.694568,-73.949046,subway
+sub_G33,Bedford - Nostrand Avs,40.689627,-73.953522,subway
+sub_G33N,Bedford - Nostrand Avs,40.689627,-73.953522,subway
+sub_G33S,Bedford - Nostrand Avs,40.689627,-73.953522,subway
+sub_G34,Classon Av,40.688873,-73.96007,subway
+sub_G34N,Classon Av,40.688873,-73.96007,subway
+sub_G34S,Classon Av,40.688873,-73.96007,subway
+sub_G35,Clinton - Washington Avs,40.688089,-73.966839,subway
+sub_G35N,Clinton - Washington Avs,40.688089,-73.966839,subway
+sub_G35S,Clinton - Washington Avs,40.688089,-73.966839,subway
+sub_G36,Fulton St,40.687119,-73.975375,subway
+sub_G36N,Fulton St,40.687119,-73.975375,subway
+sub_G36S,Fulton St,40.687119,-73.975375,subway
+sub_H01,Aqueduct Racetrack,40.668234,-73.834058,subway
+sub_H01N,Aqueduct Racetrack,40.668234,-73.834058,subway
+sub_H01S,Aqueduct Racetrack,40.668234,-73.834058,subway
+sub_H02,Aqueduct - N Conduit Av,40.668234,-73.834058,subway
+sub_H02N,Aqueduct - N Conduit Av,40.668234,-73.834058,subway
+sub_H02S,Aqueduct - N Conduit Av,40.668234,-73.834058,subway
+sub_H03,Howard Beach - JFK Airport,40.660476,-73.830301,subway
+sub_H03N,Howard Beach - JFK Airport,40.660476,-73.830301,subway
+sub_H03S,Howard Beach - JFK Airport,40.660476,-73.830301,subway
+sub_H04,Broad Channel,40.608382,-73.815925,subway
+sub_H04N,Broad Channel,40.608382,-73.815925,subway
+sub_H04S,Broad Channel,40.608382,-73.815925,subway
+sub_H06,Beach 67 St,40.590927,-73.796924,subway
+sub_H06N,Beach 67 St,40.590927,-73.796924,subway
+sub_H06S,Beach 67 St,40.590927,-73.796924,subway
+sub_H07,Beach 60 St,40.592374,-73.788522,subway
+sub_H07N,Beach 60 St,40.592374,-73.788522,subway
+sub_H07S,Beach 60 St,40.592374,-73.788522,subway
+sub_H08,Beach 44 St,40.592943,-73.776013,subway
+sub_H08N,Beach 44 St,40.592943,-73.776013,subway
+sub_H08S,Beach 44 St,40.592943,-73.776013,subway
+sub_H09,Beach 36 St,40.595398,-73.768175,subway
+sub_H09N,Beach 36 St,40.595398,-73.768175,subway
+sub_H09S,Beach 36 St,40.595398,-73.768175,subway
+sub_H10,Beach 25 St,40.600066,-73.761353,subway
+sub_H10N,Beach 25 St,40.600066,-73.761353,subway
+sub_H10S,Beach 25 St,40.600066,-73.761353,subway
+sub_H11,Far Rockaway - Mott Av,40.603995,-73.755405,subway
+sub_H11N,Far Rockaway - Mott Av,40.603995,-73.755405,subway
+sub_H11S,Far Rockaway - Mott Av,40.603995,-73.755405,subway
+sub_H12,Beach 90 St,40.588034,-73.813641,subway
+sub_H12N,Beach 90 St,40.588034,-73.813641,subway
+sub_H12S,Beach 90 St,40.588034,-73.813641,subway
+sub_H13,Beach 98 St,40.585307,-73.820558,subway
+sub_H13N,Beach 98 St,40.585307,-73.820558,subway
+sub_H13S,Beach 98 St,40.585307,-73.820558,subway
+sub_H14,Beach 105 St,40.583209,-73.827559,subway
+sub_H14N,Beach 105 St,40.583209,-73.827559,subway
+sub_H14S,Beach 105 St,40.583209,-73.827559,subway
+sub_H15,Rockaway Park - Beach 116 St,40.580903,-73.835592,subway
+sub_H15N,Rockaway Park - Beach 116 St,40.580903,-73.835592,subway
+sub_H15S,Rockaway Park - Beach 116 St,40.580903,-73.835592,subway
+sub_J12,121 St,40.700492,-73.828294,subway
+sub_J12N,121 St,40.700492,-73.828294,subway
+sub_J12S,121 St,40.700492,-73.828294,subway
+sub_J13,111 St,40.697418,-73.836345,subway
+sub_J13N,111 St,40.697418,-73.836345,subway
+sub_J13S,111 St,40.697418,-73.836345,subway
+sub_J14,104 St,40.695178,-73.84433,subway
+sub_J14N,104 St,40.695178,-73.84433,subway
+sub_J14S,104 St,40.695178,-73.84433,subway
+sub_J15,Woodhaven Blvd,40.693879,-73.851576,subway
+sub_J15N,Woodhaven Blvd,40.693879,-73.851576,subway
+sub_J15S,Woodhaven Blvd,40.693879,-73.851576,subway
+sub_J16,85 St - Forest Pkwy,40.692435,-73.86001,subway
+sub_J16N,85 St - Forest Pkwy,40.692435,-73.86001,subway
+sub_J16S,85 St - Forest Pkwy,40.692435,-73.86001,subway
+sub_J17,75 St,40.691324,-73.867139,subway
+sub_J17N,75 St,40.691324,-73.867139,subway
+sub_J17S,75 St,40.691324,-73.867139,subway
+sub_J19,Cypress Hills,40.689941,-73.87255,subway
+sub_J19N,Cypress Hills,40.689941,-73.87255,subway
+sub_J19S,Cypress Hills,40.689941,-73.87255,subway
+sub_J20,Crescent St,40.683194,-73.873785,subway
+sub_J20N,Crescent St,40.683194,-73.873785,subway
+sub_J20S,Crescent St,40.683194,-73.873785,subway
+sub_J21,Norwood Av,40.68141,-73.880039,subway
+sub_J21N,Norwood Av,40.68141,-73.880039,subway
+sub_J21S,Norwood Av,40.68141,-73.880039,subway
+sub_J22,Cleveland St,40.679947,-73.884639,subway
+sub_J22N,Cleveland St,40.679947,-73.884639,subway
+sub_J22S,Cleveland St,40.679947,-73.884639,subway
+sub_J23,Van Siclen Av,40.678024,-73.891688,subway
+sub_J23N,Van Siclen Av,40.678024,-73.891688,subway
+sub_J23S,Van Siclen Av,40.678024,-73.891688,subway
+sub_J24,Alabama Av,40.676992,-73.898654,subway
+sub_J24N,Alabama Av,40.676992,-73.898654,subway
+sub_J24S,Alabama Av,40.676992,-73.898654,subway
+sub_J27,Broadway Jct,40.679498,-73.904512,subway
+sub_J27N,Broadway Jct,40.679498,-73.904512,subway
+sub_J27S,Broadway Jct,40.679498,-73.904512,subway
+sub_J28,Chauncey St,40.682893,-73.910456,subway
+sub_J28N,Chauncey St,40.682893,-73.910456,subway
+sub_J28S,Chauncey St,40.682893,-73.910456,subway
+sub_J29,Halsey St,40.68637,-73.916559,subway
+sub_J29N,Halsey St,40.68637,-73.916559,subway
+sub_J29S,Halsey St,40.68637,-73.916559,subway
+sub_J30,Gates Av,40.68963,-73.92227,subway
+sub_J30N,Gates Av,40.68963,-73.92227,subway
+sub_J30S,Gates Av,40.68963,-73.92227,subway
+sub_J31,Kosciuszko St,40.693342,-73.928814,subway
+sub_J31N,Kosciuszko St,40.693342,-73.928814,subway
+sub_J31S,Kosciuszko St,40.693342,-73.928814,subway
+sub_L01,8 Av,40.739777,-74.002578,subway
+sub_L01N,8 Av,40.739777,-74.002578,subway
+sub_L01S,8 Av,40.739777,-74.002578,subway
+sub_L02,6 Av,40.737335,-73.996786,subway
+sub_L02N,6 Av,40.737335,-73.996786,subway
+sub_L02S,6 Av,40.737335,-73.996786,subway
+sub_L03,Union Sq - 14 St,40.734789,-73.99073,subway
+sub_L03N,Union Sq - 14 St,40.734789,-73.99073,subway
+sub_L03S,Union Sq - 14 St,40.734789,-73.99073,subway
+sub_L05,3 Av,40.732849,-73.986122,subway
+sub_L05N,3 Av,40.732849,-73.986122,subway
+sub_L05S,3 Av,40.732849,-73.986122,subway
+sub_L06,1 Av,40.730953,-73.981628,subway
+sub_L06N,1 Av,40.730953,-73.981628,subway
+sub_L06S,1 Av,40.730953,-73.981628,subway
+sub_L08,Bedford Av,40.717304,-73.956872,subway
+sub_L08N,Bedford Av,40.717304,-73.956872,subway
+sub_L08S,Bedford Av,40.717304,-73.956872,subway
+sub_L10,Lorimer St,40.714063,-73.950275,subway
+sub_L10N,Lorimer St,40.714063,-73.950275,subway
+sub_L10S,Lorimer St,40.714063,-73.950275,subway
+sub_L11,Graham Av,40.714565,-73.944053,subway
+sub_L11N,Graham Av,40.714565,-73.944053,subway
+sub_L11S,Graham Av,40.714565,-73.944053,subway
+sub_L12,Grand St,40.711926,-73.94067,subway
+sub_L12N,Grand St,40.711926,-73.94067,subway
+sub_L12S,Grand St,40.711926,-73.94067,subway
+sub_L13,Montrose Av,40.707739,-73.93985,subway
+sub_L13N,Montrose Av,40.707739,-73.93985,subway
+sub_L13S,Montrose Av,40.707739,-73.93985,subway
+sub_L14,Morgan Av,40.706152,-73.933147,subway
+sub_L14N,Morgan Av,40.706152,-73.933147,subway
+sub_L14S,Morgan Av,40.706152,-73.933147,subway
+sub_L15,Jefferson St,40.706607,-73.922913,subway
+sub_L15N,Jefferson St,40.706607,-73.922913,subway
+sub_L15S,Jefferson St,40.706607,-73.922913,subway
+sub_L16,DeKalb Av,40.703811,-73.918425,subway
+sub_L16N,DeKalb Av,40.703811,-73.918425,subway
+sub_L16S,DeKalb Av,40.703811,-73.918425,subway
+sub_L17,Myrtle - Wyckoff Avs,40.699814,-73.911586,subway
+sub_L17N,Myrtle - Wyckoff Avs,40.699814,-73.911586,subway
+sub_L17S,Myrtle - Wyckoff Avs,40.699814,-73.911586,subway
+sub_L19,Halsey St,40.695602,-73.904084,subway
+sub_L19N,Halsey St,40.695602,-73.904084,subway
+sub_L19S,Halsey St,40.695602,-73.904084,subway
+sub_L20,Wilson Av,40.688764,-73.904046,subway
+sub_L20N,Wilson Av,40.688764,-73.904046,subway
+sub_L20S,Wilson Av,40.688764,-73.904046,subway
+sub_L21,Bushwick Av - Aberdeen St,40.682829,-73.905249,subway
+sub_L21N,Bushwick Av - Aberdeen St,40.682829,-73.905249,subway
+sub_L21S,Bushwick Av - Aberdeen St,40.682829,-73.905249,subway
+sub_L22,Broadway Jct,40.678856,-73.90324,subway
+sub_L22N,Broadway Jct,40.678856,-73.90324,subway
+sub_L22S,Broadway Jct,40.678856,-73.90324,subway
+sub_L24,Atlantic Av,40.675345,-73.903097,subway
+sub_L24N,Atlantic Av,40.675345,-73.903097,subway
+sub_L24S,Atlantic Av,40.675345,-73.903097,subway
+sub_L25,Sutter Av,40.669367,-73.901975,subway
+sub_L25N,Sutter Av,40.669367,-73.901975,subway
+sub_L25S,Sutter Av,40.669367,-73.901975,subway
+sub_L26,Livonia Av,40.664038,-73.900571,subway
+sub_L26N,Livonia Av,40.664038,-73.900571,subway
+sub_L26S,Livonia Av,40.664038,-73.900571,subway
+sub_L27,New Lots Av,40.658733,-73.899232,subway
+sub_L27N,New Lots Av,40.658733,-73.899232,subway
+sub_L27S,New Lots Av,40.658733,-73.899232,subway
+sub_L28,E 105 St,40.650573,-73.899485,subway
+sub_L28N,E 105 St,40.650573,-73.899485,subway
+sub_L28S,E 105 St,40.650573,-73.899485,subway
+sub_L29,Canarsie - Rockaway Pkwy,40.646654,-73.90185,subway
+sub_L29N,Canarsie - Rockaway Pkwy,40.646654,-73.90185,subway
+sub_L29S,Canarsie - Rockaway Pkwy,40.646654,-73.90185,subway
+sub_M01,Middle Village - Metropolitan Av,40.711396,-73.889601,subway
+sub_M01N,Middle Village - Metropolitan Av,40.711396,-73.889601,subway
+sub_M01S,Middle Village - Metropolitan Av,40.711396,-73.889601,subway
+sub_M04,Fresh Pond Rd,40.706186,-73.895877,subway
+sub_M04N,Fresh Pond Rd,40.706186,-73.895877,subway
+sub_M04S,Fresh Pond Rd,40.706186,-73.895877,subway
+sub_M05,Forest Av,40.704423,-73.903077,subway
+sub_M05N,Forest Av,40.704423,-73.903077,subway
+sub_M05S,Forest Av,40.704423,-73.903077,subway
+sub_M06,Seneca Av,40.702762,-73.90774,subway
+sub_M06N,Seneca Av,40.702762,-73.90774,subway
+sub_M06S,Seneca Av,40.702762,-73.90774,subway
+sub_M08,Myrtle - Wyckoff Avs,40.69943,-73.912385,subway
+sub_M08N,Myrtle - Wyckoff Avs,40.69943,-73.912385,subway
+sub_M08S,Myrtle - Wyckoff Avs,40.69943,-73.912385,subway
+sub_M09,Knickerbocker Av,40.698664,-73.919711,subway
+sub_M09N,Knickerbocker Av,40.698664,-73.919711,subway
+sub_M09S,Knickerbocker Av,40.698664,-73.919711,subway
+sub_M10,Central Av,40.697857,-73.927397,subway
+sub_M10N,Central Av,40.697857,-73.927397,subway
+sub_M10S,Central Av,40.697857,-73.927397,subway
+sub_M11,Myrtle Av,40.697207,-73.935657,subway
+sub_M11N,Myrtle Av,40.697207,-73.935657,subway
+sub_M11S,Myrtle Av,40.697207,-73.935657,subway
+sub_M12,Flushing Av,40.70026,-73.941126,subway
+sub_M12N,Flushing Av,40.70026,-73.941126,subway
+sub_M12S,Flushing Av,40.70026,-73.941126,subway
+sub_M13,Lorimer St,40.703869,-73.947408,subway
+sub_M13N,Lorimer St,40.703869,-73.947408,subway
+sub_M13S,Lorimer St,40.703869,-73.947408,subway
+sub_M14,Hewes St,40.70687,-73.953431,subway
+sub_M14N,Hewes St,40.70687,-73.953431,subway
+sub_M14S,Hewes St,40.70687,-73.953431,subway
+sub_M16,Marcy Av,40.708359,-73.957757,subway
+sub_M16N,Marcy Av,40.708359,-73.957757,subway
+sub_M16S,Marcy Av,40.708359,-73.957757,subway
+sub_M18,Essex St,40.718315,-73.987437,subway
+sub_M18N,Essex St,40.718315,-73.987437,subway
+sub_M18S,Essex St,40.718315,-73.987437,subway
+sub_M19,Bowery,40.72028,-73.993915,subway
+sub_M19N,Bowery,40.72028,-73.993915,subway
+sub_M19S,Bowery,40.72028,-73.993915,subway
+sub_M20,Canal St,40.718092,-73.999892,subway
+sub_M20N,Canal St,40.718092,-73.999892,subway
+sub_M20S,Canal St,40.718092,-73.999892,subway
+sub_M21,Chambers St,40.713243,-74.003401,subway
+sub_M21N,Chambers St,40.713243,-74.003401,subway
+sub_M21S,Chambers St,40.713243,-74.003401,subway
+sub_M22,Fulton St,40.710374,-74.007582,subway
+sub_M22N,Fulton St,40.710374,-74.007582,subway
+sub_M22S,Fulton St,40.710374,-74.007582,subway
+sub_M23,Broad St,40.706476,-74.011056,subway
+sub_M23N,Broad St,40.706476,-74.011056,subway
+sub_M23S,Broad St,40.706476,-74.011056,subway
+sub_N02,8 Av,40.635064,-74.011719,subway
+sub_N02N,8 Av,40.635064,-74.011719,subway
+sub_N02S,8 Av,40.635064,-74.011719,subway
+sub_N03,Fort Hamilton Pkwy,40.631386,-74.005351,subway
+sub_N03N,Fort Hamilton Pkwy,40.631386,-74.005351,subway
+sub_N03S,Fort Hamilton Pkwy,40.631386,-74.005351,subway
+sub_N04,New Utrecht Av,40.624842,-73.996353,subway
+sub_N04N,New Utrecht Av,40.624842,-73.996353,subway
+sub_N04S,New Utrecht Av,40.624842,-73.996353,subway
+sub_N05,18 Av,40.620671,-73.990414,subway
+sub_N05N,18 Av,40.620671,-73.990414,subway
+sub_N05S,18 Av,40.620671,-73.990414,subway
+sub_N06,20 Av,40.61741,-73.985026,subway
+sub_N06N,20 Av,40.61741,-73.985026,subway
+sub_N06S,20 Av,40.61741,-73.985026,subway
+sub_N07,Bay Pkwy,40.611815,-73.981848,subway
+sub_N07N,Bay Pkwy,40.611815,-73.981848,subway
+sub_N07S,Bay Pkwy,40.611815,-73.981848,subway
+sub_N08,Kings Hwy,40.603923,-73.980353,subway
+sub_N08N,Kings Hwy,40.603923,-73.980353,subway
+sub_N08S,Kings Hwy,40.603923,-73.980353,subway
+sub_N09,Avenue U,40.597473,-73.979137,subway
+sub_N09N,Avenue U,40.597473,-73.979137,subway
+sub_N09S,Avenue U,40.597473,-73.979137,subway
+sub_N10,86 St,40.592721,-73.97823,subway
+sub_N10N,86 St,40.592721,-73.97823,subway
+sub_N10S,86 St,40.592721,-73.97823,subway
+sub_Q01,Canal St,40.718383,-74.00046,subway
+sub_Q01N,Canal St,40.718383,-74.00046,subway
+sub_Q01S,Canal St,40.718383,-74.00046,subway
+sub_R01,Astoria - Ditmars Blvd,40.775036,-73.912034,subway
+sub_R01N,Astoria - Ditmars Blvd,40.775036,-73.912034,subway
+sub_R01S,Astoria - Ditmars Blvd,40.775036,-73.912034,subway
+sub_R03,Astoria Blvd,40.770258,-73.917843,subway
+sub_R03N,Astoria Blvd,40.770258,-73.917843,subway
+sub_R03S,Astoria Blvd,40.770258,-73.917843,subway
+sub_R04,30 Av,40.766779,-73.921479,subway
+sub_R04N,30 Av,40.766779,-73.921479,subway
+sub_R04S,30 Av,40.766779,-73.921479,subway
+sub_R05,Broadway,40.76182,-73.925508,subway
+sub_R05N,Broadway,40.76182,-73.925508,subway
+sub_R05S,Broadway,40.76182,-73.925508,subway
+sub_R06,36 Av,40.756804,-73.929575,subway
+sub_R06N,36 Av,40.756804,-73.929575,subway
+sub_R06S,36 Av,40.756804,-73.929575,subway
+sub_R08,39 Av,40.752882,-73.932755,subway
+sub_R08N,39 Av,40.752882,-73.932755,subway
+sub_R08S,39 Av,40.752882,-73.932755,subway
+sub_R09,Queensboro Plaza,40.750582,-73.940202,subway
+sub_R09N,Queensboro Plaza,40.750582,-73.940202,subway
+sub_R09S,Queensboro Plaza,40.750582,-73.940202,subway
+sub_R11,Lexington Av/59 St,40.76266,-73.967258,subway
+sub_R11N,Lexington Av/59 St,40.76266,-73.967258,subway
+sub_R11S,Lexington Av/59 St,40.76266,-73.967258,subway
+sub_R13,5 Av/59 St,40.764811,-73.973347,subway
+sub_R13N,5 Av/59 St,40.764811,-73.973347,subway
+sub_R13S,5 Av/59 St,40.764811,-73.973347,subway
+sub_R14,57 St - 7 Av,40.764664,-73.980658,subway
+sub_R14N,57 St - 7 Av,40.764664,-73.980658,subway
+sub_R14S,57 St - 7 Av,40.764664,-73.980658,subway
+sub_R15,49 St,40.759901,-73.984139,subway
+sub_R15N,49 St,40.759901,-73.984139,subway
+sub_R15S,49 St,40.759901,-73.984139,subway
+sub_R16,Times Sq - 42 St,40.754672,-73.986754,subway
+sub_R16N,Times Sq - 42 St,40.754672,-73.986754,subway
+sub_R16S,Times Sq - 42 St,40.754672,-73.986754,subway
+sub_R17,34 St - Herald Sq,40.749567,-73.98795,subway
+sub_R17N,34 St - Herald Sq,40.749567,-73.98795,subway
+sub_R17S,34 St - Herald Sq,40.749567,-73.98795,subway
+sub_R18,28 St,40.745494,-73.988691,subway
+sub_R18N,28 St,40.745494,-73.988691,subway
+sub_R18S,28 St,40.745494,-73.988691,subway
+sub_R19,23 St,40.741303,-73.989344,subway
+sub_R19N,23 St,40.741303,-73.989344,subway
+sub_R19S,23 St,40.741303,-73.989344,subway
+sub_R20,14 St - Union Sq,40.735736,-73.990568,subway
+sub_R20N,14 St - Union Sq,40.735736,-73.990568,subway
+sub_R20S,14 St - Union Sq,40.735736,-73.990568,subway
+sub_R21,8 St - NYU,40.730328,-73.992629,subway
+sub_R21N,8 St - NYU,40.730328,-73.992629,subway
+sub_R21S,8 St - NYU,40.730328,-73.992629,subway
+sub_R22,Prince St,40.724329,-73.997702,subway
+sub_R22N,Prince St,40.724329,-73.997702,subway
+sub_R22S,Prince St,40.724329,-73.997702,subway
+sub_R23,Canal St,40.719527,-74.001775,subway
+sub_R23N,Canal St,40.719527,-74.001775,subway
+sub_R23S,Canal St,40.719527,-74.001775,subway
+sub_R24,City Hall,40.713282,-74.006978,subway
+sub_R24N,City Hall,40.713282,-74.006978,subway
+sub_R24S,City Hall,40.713282,-74.006978,subway
+sub_R25,Cortlandt St,40.710668,-74.011029,subway
+sub_R25N,Cortlandt St,40.710668,-74.011029,subway
+sub_R25S,Cortlandt St,40.710668,-74.011029,subway
+sub_R26,Rector St,40.70722,-74.013342,subway
+sub_R26N,Rector St,40.70722,-74.013342,subway
+sub_R26S,Rector St,40.70722,-74.013342,subway
+sub_R27,Whitehall St,40.703087,-74.012994,subway
+sub_R27N,Whitehall St,40.703087,-74.012994,subway
+sub_R27S,Whitehall St,40.703087,-74.012994,subway
+sub_R28,Court St,40.6941,-73.991777,subway
+sub_R28N,Court St,40.6941,-73.991777,subway
+sub_R28S,Court St,40.6941,-73.991777,subway
+sub_R29,Jay St - MetroTech,40.69218,-73.985942,subway
+sub_R29N,Jay St - MetroTech,40.69218,-73.985942,subway
+sub_R29S,Jay St - MetroTech,40.69218,-73.985942,subway
+sub_R30,DeKalb Av,40.690635,-73.981824,subway
+sub_R30N,DeKalb Av,40.690635,-73.981824,subway
+sub_R30S,DeKalb Av,40.690635,-73.981824,subway
+sub_R31,Atlantic Av - Barclays Ctr,40.683666,-73.97881,subway
+sub_R31N,Atlantic Av - Barclays Ctr,40.683666,-73.97881,subway
+sub_R31S,Atlantic Av - Barclays Ctr,40.683666,-73.97881,subway
+sub_R32,Union St,40.677316,-73.98311,subway
+sub_R32N,Union St,40.677316,-73.98311,subway
+sub_R32S,Union St,40.677316,-73.98311,subway
+sub_R33,9 St,40.670847,-73.988302,subway
+sub_R33N,9 St,40.670847,-73.988302,subway
+sub_R33S,9 St,40.670847,-73.988302,subway
+sub_R34,Prospect Av,40.665414,-73.992872,subway
+sub_R34N,Prospect Av,40.665414,-73.992872,subway
+sub_R34S,Prospect Av,40.665414,-73.992872,subway
+sub_R35,25 St,40.660397,-73.998091,subway
+sub_R35N,25 St,40.660397,-73.998091,subway
+sub_R35S,25 St,40.660397,-73.998091,subway
+sub_R36,36 St,40.655144,-74.003549,subway
+sub_R36N,36 St,40.655144,-74.003549,subway
+sub_R36S,36 St,40.655144,-74.003549,subway
+sub_R39,45 St,40.648939,-74.010006,subway
+sub_R39N,45 St,40.648939,-74.010006,subway
+sub_R39S,45 St,40.648939,-74.010006,subway
+sub_R40,53 St,40.645069,-74.014034,subway
+sub_R40N,53 St,40.645069,-74.014034,subway
+sub_R40S,53 St,40.645069,-74.014034,subway
+sub_R41,59 St,40.641362,-74.017881,subway
+sub_R41N,59 St,40.641362,-74.017881,subway
+sub_R41S,59 St,40.641362,-74.017881,subway
+sub_R42,Bay Ridge Av,40.634967,-74.023377,subway
+sub_R42N,Bay Ridge Av,40.634967,-74.023377,subway
+sub_R42S,Bay Ridge Av,40.634967,-74.023377,subway
+sub_R43,77 St,40.629742,-74.02551,subway
+sub_R43N,77 St,40.629742,-74.02551,subway
+sub_R43S,77 St,40.629742,-74.02551,subway
+sub_R44,86 St,40.622687,-74.028398,subway
+sub_R44N,86 St,40.622687,-74.028398,subway
+sub_R44S,86 St,40.622687,-74.028398,subway
+sub_R45,Bay Ridge - 95 St,40.616622,-74.030876,subway
+sub_R45N,Bay Ridge - 95 St,40.616622,-74.030876,subway
+sub_R45S,Bay Ridge - 95 St,40.616622,-74.030876,subway
+sub_S01,Franklin Av,40.680596,-73.955827,subway
+sub_S01N,Franklin Av,40.680596,-73.955827,subway
+sub_S01S,Franklin Av,40.680596,-73.955827,subway
+sub_S03,Park Pl,40.674772,-73.957624,subway
+sub_S03N,Park Pl,40.674772,-73.957624,subway
+sub_S03S,Park Pl,40.674772,-73.957624,subway
+sub_S04,Botanic Garden,40.670343,-73.959245,subway
+sub_S04N,Botanic Garden,40.670343,-73.959245,subway
+sub_S04S,Botanic Garden,40.670343,-73.959245,subway
+sub_S09,Tottenville,40.512764,-74.251961,subway
+sub_S09N,Tottenville,40.512764,-74.251961,subway
+sub_S09S,Tottenville,40.512764,-74.251961,subway
+sub_S10,Atlantic,40.515401,-74.245689,subway
+sub_S10N,Atlantic,40.515401,-74.245689,subway
+sub_S10S,Atlantic,40.515401,-74.245689,subway
+sub_S12,Nassau,40.517812,-74.238373,subway
+sub_S12N,Nassau,40.517812,-74.238373,subway
+sub_S12S,Nassau,40.517812,-74.238373,subway
+sub_S13,Richmond Valley,40.519631,-74.229141,subway
+sub_S13N,Richmond Valley,40.519631,-74.229141,subway
+sub_S13S,Richmond Valley,40.519631,-74.229141,subway
+sub_S14,Pleasant Plains,40.52241,-74.217847,subway
+sub_S14N,Pleasant Plains,40.52241,-74.217847,subway
+sub_S14S,Pleasant Plains,40.52241,-74.217847,subway
+sub_S15,Prince's Bay,40.525507,-74.200064,subway
+sub_S15N,Prince's Bay,40.525507,-74.200064,subway
+sub_S15S,Prince's Bay,40.525507,-74.200064,subway
+sub_S16,Huguenot,40.533674,-74.191794,subway
+sub_S16N,Huguenot,40.533674,-74.191794,subway
+sub_S16S,Huguenot,40.533674,-74.191794,subway
+sub_S17,Annadale,40.54046,-74.178217,subway
+sub_S17N,Annadale,40.54046,-74.178217,subway
+sub_S17S,Annadale,40.54046,-74.178217,subway
+sub_S18,Eltingville,40.544601,-74.16457,subway
+sub_S18N,Eltingville,40.544601,-74.16457,subway
+sub_S18S,Eltingville,40.544601,-74.16457,subway
+sub_S19,Great Kills,40.551231,-74.151399,subway
+sub_S19N,Great Kills,40.551231,-74.151399,subway
+sub_S19S,Great Kills,40.551231,-74.151399,subway
+sub_S20,Bay Terrace,40.5564,-74.136907,subway
+sub_S20N,Bay Terrace,40.5564,-74.136907,subway
+sub_S20S,Bay Terrace,40.5564,-74.136907,subway
+sub_S21,Oakwood Heights,40.56511,-74.12632,subway
+sub_S21N,Oakwood Heights,40.56511,-74.12632,subway
+sub_S21S,Oakwood Heights,40.56511,-74.12632,subway
+sub_S22,New Dorp,40.57348,-74.11721,subway
+sub_S22N,New Dorp,40.57348,-74.11721,subway
+sub_S22S,New Dorp,40.57348,-74.11721,subway
+sub_S23,Grant City,40.578965,-74.109704,subway
+sub_S23N,Grant City,40.578965,-74.109704,subway
+sub_S23S,Grant City,40.578965,-74.109704,subway
+sub_S24,Jefferson Av,40.583591,-74.103338,subway
+sub_S24N,Jefferson Av,40.583591,-74.103338,subway
+sub_S24S,Jefferson Av,40.583591,-74.103338,subway
+sub_S25,Dongan Hills,40.588849,-74.09609,subway
+sub_S25N,Dongan Hills,40.588849,-74.09609,subway
+sub_S25S,Dongan Hills,40.588849,-74.09609,subway
+sub_S26,Old Town,40.596612,-74.087368,subway
+sub_S26N,Old Town,40.596612,-74.087368,subway
+sub_S26S,Old Town,40.596612,-74.087368,subway
+sub_S27,Grasmere,40.603117,-74.084087,subway
+sub_S27N,Grasmere,40.603117,-74.084087,subway
+sub_S27S,Grasmere,40.603117,-74.084087,subway
+sub_S28,Clifton,40.621319,-74.071402,subway
+sub_S28N,Clifton,40.621319,-74.071402,subway
+sub_S28S,Clifton,40.621319,-74.071402,subway
+sub_S29,Stapleton,40.627915,-74.075162,subway
+sub_S29N,Stapleton,40.627915,-74.075162,subway
+sub_S29S,Stapleton,40.627915,-74.075162,subway
+sub_S30,Tompkinsville,40.636949,-74.074835,subway
+sub_S30N,Tompkinsville,40.636949,-74.074835,subway
+sub_S30S,Tompkinsville,40.636949,-74.074835,subway
+sub_S31,St George,40.643748,-74.073643,subway
+sub_S31N,St George,40.643748,-74.073643,subway
+sub_S31S,St George,40.643748,-74.073643,subway
 bus_bx_100014,BEDFORD PK BL/GRAND CONCOURSE,40.872562,-73.888153,bus
 bus_bx_100017,PAUL AV/W 205 ST,40.876808,-73.889656,bus
 bus_bx_100018,PAUL AV/W MOSHOLU PY S,40.880341,-73.886063,bus
