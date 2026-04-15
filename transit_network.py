@@ -1,7 +1,7 @@
 # %%
 # pyright: basic
 
-import os
+import os, pickle
 from unittest import skip
 import osmnx as ox
 import pandas as pd
@@ -199,9 +199,6 @@ nxG_final.add_edges_from(new_nta_edges)
 print(f"Added {len(nta_codes)} NTAs and {len(new_nta_edges)} connecting edges")
 
 # %%
-
-
-# %%
 # building nodes and edge geometry list
 
 ## Filter the nodes into the different types so they can be represented differently on the visual
@@ -237,6 +234,13 @@ min_tk = gdf_edges['travel_time'].min()
 max_tk = gdf_edges['travel_time'].max()
 
 print(f"Minimum Travel Time : {min_tk} and Maximum Travel Time : {max_tk}")
+
+# %%
+# save data structure to file
+with open('transit_graph.pkl', 'wb') as f: pickle.dump(nxG_final, f)
+
+gdf_edges.to_file("network_data.gpkg", layer='edges', driver="GPKG")
+gdf_nodes.to_file("network_data.gpkg", layer='nodes', driver="GPKG")
 # %% 
 # plotting
 
