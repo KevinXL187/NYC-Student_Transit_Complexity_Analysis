@@ -147,7 +147,9 @@ for i, sch_node in enumerate(sch_ids):
     new_school_edges.append((s_node, sch_node, {'weight': w, 'relation': 'walking_school'}))
 
 nxG_final.add_edges_from(new_school_edges)
+sch_weights = [d['weight'] for u, v, d in nxG_final.edges(data=True) if d['relation'] == 'walking_school']
 print(f"Added {len(sch_ids)} schools and {len(new_school_edges)} connecting edges.")
+print(f"Min weight: {min(sch_weights)}, Max weight: {max(sch_weights)}")
 # %%
 # add nta nodes and walking edge to Graph
 nta_gdf = gpd.read_file("./data/spatial/nta_2010/nynta2010.shp")
@@ -196,7 +198,9 @@ for i, rw in nta_gdf.iterrows():
     new_nta_edges.append((s_node, nta_node, {'weight': weight, 'relation': 'walking_nta'}))
 
 nxG_final.add_edges_from(new_nta_edges)
+nta_weights = [d['weight'] for u, v, d in nxG_final.edges(data=True) if d['relation'] == 'walking_nta']
 print(f"Added {len(nta_codes)} NTAs and {len(new_nta_edges)} connecting edges")
+print(f"Min weight: {min(nta_weights)}, Max weight: {max(nta_weights)}")
 
 # %%
 # building nodes and edge geometry list
