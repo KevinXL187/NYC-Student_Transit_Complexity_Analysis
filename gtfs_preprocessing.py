@@ -51,11 +51,14 @@ def process_gtfs_data(gtfs_dir, prefix):
         trans_df = pd.read_csv(transfer_file)
         trans_list = []
         for _, row in trans_df.iterrows():
+            time = row.get('min_transfer_time', None)
+            if pd.isna(time) : time = 180
+            elif time <= 0 : time = 60
+
             trans_list.append({
                 'source': f"{prefix}_{row['from_stop_id']}",
                 'target': f"{prefix}_{row['to_stop_id']}",
-                # TODO
-                'weight': row['min_transfer_time'] if 'min_transfer_time' in row else 180,
+                'weight': time,
                 'type': 'transfer'
             })
         trans_df = pd.DataFrame(trans_list)
