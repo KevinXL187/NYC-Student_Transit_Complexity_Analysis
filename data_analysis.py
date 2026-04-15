@@ -1,33 +1,24 @@
-# %%
 # pyright: basic
 import os
 import networkx as nx
 import geopandas as gpd
 
 
-def calculate_CCI(G, origin, dest):
-    # calculate commute complexity index formula
-    path = nx.shortest_path(G, source=origin, target=dest, weight='weight')
-    total_travel_time = nx.shortest_path_length(G, origin, dest, weight='weight')
-        
-    transfer_count = 0
-    edge_types = []
-        
-    for i in range(len(path) - 1):
-        u, v = path[i], path[i+1]
-        edge_data = G.get_edge_data(u, v)
+def calculate_CCI(nx_graph, origin, dest):
+    nta_nodes = [n for n, d in nx_graph.nodes(data=True) if d.get('type') == 'origin']
+    school_nodes = [n for n, d in nx_graph.nodes(data=True) if d.get('type') == 'school']
 
-        rel = edge_data.get('relation')
-        if rel == 'transfer':
-            transfer_count += 1
-            
-        edge_types.append(rel)
-    
-    # CCI = (Total Time / Constant) * (1 + (Transfer Penalty * Num Transfers))
-    transfer_penalty = 1.5
-    cci = (total_travel_time / 60) * (1 + (transfer_count * transfer_penalty))
+    # checks if graph is connected
+    if not nx.is_connected(nx_graph.to_undirected()):
+        print("Warning - graph has isolated islands and some schools will be unreachable")
+
+    for start_nodes in nta_nodes:
+        distances = nx.single_source_dijkstra_path_length(nxG_final, start_nta, weight='weight')
         
-    return round(cci, 2)
+        for target_nodes in school_nodes:
+            travel_times = distances.get(target_nodes, np.nan)
+
+            sch_
 
 if __name__ == "__main__":
 
