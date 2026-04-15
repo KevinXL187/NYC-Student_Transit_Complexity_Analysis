@@ -2,7 +2,6 @@
 # pyright: basic
 
 import os, pickle
-from unittest import skip
 import osmnx as ox
 import pandas as pd
 import geopandas as gpd
@@ -19,13 +18,14 @@ from shapely.geometry import Point, LineString
 crs_code = "EPSG:4326"
 walk_spd = 1.3889 # meters/sec ≈ 5 km/h
 max_dist =  500
+min_weight = 1.0
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 ox.settings.bidirectional_network_types =  ['walk']
 # %%
 
 # create graph
 walk_graph = ox.graph_from_place("New York City, New York", network_type='walk', simplify=True)
-boroughs = gpd.read_file("./data/spatial/Borough_Boundaries.geojson")
+boroughs = gpd.read_file("./data/spatial/Borough_Boundaries.geojson").to_crs(crs_code)
 nxG = nx.MultiDiGraph()
 
 # rename nodes and add type to match rest of network
@@ -36,7 +36,7 @@ nx.set_node_attributes(walk_graph, "walk", name='type')
 # convert edge weights to seconds
 for u, v, k, data in walk_graph.edges(keys=True, data=True):
     len_m = data.get('length', 0)
-    data['weight'] = max(len_m/ walk_spd, 0.1)
+    data['weight'] = max(len_m/ walk_spd, min_weight/10)
     data['relation'] = 'walking'
 
 # %%
@@ -57,7 +57,7 @@ for idx, rw in transit_edges_df.iterrows():
         rw['source'], 
         rw['target'], 
         weight=rw['weight'],
-        relation=rw['relation'] # 'transit_travel', 'transfer'
+        relation=rw['type'] # 'transit_travel', 'transfer'
     )
 
 # %%
@@ -83,7 +83,7 @@ for i, t_node in enumerate(transit_nodes):
     if dist > max_dist: 
         print(f"Skipping stop {t_node} is {dist:.1f}m from nearest street")
         continue
-    weight = max(dist / walk_spd, 1.0)
+    weight = max(dist / walk_spd, min_weight)
     
 
     new_edges.append((t_node, s_node, {'weight': weight, 'relation': 'walk_transfer'}))
@@ -141,8 +141,9 @@ for i, sch_node in enumerate(sch_ids):
         lat2=walk_graph.nodes[s_node]['y'], 
         lon2=walk_graph.nodes[s_node]['x']
     )
-    
-    w = max(dist / walk_spd, 1.0)
+
+    w = max(dist / walk_spd, min_weight)
+
     new_school_edges.append((sch_node, s_node, {'weight': w, 'relation': 'walking_school'}))
     new_school_edges.append((s_node, sch_node, {'weight': w, 'relation': 'walking_school'}))
 
@@ -152,9 +153,9 @@ print(f"Added {len(sch_ids)} schools and {len(new_school_edges)} connecting edge
 print(f"Min weight: {min(sch_weights)}, Max weight: {max(sch_weights)}")
 # %%
 # add nta nodes and walking edge to Graph
-nta_gdf = gpd.read_file("./data/spatial/nta_2010/nynta2010.shp")
+nta_gdf = gpd.read_file("./data/spatial/nta_2010/nynta2010.shp").to_crs(crs_code)
 
-print("nta_shapefile cols:", nta_gdf.columns.tolist())
+#print("nta_shapefile cols:", nta_gdf.columns.tolist())
 
 nta_df = pd.read_csv('nta_SE_indicators_2015.csv')
 income_dict = nta_df.set_index('GeoID')['median_income_estimate'].to_dict()
@@ -193,7 +194,7 @@ for i, rw in nta_gdf.iterrows():
         lon2=walk_graph.nodes[s_node]['x']
     )
 
-    weight = max(dist / walk_spd, 1.0) 
+    weight = max(dist / walk_spd, min_weight) 
     new_nta_edges.append((nta_node, s_node, {'weight': weight, 'relation': 'walking_nta'}))
     new_nta_edges.append((s_node, nta_node, {'weight': weight, 'relation': 'walking_nta'}))
 
@@ -228,7 +229,7 @@ for u, v, data in nxG_final.edges(data=True):
         u_pos = (nxG_final.nodes[u]['x'], nxG_final.nodes[u]['y'])
         v_pos = (nxG_final.nodes[v]['x'], nxG_final.nodes[v]['y'])
         edges_data.append({
-            'geometry' : LineString(u_pos, v_pos),
+            'geometry' : LineString([u_pos, v_pos]),
             'travel_time' : data.get('weight'),
             'edge_type' : data.get('relation')
             })
@@ -318,11 +319,11 @@ for e_type, df in gdf_edges.groupby('edge_type'):
         'ax' : ax,
         'zorder' : z_orders.get(e_type),
         'linewidth' : line_widths.get(e_type),
-        'columns' = 'Travel Time (Sec)',
+        'column' : 'travel_time',
         'alpha' : 0.5,
         'legend' : True,
         'legend_kwds' : {
-                'label' : label,
+                'label' : e_type,
                 'orientation' : 'horizontal',
                 'pad' : 0.05,
                 'shrink' : 0.5
