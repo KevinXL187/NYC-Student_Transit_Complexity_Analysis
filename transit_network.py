@@ -28,9 +28,10 @@ walk_graph = ox.graph_from_place("New York City, New York", network_type='walk',
 boroughs = gpd.read_file("./data/spatial/Borough_Boundaries.geojson")
 nxG = nx.MultiDiGraph()
 
-# rename nodes to match rest of network
+# rename nodes and add type to match rest of network
 mapping = {n: f'walk_{n}' for n in walk_graph.nodes()}
 walk_graph = nx.relabel_nodes(walk_graph, mapping, copy=False)
+nx.set_node_attributes(walk_graph, "walk", name='type')
 
 # convert edge weights to seconds
 for u, v, k, data in walk_graph.edges(keys=True, data=True):
@@ -56,7 +57,7 @@ for idx, rw in transit_edges_df.iterrows():
         rw['source'], 
         rw['target'], 
         weight=rw['weight'],
-        relation=rw['type'] # 'transit_travel', 'transfer'
+        relation=rw['relation'] # 'transit_travel', 'transfer'
     )
 
 # %%
@@ -204,13 +205,13 @@ print(f"Added {len(nta_codes)} NTAs and {len(new_nta_edges)} connecting edges")
 # building nodes and edge geometry list
 
 ## Filter the nodes into the different types so they can be represented differently on the visual
-## school, nta, bus, subway
+## subway_transit, bus_transit, walk, school, nta
 nodes_data = []
 for node, data in nxG_final.nodes(data=True):
     nodes_data.append({
         'stop_id': node, 
         'geometry': Point(data['x'], data['y']),
-        'node_type': data.get('type', 'unknown')
+        'node_type': data.get('type')
         })
 
 gdf_nodes = gpd.GeoDataFrame(nodes_data, crs=crs_code)
@@ -219,7 +220,7 @@ gdf_nodes = gpd.sjoin(gdf_nodes, boroughs[['geometry']], predicate='within')
 valid_stops = set(gdf_nodes['stop_id'])
 
 # Filter the edges into different types so they can be represented differently on the visual
-# walking, bus_transit, subway_transit
+# transit_travel, transfer, walking, walk_transfer, walking_school, walking_nta
 edges_data = []
 for u, v, data in nxG_final.edges(data=True):
     if u in valid_stops and v in valid_stops:
@@ -227,56 +228,100 @@ for u, v, data in nxG_final.edges(data=True):
         v_pos = (nxG_final.nodes[v]['x'], nxG_final.nodes[v]['y'])
         edges_data.append({
             'geometry' : LineString(u_pos, v_pos),
-            'travel_time' : data.get('weight', 0),
-            'edge_type' : data.get('type', 'unknown')
+            'travel_time' : data.get('weight'),
+            'edge_type' : data.get('relation')
             })
 gdf_edges = gpd.GeoDataFrame(edges_data, crs=crs_code)
 
 min_tk = gdf_edges['travel_time'].min()
 max_tk = gdf_edges['travel_time'].max()
 
+print(f"Minimum Travel Time : {min_tk} and Maximum Travel Time : {max_tk}")
 # %% 
 # plotting
+
+# TODO : make the nodes and edges toggleable/highlightalble
+
 plt.ion()
 fig, ax = plt.subplots(figsize=(12, 12))
-boroughs.plot(ax=ax, color='#f2f2f2', edgecolor='black', linewidth=0.5)
+boroughs.plot(ax=ax, color='#fffafa', edgecolor='black', linewidth=1)
 
 ## plot points
-markers = {'school' : 's', 'bus_transit': 'bt', "subway_transit": 'st', 'nta' : 'n'}
-color_nodes = {'school' : 'red', 'bus_transit': 'blue', "subway_transit": 'light_blue', 'nta' : 'green'}
+markers = {
+    'school' : 's', 
+    'bus_transit': 'bt',
+    "subway_transit": 'st', 
+    'nta' : 'n', 
+    # 'walk' : 'w' leave invisible
+    }
+color_nodes = {
+    'school' : 'red',
+    'nta' : 'green', 
+    'bus_transit': 'blue', 
+    'subway_transit': 'light_blue', 
+    # 'walk' : 'white' leave invisible
+    }
+size_nodes = {
+    'school': 0.5,
+    'nta' : 0.5,
+    'bus_transit' : 0.25,
+    'subway_transit' : 0.25,
+    # 'walk' : 0 leave invisible
+}
+
 for n_type, df in gdf_nodes.groupby('node_type'):
+    if n_type == 'walk' : continue
     df.plot(
         ax=ax, 
-        marker=markers.get(n_type, 'o'), 
-        color=color_nodes.get(n_type, 'black'), 
-        markersize=0.5,
+        marker=markers.get(n_type), 
+        color=color_nodes.get(n_type), 
+        markersize=size_nodes.get(n_type),
         alpha=0.2,
         label=n_type
         )
 
 ## plot edges
+edge_colors = {
+    'transit_travel' : 'cividis_r', 
+    'transfer': 'magma_r', 
+    #'walking': 'black', 
+    'walk_transfer' : 'inferno', 
+    'walking_school' : 'inferno', 
+    'walking_nta' : 'inferno'
+}
+z_orders = {
+    'transit_travel' : 4,
+    'transfer' : 3,
+    'walking' : 1,
+    'walk_transfer' : 3,
+    'walking_school' : 3,
+    'walking_nta' : 3
+}
+line_widths = {
+    'transit_travel' : 0.5,
+    'transfer' : 0.3,
+    'walking' : 0.1,
+    'walk_transfer' : 0.3,
+    'walking_school' : 0.3,
+    'walking_nta' : 0.3,
+}
 for e_type, df in gdf_edges.groupby('edge_type'):
-    cmap_options = ["magma_r",'cividis_r']
-    if e_type == "bus_transit" or e_type =="subway_transit":
-        cmap = cmap_options[1],
-        label = "Transit Travel Time (seconds)",
-        zorder = 2
-    if e_type == "transfer":
-        cmap = cmap_options[0],
-        label = "Transfer Travel Time (seconds)"
-        zorder = 3,
-    df.plot(
-        ax = ax,
-        column="travel_time",
-        cmap = cmap,
-        zorder = zorder,
-        linewidth = 0.5,
-        alpha = 0.5,
-        legend=True,
-        legend_kwds = {
-            'label' : label,
-            'orientation' : 'horizontal',
-            'pad' : 0.05,
-            'shrink' : 0.5
-        }
-    )
+    style_config = {
+        'ax' : ax,
+        'zorder' : z_orders.get(e_type),
+        'linewidth' : line_widths.get(e_type),
+        'columns' = 'Travel Time (Sec)',
+        'alpha' : 0.5,
+        'legend' : True,
+        'legend_kwds' : {
+                'label' : label,
+                'orientation' : 'horizontal',
+                'pad' : 0.05,
+                'shrink' : 0.5
+            }
+    }
+
+    if e_type == 'walking' :
+        df.plot(**style_config, color='black')
+    else :
+        df.plot(**style_config, cmap=edge_colors.get(e_type))
