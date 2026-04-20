@@ -47,13 +47,16 @@ def process_gtfs_data(gtfs_dir, prefix):
 
     # process transfers for subway
     transfer_file = os.path.join(gtfs_dir, "transfers.txt")
+    avg_transfer_time = 180
+    min_transfer_time = 60
+
     if os.path.exists(transfer_file):
         trans_df = pd.read_csv(transfer_file)
         trans_list = []
         for _, row in trans_df.iterrows():
             time = row.get('min_transfer_time', None)
-            if pd.isna(time) : time = 180
-            elif time <= 0 : time = 60
+            if pd.isna(time) : time = avg_transfer_time
+            elif time <= 0 : time = min_transfer_time
 
             trans_list.append({
                 'source': f"{prefix}_{row['from_stop_id']}",
