@@ -5,46 +5,73 @@ import geopandas as gpd
 import numpy as np
 
 
-def calculate_CCI(nx_graph, origin, dest):
-    transfer_penalty = 300
-    results = []
+def calculate_CCI_with_Tpenalty(nx_graph):
+    transfer_penalty = 300  # Penalty in seconds/units
+    results = {}
+    
     nta_nodes = [n for n, d in nx_graph.nodes(data=True) if d.get('type') == 'origin']
     school_nodes = [n for n, d in nx_graph.nodes(data=True) if d.get('type') == 'school']
 
-    # checks if graph is connected
     if not nx.is_connected(nx_graph.to_undirected()):
         print("Warning - graph has isolated islands and some schools will be unreachable")
 
     for start_node in nta_nodes:
-        distances, paths = nx.single_source_dijkstra_path_length(nx_graph, start_node, weight='weight')
-        nta_cci_score = 0
-        reachable_qualities = []
+        # Get both distances (weights) and the actual paths to calculate transfers
+        distances, paths = nx.single_source_dijkstra(nx_graph, start_node, weight='weight')
+        school_scores = {}
 
         for target in school_nodes:
             if target in paths:
-
                 path = paths[target]
-                time = distances[target]
+                base_time = distances[target]
                 num_transfers = 0
                 prev_relation = None
                 
-                # Step through the path edges to count mode switches
                 for i in range(len(path) - 1):
                     u, v = path[i], path[i+1]
+                    
+                    # For MultiDiGraph, get the edge with the minimum weight or first available
                     edge_data = nx_graph.get_edge_data(u, v)
-                    rel = edge_data[0].get('relation') if isinstance(edge_data, dict) and 0 in edge_data else edge_data.get('relation')
+                    if isinstance(edge_data, dict): data = edge_data[0] 
+                    else:   data = edge_data
+                    
+                    rel = data.get('relation', '')
                     
                     if prev_relation and rel != prev_relation:
-                        if 'walking' in prev_relation and 'transit' in rel:
-                            num_transfers += 1 # Walk -> Bus/Subway
-                        elif 'transit' in prev_relation and 'transit' in rel:
-                            num_transfers += 1 # Bus -> Subway transfer
+                        # Logic: Transfer occurs when switching modes or transit lines
+                        if ('walking' in prev_relation and 'transit' in rel) or \
+                           ('transit' in prev_relation and 'transit' in rel):
+                            num_transfers += 1
                     
                     prev_relation = rel
+                
+                # CCI = Time + (Transfers * Penalty)
+                school_scores[target] = base_time + (num_transfers * transfer_penalty)
+            else:   school_scores[target] = np.nan
+        
+        results[start_node] = school_scores
+    
+    return results
 
-            travel_times = distances.get(target, np.nan)
+def calculate_CCI_no_Tpenalty(nx_graph):
+    if not nx.is_connected(nx_graph.to_undirected()):
+        print("Warning - graph has isolated islands and some schools will be unreachable")
 
-            sch_
+    nta_nodes = [n for n, d in nx_graph.nodes(data=True) if d.get('type') == 'origin']
+    school_nodes = [n for n, d in nx_graph.nodes(data=True) if d.get('type') == 'school']
+
+    results = {}
+
+    for start_node in nta_nodes:
+        distances = nx.single_source_dijkstra_path_length(nx_graph, start_node, weight='weight')
+        school_score = {}
+        for target_node in school_nodes:
+            travel_time = distances.get(target_node, np.nan)
+            school_score[target_node] = travel_time
+        results[start_node] = school_score
+    
+    return results
+        
 
 if __name__ == "__main__":
 
