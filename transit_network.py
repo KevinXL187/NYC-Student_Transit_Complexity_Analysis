@@ -246,6 +246,7 @@ with open('transit_graph.pkl', 'wb') as f: pickle.dump(nxG_final, f)
 
 gdf_edges.to_file("network_data.gpkg", layer='edges', driver="GPKG")
 gdf_nodes.to_file("network_data.gpkg", layer='nodes', driver="GPKG")
+
 # %% 
 # plotting
 
@@ -257,17 +258,17 @@ boroughs.plot(ax=ax, color='#fffafa', edgecolor='black', linewidth=1)
 
 ## plot points
 markers = {
-    'school' : 's', 
-    'bus_transit': 'bt',
-    "subway_transit": 'st', 
-    'nta' : 'n', 
+    'school' : 'D', 
+    'bus_transit': 'o',
+    "subway_transit": 'o', 
+    'nta' : 'D', 
     # 'walk' : 'w' leave invisible
     }
 color_nodes = {
     'school' : 'red',
     'nta' : 'green', 
     'bus_transit': 'blue', 
-    'subway_transit': 'light_blue', 
+    'subway_transit': 'navy', 
     # 'walk' : 'white' leave invisible
     }
 size_nodes = {
@@ -331,6 +332,7 @@ for e_type, df in gdf_edges.groupby('edge_type'):
     }
 
     if e_type == 'walking' :
+        pass
         df.plot(**style_config, color='black')
     else :
         df.plot(**style_config, cmap=edge_colors.get(e_type))
