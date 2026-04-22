@@ -1,7 +1,8 @@
 # pyright: basic
-import os, pickle
+import os, pickle, json
 import networkx as nx
 import geopandas as gpd
+import pandas as pd
 import numpy as np
 
 
@@ -73,7 +74,34 @@ def calculate_CCI_no_Tpenalty(nx_graph):
     return results
         
 def CCI_graph(nx_graph, results):
-    pass
+    flattened_data = []
+    for origin, schools in results.items():
+        for school, cost in schools.items():
+            flattened_data.append({
+                'origin_id': origin,
+                'school_id': school,
+                'cci_cost': cost
+            })
+    
+    cci_df = pd.DataFrame(flattened_data)
+    cci_df.to_csv(f"cci_result.csv", index=False)
+    print(f"Results saved to cci_result.csv")
+
+    cci_nx = nx.DiGraph()
+    
+    for entry in flattened_data:
+        if not np.isnan(entry['cci_cost']):
+            cci_nx.add_edge(
+                entry['origin_id'], 
+                entry['school_id'], 
+                weight=entry['cci_cost']
+            )
+            
+    with open(f"cci_result_graph.pkl", 'wb') as f:
+        pickle.dump(cci_nx, f)
+        
+    return cci_nx
+
 if __name__ == "__main__":
 
     # loading data
