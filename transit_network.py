@@ -121,7 +121,7 @@ for idx, rw in school_df.iterrows():
         pos= (rw['lon'], rw['lat']), 
         name= rw['LOCATION_NAME'], 
         nta = rw['NTA_NAME'],
-        sch_weight = rw['weighted_accessibility'], # (total funding/total students) * graduation rates
+        sch_weight = rw['funding_per_student'], # (total funding/total students)
         type='school')
 
 # vector operation
@@ -249,8 +249,6 @@ gdf_nodes.to_file("network_data.gpkg", layer='nodes', driver="GPKG")
 
 # %% 
 # plotting
-
-# TODO : make the nodes and edges toggleable/highlightalble
 
 plt.ion()
 fig, ax = plt.subplots(figsize=(12, 12))
