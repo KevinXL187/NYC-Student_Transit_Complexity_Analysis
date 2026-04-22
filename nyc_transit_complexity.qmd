@@ -1,0 +1,69 @@
+
+# NYC Transit Complexity : A look at the relation between transit complexity and school graduation rates
+
+## Introduction
+
+
+## Dataset
+
+Over 9 different datasets were used, with most of them being were sourced from NYC Open Data.
+
+**Data Range** : 2014-2015
+
+1. General Transit Feed Specification (GTFS) Data
+    - 2015 Subway GTFS File
+        - transfers : `from_stop_id`, `to_stop_id`, `min_transfer_time`
+        - stop_times : `trip_id`, `arrival_time`, `departure_time`, `stop_id`
+        - stops : `stop_id`, `stop_name`, `stop_lat`, `stop_lon`
+    - 2015 Bus GTFS files
+        - Bronx, Brooklyn, Manhattan, Mtabc, Queens, Staten Island
+        - stop_times : `trip_id`, `arrival_time`, `departure_time`, `stop_id`
+        - stops : `stop_id`, `stop_name`, `stop_lat`, `stop`
+2. Graduation Results Cohorts
+    - `Report Category`, `Category`, `Cohort Year`, `Cohort`, `Geographic Subdivision`, `% Grads`, `% Advanced Regents of Cohort`
+3. School Budget Overview 2014-2015
+    - `Location`, `S4: Label d: FY14 FSF Initial`
+3. DOE High School Directory 2014-2015
+    - `dbn`, `total_students`
+4. School Locations 2014-2015
+    - `LOCATION_CODE`, `LOCATION_NAME`, `lon`, `lat`, `LOCATION_TYPE_DESCRIPTION`, `NTA_NAME`, `LOCATION_CATEGORY_DESCRIPTION`
+5. Demographic Profiles of American Community Survey (ACS) 5 Year Estimates at the NNTA level  2012-2016
+    - demographic, economic, house, social
+    - `GeoID`, `GeogName`, `Borough`
+    - `PBwPvP`, `MdHHIncE`, `CvLFUEm2P`, `Pop15t19P`, `GRPI35plP`, `EA_BchDHP`, `LgOEnLEP1P`
+6. NYC Borough Boundaries 2026
+    - GEOjson file
+7. NYC Walk Graph 2026
+    - sourced from OSMnx
+8. NYC Neighborhood Tabulation Areas (NTA) Data 2010
+    - Shapefile files
+
+
+## Data Processing
+### GTFS Data Processing
+- convert all time metrics beside data to seconds
+- filtered for only trips on weekdays and during school hours
+- set min_transfer time at 60 and avg_transfer time at 180 
+- joined all df to two dfs, one for points and one for edges
+### School and NTA Data Processing
+- convert all coords to EPSG:4326 using pyproj transformer
+- filter school doe data to only highschools and K-12
+- joined school funding on location and location_code key, keeping only 'S4: Label d: FY14 FSF Initial' col from school funding
+- joined school population on dbn value[-4:], keeping only 'total_students' from school population
+- joined school graducation results on `Geographic Subdivision`, keeping only `
+
+## Exploratory Analysis
+
+## Method
+
+## Model Analysis
+
+## Results and Conclusion
+
+### Limitations
+
+## Future Works 
+
+### Questions
+
+## References
