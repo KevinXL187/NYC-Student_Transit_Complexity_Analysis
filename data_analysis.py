@@ -72,7 +72,8 @@ def calculate_CCI_no_Tpenalty(nx_graph):
     
     return results
         
-
+def CCI_graph(nx_graph, results):
+    pass
 if __name__ == "__main__":
 
     # loading data
