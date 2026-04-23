@@ -15,9 +15,9 @@ from shapely.geometry import Point, LineString
 # coord_sys = (lon, lat)
 # time in seconds
 
-crs_code = "EPSG:4326"
+crs_code = 'EPSG:2263'
 walk_spd = 1.3889 # meters/sec ≈ 5 km/h
-max_dist =  500
+max_dist =  300
 min_weight = 1.0
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 ox.settings.bidirectional_network_types =  ['walk']
@@ -25,6 +25,7 @@ ox.settings.bidirectional_network_types =  ['walk']
 
 # create graph
 walk_graph = ox.graph_from_place("New York City, New York", network_type='walk', simplify=True)
+walk_graph = ox.project_graph(walk_graph, to_crs=crs_code)
 boroughs = gpd.read_file("./data/spatial/Borough_Boundaries.geojson").to_crs(crs_code)
 nxG = nx.MultiDiGraph()
 
@@ -41,17 +42,23 @@ for u, v, k, data in walk_graph.edges(keys=True, data=True):
 
 # %%
 
-transit_stops_df = pd.read_csv("processed_stops_2015.csv")
 transit_edges_df = pd.read_csv("processed_edges_2015.csv")
+transit_stops_df = pd.read_csv("processed_stops_2015.csv")
+transit_gdf = gpd.GeoDataFrame(
+    transit_stops_df,
+    geometry = gpd.points_from_xy(transit_stops_df['stop_lon'], transit_stops_df['stop_lat']),
+    crs="EPSG:4326"
+)
+transit_gdf.to_crs(crs_code, inplace=True)
 
-for idx, rw in transit_stops_df.iterrows():
+for idx, rw in transit_gdf.iterrows():
     nxG.add_node(
         rw['stop_id'], 
-        y=rw['stop_lat'], x=rw['stop_lon'], 
-        pos=(rw['stop_lon'], rw['stop_lat']),
-        type=f"{rw['mode']}_transit" # 'subway' or 'bus'
+        x=rw.geometry.x,
+        y=rw.geometry.y, 
+        pos=(rw.geometry.x, rw.geometry.y),
+        type=f"{rw['mode']}_transit"
     )
-
 for idx, rw in transit_edges_df.iterrows():
     nxG.add_edge(
         rw['source'], 
@@ -77,9 +84,9 @@ for i, t_node in enumerate(transit_nodes):
     s_node = nearest_indices[i]
     
     # find distance
-    dist = ox.distance.great_circle(lat1=stop_coords[i, 0], lon1=stop_coords[i, 1],
-                                        lat2=walk_graph.nodes[s_node]['y'], 
-                                        lon2=walk_graph.nodes[s_node]['x'])
+    x1, y1 = stop_coords[i, 0], stop_coords[i, 1]
+    x2, y2 = walk_graph.nodes[s_node]['x'], walk_graph.nodes[s_node]['y']
+    dist = np.sqrt((x1 - x2)**2 + (y1 - y2)**2)
     if dist > max_dist: 
         print(f"Skipping stop {t_node} is {dist:.1f}m from nearest street")
         continue
@@ -135,12 +142,10 @@ new_school_edges = []
 for i, sch_node in enumerate(sch_ids):
     s_node = nearest_street_nodes[i]
     
-    # Calculate distance
-    dist = ox.distance.great_circle(
-        lat1=sch_y[i], lon1=sch_x[i],
-        lat2=walk_graph.nodes[s_node]['y'], 
-        lon2=walk_graph.nodes[s_node]['x']
-    )
+    # Calculate Euclidean distance
+    x1, y1 = sch_x[i], sch_y[i]
+    x2, y2 = walk_graph.nodes[s_node]['x'], walk_graph.nodes[s_node]['y']
+    dist = np.sqrt((x1 - x2)**2 + (y1 - y2)**2)
 
     w = max(dist / walk_spd, min_weight)
 
@@ -187,12 +192,9 @@ for i, rw in nta_gdf.iterrows():
         type = 'origin'
     )
 
-    # Calculate distance to the street node
-    dist = ox.distance.great_circle(
-        lat1=curr_y, lon1=curr_x,
-        lat2=walk_graph.nodes[s_node]['y'], 
-        lon2=walk_graph.nodes[s_node]['x']
-    )
+    # Calculate Euclidean distance
+    dist = np.sqrt((curr_x - walk_graph.nodes[s_node]['x'])**2 + 
+                   (curr_y - walk_graph.nodes[s_node]['y'])**2)
 
     weight = max(dist / walk_spd, min_weight) 
     new_nta_edges.append((nta_node, s_node, {'weight': weight, 'relation': 'walking_nta'}))
@@ -223,13 +225,24 @@ valid_stops = set(gdf_nodes['stop_id'])
 
 # Filter the edges into different types so they can be represented differently on the visual
 # transit_travel, transfer, walking, walk_transfer, walking_school, walking_nta
+shapes_df = pd.read_csv("processed_shapes_2015.csv")
+shape_lookup = {name: group for name, group in shapes_df.groupby('shape_id')}
+
 edges_data = []
 for u, v, data in nxG_final.edges(data=True):
     if u in valid_stops and v in valid_stops:
-        u_pos = (nxG_final.nodes[u]['x'], nxG_final.nodes[u]['y'])
-        v_pos = (nxG_final.nodes[v]['x'], nxG_final.nodes[v]['y'])
+        shape_id = data.get('shape_id')
+
+        if shape_id and shape_id in shape_lookup:
+            pts = shape_lookup[shape_id].sort_values('shape_pt_sequence')
+            geom_4326 = LineString(zip(pts.shape_pt_lon, pts.shape_pt_lat))
+            geom = gpd.GeoSeries([geom_4326], crs="EPSG:4326").to_crs(crs_code).iloc[0]
+        else:
+            u_pos = (nxG_final.nodes[u]['x'], nxG_final.nodes[u]['y'])
+            v_pos = (nxG_final.nodes[v]['x'], nxG_final.nodes[v]['y'])
+            geom = LineString([u_pos, v_pos])
         edges_data.append({
-            'geometry' : LineString([u_pos, v_pos]),
+            'geometry' : geom,
             'travel_time' : data.get('weight'),
             'edge_type' : data.get('relation')
             })
