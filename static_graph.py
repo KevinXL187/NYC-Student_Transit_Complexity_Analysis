@@ -16,18 +16,18 @@ gdf_nodes = gpd.read_file('network_data.gpkg', layer='nodes').to_crs(projected_c
 boroughs = gpd.read_file("./data/spatial/Borough_Boundaries.geojson").to_crs(projected_crs)
 
 minX, minY, maxX, maxY = boroughs.total_bounds
-PLOT_H, PLOT_W = 1500, 1500
+PLOT_H, PLOT_W = 4500, 4500
 
 # %%
 # Create Transit Graph
 spf_edges = spd.GeoDataFrame(gdf_edges)
 edge_configs = {
-    'transit_travel': {'cmap': cc.cm.bjy, 'agg_func': 'mean'},
-    'transfer': {'cmap': cc.cm.coolwarm, 'agg_func': 'count'},
-    'walking': {'cmap': cc.gray, 'agg_func': 'mean'},
-    'walk_transfer': {'cmap': cc.fire, 'agg_func': 'mean'},
-    'walking_school': {'cmap': cc.fire, 'agg_func': 'mean'},
-    'walking_nta': {'cmap': cc.fire, 'agg_func': 'mean'}
+    'transit_travel': {'cmap': cc.cm.bjy, 'agg_func': 'mean', 'max_px' : 3},
+    'transfer': {'cmap': cc.cm.coolwarm, 'agg_func': 'count', 'max_px' : 3},
+    'walking': {'cmap': cc.gray, 'agg_func': 'mean', 'max_px' : 1},
+    'walk_transfer': {'cmap': cc.fire, 'agg_func': 'mean', 'max_px' : 2},
+    'walking_school': {'cmap': cc.fire, 'agg_func': 'mean', 'max_px' : 2},
+    'walking_nta': {'cmap': cc.fire, 'agg_func': 'mean', 'max_px' : 2}
 }
 order_configs = [
     'walking', 'transit_travel', 'transfer',
@@ -35,15 +35,15 @@ order_configs = [
 ]
 node_configs = {
     'school': {'marker': 'D', 'color': 'red', 'size': 2.8},
-    'nta': {'marker': 'o', 'color': 'green', 'size': 2.8},
+    'origin': {'marker': 'o', 'color': 'green', 'size': 2.8},
     'subway_transit': {'marker': '^', 'color': 'navy', 'size': 1.5},
     'bus_transit': {'marker': 'v', 'color': 'blue', 'size': 1.5},
 }
 
-fig, ax = plt.subplots(figsize=(12, 12))
+fig, ax = plt.subplots(figsize=(25, 25))
 fig.patch.set_facecolor('#1a1a1a')
 ax.set_aspect('equal')
-boroughs.plot(ax=ax, color='#1a1a1a', edgecolor='#333333', linewidth=0.75, zorder=0)
+boroughs.plot(ax=ax, color='#1a1a1a', edgecolor='#878787', linewidth=0.75, zorder=0)
 
 x_range = (minX, maxX)
 y_range = (minY, maxY)
@@ -51,6 +51,7 @@ y_range = (minY, maxY)
 map_cvs = ds.Canvas(plot_height=PLOT_H, plot_width=PLOT_W, x_range=x_range, y_range=y_range)
 images = []
 
+# edges
 for e_type in order_configs:
     config = edge_configs[e_type]
     if config['agg_func'] == 'mean':
@@ -60,11 +61,18 @@ for e_type in order_configs:
 
     img = tf.shade(agg, cmap=config['cmap'])
     
-    if e_type == 'walking':
-        continue
-        img = tf.dynspread(img, threshold=0.5, max_px=1)
-    else :
-        img = tf.dynspread(img, threshold=0.5, max_px=3)
+    if e_type == 'walking': continue
+    #if e_type == 'transit_travel': continue
+    if e_type == 'transfer': continue #all transfer appears as points instead of edges
+    if e_type == 'walk_transfer': continue
+    if e_type == 'walking_school': continue
+    if e_type == 'walking_nta' : continue
+        
+    img = tf.dynspread(
+        img, 
+        threshold=0.95, 
+        max_px=edge_configs[e_type]['max_px']
+        )
     
 
     img_array = img.to_pil().convert('RGBA')
@@ -74,28 +82,53 @@ borders = [minX, maxX, minY, maxY]
 for img in images:
     ax.imshow(img, extent=borders, zorder=1, aspect='equal')
 
+# nodes
 for n_type, df in gdf_nodes.groupby('node_type'):
     if n_type == 'walk': continue # Skip invisible walk nodes
-    config = node_configs.get(n_type, {'marker': 'o', 'color': 'grey', 'size': 0.1})
+    if 'transit' in str(n_type) :
+        alpha = 0.25
+    else:  alpha=1
+    config = node_configs.get(n_type)
 
     df.plot(
         ax=ax,
         marker=config['marker'],
         color=config['color'],
         markersize=config['size'],
-        alpha=1,
+        alpha=alpha,
         zorder=5
     )
 
     ax.axis('off')
 
+transit_color = cc.cm.bjy(0.7)
+walk_color = "#555555"
+transfer_color = cc.fire[150]
+
 legend_config = [
-    Line2D([0], [0], marker='D', color='w', label='School', markerfacecolor='red', markersize=5),
-    Line2D([0], [0], marker='o', color='w', label='NTA Center', markerfacecolor='green', markersize=5),
-    Line2D([0], [0], color=cc.bjy[0], lw=2, label='Transit Line'),
-    Line2D([0], [0], color=cc.fire[len(cc.fire)//2], lw=2, label='Walking Path')
+    # nodes 
+    Line2D([0], [0], marker='D', color='w', label='School', 
+           markerfacecolor='red', markersize=6, linestyle='None'),
+    Line2D([0], [0], marker='o', color='w', label='NTA Center', 
+           markerfacecolor='green', markersize=6, linestyle='None'),
+    Line2D([0], [0], marker='^', color='w', label='Subway Station', 
+           markerfacecolor='navy', markersize=6, linestyle='None'),
+    Line2D([0], [0], marker='v', color='w', label='Bus Stop', 
+           markerfacecolor='blue', markersize=6, linestyle='None'),
+    
+    # edges
+    Line2D([0], [0], color=transit_color, lw=2, label='Transit Line'),
+    Line2D([0], [0], color=walk_color, lw=1.5, label='Walking Path'),
+    Line2D([0], [0], color=transfer_color, lw=1.5, ls='--', label='Transfer/Link'),
 ]
-ax.legend(handles=legend_config, loc='upper left')
+
+leg = ax.legend(
+    handles=legend_config, 
+    loc='upper left', 
+    frameon=True, 
+    fontsize='small',
+    title="NYC Transit Accessibility"
+)
 plt.tight_layout()
 plt.show()
 
