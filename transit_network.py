@@ -12,19 +12,19 @@ import matplotlib.pyplot as plt
 from sklearn.neighbors import BallTree
 from shapely.geometry import Point, LineString
 
-# coord_sys = (lon, lat)
-# time in seconds
-
 crs_code = 'EPSG:2263'
 walk_spd = 4.5567 # feets/sec
+ft_per_meter = 3.2808 # feet
 max_dist =  985 # feet
-min_weight = 32 # feet
+min_weight = 10 # second
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
-ox.settings.bidirectional_network_types =  ['walk']
+
+def euclidean_distance(x1, y1, x2, y2):
+    return np.sqrt((x1 - x2)**2 + (y1 - y2)**2)
 # %%
 
 # create graph
-walk_graph = ox.graph_from_place("New York City, New York", network_type='walk', simplify=True)
+walk_graph = ox.graph_from_place("New York City, New York", network_type='walk', simplify=True, retain_all=True)
 walk_graph = ox.project_graph(walk_graph, to_crs=crs_code)
 boroughs = gpd.read_file("./data/spatial/Borough_Boundaries.geojson").to_crs(crs_code)
 nxG = nx.MultiDiGraph()
@@ -36,8 +36,9 @@ nx.set_node_attributes(walk_graph, "walk", name='type')
 
 # convert edge weights to seconds
 for u, v, k, data in walk_graph.edges(keys=True, data=True):
-    len_m = data.get('length', 0)
-    data['weight'] = max(len_m/ walk_spd, min_weight/10)
+    len_meter = data.get('length', 0)
+    len_feet = len_meter * ft_per_meter
+    data['weight'] = max(len_feet / walk_spd, min_weight / 2)
     data['relation'] = 'walking'
 
 # %%
@@ -71,25 +72,26 @@ for idx, rw in transit_edges_df.iterrows():
 # connect walking network and transit network
 nxG_final = nx.compose(walk_graph, nxG)
 
+#tranit graph
 transit_nodes = [n for n, d in nxG_final.nodes(data=True) if 'transit' in str(d.get('type'))]
-stop_coords = np.array([[nxG_final.nodes[n]['y'], nxG_final.nodes[n]['x']] for n in transit_nodes])
-
-street_nodes = [n for n, d in walk_graph.nodes(data=True)]
-street_coords = np.array([[walk_graph.nodes[n]['y'], walk_graph.nodes[n]['x']] for n in street_nodes])
-
-nearest_indices = ox.distance.nearest_nodes(walk_graph, X=stop_coords[:, 1], Y=stop_coords[:, 0])
+t_x = np.array([nxG_final.nodes[n]['x'] for n in transit_nodes])
+t_y = np.array([nxG_final.nodes[n]['y'] for n in transit_nodes])
 
 new_edges = []
+nearest_street_nodes = ox.distance.nearest_nodes(walk_graph, X=t_x, Y=t_y)
+
 for i, t_node in enumerate(transit_nodes):
-    s_node = nearest_indices[i]
+    s_node = nearest_street_nodes[i]
     
     # find distance
-    x1, y1 = stop_coords[i, 0], stop_coords[i, 1]
+    x1, y1 = t_x[i], t_y[i]
     x2, y2 = walk_graph.nodes[s_node]['x'], walk_graph.nodes[s_node]['y']
-    dist = np.sqrt((x1 - x2)**2 + (y1 - y2)**2)
+    dist = euclidean_distance(x1, y1, x2, y2)
+
     if dist > max_dist: 
-        print(f"Skipping stop {t_node} is {dist:.1f}m from nearest street")
+        print(f"Skipping stop {t_node} is {dist:.1f}ft from nearest street")
         continue
+
     weight = max(dist / walk_spd, min_weight)
     
 
@@ -118,23 +120,27 @@ print(f"Coordinates of stop: {bad_node['y']}, {bad_node['x']}")
 # %%
 # add school nodes and walking edge to Graph
 school_df = pd.read_csv("processed_schools_2015.csv")
+school_gdf = gpd.GeoDataFrame(
+    school_df,
+    geometry=gpd.points_from_xy(school_df['lon'], school_df['lat']),
+    crs="EPSG:4326"
+).to_crs(crs_code)
+
+sch_ids = [f"school_{code}" for code in school_df['LOCATION_CODE']]
+sch_x = school_gdf.geometry.x.values
+sch_y = school_gdf.geometry.y.values
 
 for idx, rw in school_df.iterrows():
-    sch_node = f"school_{rw['LOCATION_CODE']}"
+    sch_node = sch_ids[idx]
     nxG_final.add_node(
         sch_node, 
-        x = rw['lon'],
-        y = rw['lat'],
-        pos= (rw['lon'], rw['lat']), 
+        x = sch_x[idx],
+        y = sch_y[idx],
+        pos= (sch_x[idx], sch_y[idx]), 
         name= rw['LOCATION_NAME'], 
         nta = rw['NTA_NAME'],
         sch_weight = rw['funding_per_student'], # (total funding/total students)
         type='school')
-
-# vector operation
-sch_ids = [f"school_{code}" for code in school_df['LOCATION_CODE']]
-sch_x = school_df['lon'].values
-sch_y = school_df['lat'].values
 
 nearest_street_nodes = ox.distance.nearest_nodes(walk_graph, X=sch_x, Y=sch_y)
 
@@ -145,7 +151,7 @@ for i, sch_node in enumerate(sch_ids):
     # Calculate Euclidean distance
     x1, y1 = sch_x[i], sch_y[i]
     x2, y2 = walk_graph.nodes[s_node]['x'], walk_graph.nodes[s_node]['y']
-    dist = np.sqrt((x1 - x2)**2 + (y1 - y2)**2)
+    dist = euclidean_distance(x1, y1, x2, y2)
 
     w = max(dist / walk_spd, min_weight)
 
@@ -165,10 +171,10 @@ nta_gdf = gpd.read_file("./data/spatial/nta_2010/nynta2010.shp").to_crs(crs_code
 nta_df = pd.read_csv('nta_SE_indicators_2015.csv')
 income_dict = nta_df.set_index('GeoID')['median_income_estimate'].to_dict()
 
-centroids = nta_gdf.geometry.centroid
+rep_points = nta_gdf.geometry.representative_point()
+nta_x = rep_points.x.values
+nta_y = rep_points.y.values
 nta_codes = nta_gdf['NTACode'].values
-nta_x = centroids.x.values
-nta_y = centroids.y.values
 
 nearest_street_nodes = ox.distance.nearest_nodes(walk_graph, X=nta_x, Y=nta_y)
 new_nta_edges = []
@@ -178,23 +184,21 @@ for i, rw in nta_gdf.iterrows():
     nta_node = f"nta_{nta_code}"
     s_node = nearest_street_nodes[i]
     
-    # Coordinates from our vectorized arrays
-    curr_x, curr_y = nta_x[i], nta_y[i]
+    #coordinates & distance 
+    x1, y1 = nta_x[i], nta_y[i]
+    x2, y2 = walk_graph.nodes[s_node]['x'], walk_graph.nodes[s_node]['y']
+    dist = euclidean_distance(x1, y1, x2, y2)
 
     # Add the Node
     nxG_final.add_node(
         nta_node,
-        x = curr_x,
-        y = curr_y,
-        pos = (curr_x, curr_y),
+        x = x1,
+        y = y1,
+        pos = (x1, y1),
         income = income_dict.get(nta_code),
         name = rw.get('NTAName', 'Unknown'),
         type = 'origin'
     )
-
-    # Calculate Euclidean distance
-    dist = np.sqrt((curr_x - walk_graph.nodes[s_node]['x'])**2 + 
-                   (curr_y - walk_graph.nodes[s_node]['y'])**2)
 
     weight = max(dist / walk_spd, min_weight) 
     new_nta_edges.append((nta_node, s_node, {'weight': weight, 'relation': 'walking_nta'}))
