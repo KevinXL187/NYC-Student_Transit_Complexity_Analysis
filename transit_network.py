@@ -16,9 +16,9 @@ from shapely.geometry import Point, LineString
 # time in seconds
 
 crs_code = 'EPSG:2263'
-walk_spd = 1.3889 # meters/sec ≈ 5 km/h
-max_dist =  300
-min_weight = 1.0
+walk_spd = 4.5567 # feets/sec
+max_dist =  985 # feet
+min_weight = 32 # feet
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 ox.settings.bidirectional_network_types =  ['walk']
 # %%
@@ -259,91 +259,3 @@ with open('transit_graph.pkl', 'wb') as f: pickle.dump(nxG_final, f)
 
 gdf_edges.to_file("network_data.gpkg", layer='edges', driver="GPKG")
 gdf_nodes.to_file("network_data.gpkg", layer='nodes', driver="GPKG")
-
-# %% 
-# plotting
-
-plt.ion()
-fig, ax = plt.subplots(figsize=(12, 12))
-boroughs.plot(ax=ax, color='#fffafa', edgecolor='black', linewidth=1)
-
-## plot points
-markers = {
-    'school' : 'D', 
-    'bus_transit': 'o',
-    "subway_transit": 'o', 
-    'nta' : 'D', 
-    # 'walk' : 'w' leave invisible
-    }
-color_nodes = {
-    'school' : 'red',
-    'nta' : 'green', 
-    'bus_transit': 'blue', 
-    'subway_transit': 'navy', 
-    # 'walk' : 'white' leave invisible
-    }
-size_nodes = {
-    'school': 0.5,
-    'nta' : 0.5,
-    'bus_transit' : 0.25,
-    'subway_transit' : 0.25,
-    # 'walk' : 0 leave invisible
-}
-
-for n_type, df in gdf_nodes.groupby('node_type'):
-    if n_type == 'walk' : continue
-    df.plot(
-        ax=ax, 
-        marker=markers.get(n_type), 
-        color=color_nodes.get(n_type), 
-        markersize=size_nodes.get(n_type),
-        alpha=0.2,
-        label=n_type
-        )
-
-## plot edges
-edge_colors = {
-    'transit_travel' : 'cividis_r', 
-    'transfer': 'magma_r', 
-    #'walking': 'black', 
-    'walk_transfer' : 'inferno', 
-    'walking_school' : 'inferno', 
-    'walking_nta' : 'inferno'
-}
-z_orders = {
-    'transit_travel' : 4,
-    'transfer' : 3,
-    'walking' : 1,
-    'walk_transfer' : 3,
-    'walking_school' : 3,
-    'walking_nta' : 3
-}
-line_widths = {
-    'transit_travel' : 0.5,
-    'transfer' : 0.3,
-    'walking' : 0.1,
-    'walk_transfer' : 0.3,
-    'walking_school' : 0.3,
-    'walking_nta' : 0.3,
-}
-for e_type, df in gdf_edges.groupby('edge_type'):
-    style_config = {
-        'ax' : ax,
-        'zorder' : z_orders.get(e_type),
-        'linewidth' : line_widths.get(e_type),
-        'column' : 'travel_time',
-        'alpha' : 0.5,
-        'legend' : True,
-        'legend_kwds' : {
-                'label' : e_type,
-                'orientation' : 'horizontal',
-                'pad' : 0.05,
-                'shrink' : 0.5
-            }
-    }
-
-    if e_type == 'walking' :
-        pass
-        df.plot(**style_config, color='black')
-    else :
-        df.plot(**style_config, cmap=edge_colors.get(e_type))
