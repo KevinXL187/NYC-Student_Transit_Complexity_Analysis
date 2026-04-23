@@ -65,7 +65,7 @@ for idx, rw in transit_edges_df.iterrows():
         rw['source'], 
         rw['target'], 
         weight=rw['weight'],
-        relation=rw['type'] # 'transit_travel', 'transfer'
+        relation=rw['type'] # 'transit_travel', 'sub_transfer'
     )
 
 # %%
@@ -95,8 +95,8 @@ for i, t_node in enumerate(transit_nodes):
     weight = max(dist / walk_spd, min_weight)
     
 
-    new_edges.append((t_node, s_node, {'weight': weight, 'relation': 'walk_transfer'}))
-    new_edges.append((s_node, t_node, {'weight': weight, 'relation': 'walk_transfer'}))
+    new_edges.append((t_node, s_node, {'weight': weight, 'relation': 'walk_transit'}))
+    new_edges.append((s_node, t_node, {'weight': weight, 'relation': 'walk_transit'}))
 
 nxG_final.add_edges_from(new_edges)
 
@@ -105,8 +105,8 @@ nxG_final.add_edges_from(new_edges)
 unconnected = [n for n in transit_nodes if nxG_final.degree(n) == 0]
 print(f"Number of unconnected transit stops: {len(unconnected)}")
 
-# check weights for walk_transfer
-weights = [d['weight'] for u, v, d in nxG_final.edges(data=True) if d['relation'] == 'walk_transfer']
+# check weights for walk_transit
+weights = [d['weight'] for u, v, d in nxG_final.edges(data=True) if d['relation'] == 'walk_transit']
 print(f"Min weight: {min(weights)}, Max weight: {max(weights)}")
 
 # find specific edge with large weight
@@ -155,11 +155,11 @@ for i, sch_node in enumerate(sch_ids):
 
     w = max(dist / walk_spd, min_weight)
 
-    new_school_edges.append((sch_node, s_node, {'weight': w, 'relation': 'walking_school'}))
-    new_school_edges.append((s_node, sch_node, {'weight': w, 'relation': 'walking_school'}))
+    new_school_edges.append((sch_node, s_node, {'weight': w, 'relation': 'walk_school'}))
+    new_school_edges.append((s_node, sch_node, {'weight': w, 'relation': 'walk_school'}))
 
 nxG_final.add_edges_from(new_school_edges)
-sch_weights = [d['weight'] for u, v, d in nxG_final.edges(data=True) if d['relation'] == 'walking_school']
+sch_weights = [d['weight'] for u, v, d in nxG_final.edges(data=True) if d['relation'] == 'walk_school']
 print(f"Added {len(sch_ids)} schools and {len(new_school_edges)} connecting edges.")
 print(f"Min weight: {min(sch_weights)}, Max weight: {max(sch_weights)}")
 # %%
@@ -201,11 +201,11 @@ for i, rw in nta_gdf.iterrows():
     )
 
     weight = max(dist / walk_spd, min_weight) 
-    new_nta_edges.append((nta_node, s_node, {'weight': weight, 'relation': 'walking_nta'}))
-    new_nta_edges.append((s_node, nta_node, {'weight': weight, 'relation': 'walking_nta'}))
+    new_nta_edges.append((nta_node, s_node, {'weight': weight, 'relation': 'walk_nta'}))
+    new_nta_edges.append((s_node, nta_node, {'weight': weight, 'relation': 'walk_nta'}))
 
 nxG_final.add_edges_from(new_nta_edges)
-nta_weights = [d['weight'] for u, v, d in nxG_final.edges(data=True) if d['relation'] == 'walking_nta']
+nta_weights = [d['weight'] for u, v, d in nxG_final.edges(data=True) if d['relation'] == 'walk_nta']
 print(f"Added {len(nta_codes)} NTAs and {len(new_nta_edges)} connecting edges")
 print(f"Min weight: {min(nta_weights)}, Max weight: {max(nta_weights)}")
 
@@ -228,7 +228,7 @@ gdf_nodes = gpd.sjoin(gdf_nodes, boroughs[['geometry']], predicate='within')
 valid_stops = set(gdf_nodes['stop_id'])
 
 # Filter the edges into different types so they can be represented differently on the visual
-# transit_travel, transfer, walking, walk_transfer, walking_school, walking_nta
+# transit_travel, sub_transfer, walking, walk_transit, walk_school, walk_nta
 shapes_df = pd.read_csv("processed_shapes_2015.csv")
 shape_lookup = {name: group for name, group in shapes_df.groupby('shape_id')}
 

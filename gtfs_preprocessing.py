@@ -71,7 +71,7 @@ def process_gtfs_data(gtfs_dir, prefix):
                 'source': f"{prefix}_{row['from_stop_id']}",
                 'target': f"{prefix}_{row['to_stop_id']}",
                 'weight': time,
-                'type': 'transfer',
+                'type': 'sub_transfer',
                 'shape_id': None
             })
         trans_df = pd.DataFrame(trans_list)
