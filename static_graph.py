@@ -23,15 +23,15 @@ PLOT_H, PLOT_W = 4500, 4500
 spf_edges = spd.GeoDataFrame(gdf_edges)
 edge_configs = {
     'transit_travel': {'cmap': cc.cm.bjy, 'agg_func': 'mean', 'max_px' : 3},
-    'transfer': {'cmap': cc.cm.coolwarm, 'agg_func': 'count', 'max_px' : 3},
+    'sub_transfer': {'cmap': cc.cm.coolwarm, 'agg_func': 'count', 'max_px' : 3},
     'walking': {'cmap': cc.gray, 'agg_func': 'mean', 'max_px' : 1},
-    'walk_transfer': {'cmap': cc.fire, 'agg_func': 'mean', 'max_px' : 2},
-    'walking_school': {'cmap': cc.fire, 'agg_func': 'mean', 'max_px' : 2},
-    'walking_nta': {'cmap': cc.fire, 'agg_func': 'mean', 'max_px' : 2}
+    'walk_transit': {'cmap': cc.fire, 'agg_func': 'mean', 'max_px' : 2},
+    'walk_school': {'cmap': cc.fire, 'agg_func': 'mean', 'max_px' : 2},
+    'walki_nta': {'cmap': cc.fire, 'agg_func': 'mean', 'max_px' : 2}
 }
 order_configs = [
-    'walking', 'transit_travel', 'transfer',
-    'walk_transfer', 'walking_school', 'walking_nta'
+    'walking', 'transit_travel', 'sub_transfer',
+    'walk_transit', 'walk_school', 'walk_nta'
 ]
 node_configs = {
     'school': {'marker': 'D', 'color': 'red', 'size': 2.8},
@@ -63,10 +63,10 @@ for e_type in order_configs:
     
     if e_type == 'walking': continue
     #if e_type == 'transit_travel': continue
-    if e_type == 'transfer': continue #all transfer appears as points instead of edges
-    if e_type == 'walk_transfer': continue
-    if e_type == 'walking_school': continue
-    if e_type == 'walking_nta' : continue
+    if e_type == 'sub_transfer': continue #all transfer appears as points instead of edges
+    if e_type == 'walk_transit': continue
+    if e_type == 'walk_school': continue
+    if e_type == 'walk_nta' : continue
         
     img = tf.dynspread(
         img, 
