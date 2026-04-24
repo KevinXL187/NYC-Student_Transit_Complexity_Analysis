@@ -137,7 +137,8 @@ plt.show()
 
 # %%
 # Load CCI Data
-cci_edges = pickle.load('cci_result_graph_pkl')
+with open ("cci_result_graph.pkl", "rb") as f:
+    cci_edges = pickle.load(f)
 cci_nodes = gdf_nodes.copy()
 sch_df = pd.read_csv('processed_schools_2015.csv')
 
@@ -146,6 +147,7 @@ funding_mp = {'school_' + key: value for key, value in funding_mp.items()}
 
 base_size = 10
 scale = 0.05
+
 color_map_config = {
     'school': '#ff4d4d',          
     'nta': '#2ecc71',             
@@ -157,16 +159,16 @@ color_map_config = {
 cci_graph = nx.Graph()
 
 for idx, row in gdf_nodes.iterrows():
-    G.add_node(idx, pos=(row.geometry.x, row.geometry.y), node_type=row['node_type'])
+    cci_graph.add_node(idx, pos=(row.geometry.x, row.geometry.y), node_type=row['node_type'])
 for u, v, weight in cci_edges:
-    G.add_edge(u, v, weight=weight)
+    cci_graph.add_edge(u, v, weight=weight)
 pos = nx.get_node_attributes(cci_graph, 'pos')
 
 node_sizes = []
 node_colors = []
 for n, data in cci_graph.nodes(data=True):
     n_type = data.get('node_type', 'unknown')
-    node_colors.append(color_map_config.get(ntype, '#ffffff'))
+    node_colors.append(color_map_config.get(n_type, '#ffffff'))
 
     funding = funding_mp.get(n, 0)
     if funding > 0: size = funding*scale
@@ -181,15 +183,15 @@ boroughs.plot(ax=ax, color='#252525', edgecolor='#444444', linewidth=0.8, zorder
 
 ## draw nodes and edges
 nx.draw_networkx_nodes(
-    G, pos, ax=ax,
+    cci_graph, pos, ax=ax,
     node_size=node_sizes,
     node_color=node_colors,
     alpha=0.6,
     zorder=3
 )
-weights = [G[u][v]['weight'] for u, v in G.edges()]
+weights = [cci_graph[u][v]['weight'] for u, v in cci_graph.edges()]
 nx.draw_networkx_edges(
-    G, pos, ax=ax,
+    cci_graph, pos, ax=ax,
     width=1.5,
     edgecolors='white',
     edge_color=weights,
