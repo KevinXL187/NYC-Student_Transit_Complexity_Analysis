@@ -2,11 +2,12 @@
 import os, pickle, json
 import networkx as nx
 import geopandas as gpd
+from numpy._core.numeric import False_
 import pandas as pd
 import numpy as np
 
 
-def calculate_CCI_with_Tpenalty(nx_graph, apply_penalty=True):
+def calculate_CCI(nx_graph, apply_penalty=True):
     transfer_penalty = 180
 
     for u, v, k, data in nx_graph.edges(keys=True, data=True):
@@ -16,9 +17,9 @@ def calculate_CCI_with_Tpenalty(nx_graph, apply_penalty=True):
         if apply_penalty:
             rel = data.get('relation', '')
             if rel == 'walk_transit':
-                penalty = penalty_val * 1.75
+                penalty = transfer_penalty * 1.75
             elif rel == 'sub_transfer':
-                penalty = penalty_val * 1.25
+                penalty = transfer_penalty * 1.25
         
         data['tmp_w'] = base_time + penalty
 
@@ -35,9 +36,8 @@ def calculate_CCI_with_Tpenalty(nx_graph, apply_penalty=True):
         results[start_node] = {s: lengths.get(s, np.nan) for s in school_nodes}
         
     return results
-
         
-def CCI_graph(nx_graph, results):
+def CCI_graph(results, prefix):
     flattened_data = []
     for origin, schools in results.items():
         for school, cost in schools.items():
@@ -61,7 +61,7 @@ def CCI_graph(nx_graph, results):
                 weight=entry['cci_cost']
             )
             
-    with open(f"cci_result_graph.pkl", 'wb') as f:
+    with open(f"{prefix}_cci_result_graph.pkl", 'wb') as f:
         pickle.dump(cci_nx, f)
         
     return cci_nx
@@ -69,8 +69,14 @@ def CCI_graph(nx_graph, results):
 if __name__ == "__main__":
 
     # loading data
-    with open('my_graph.pkl', 'rb') as f:
+    with open('transit_graph.pkl', 'rb') as f:
         nx_graph = pickle.load(f)
 
-    gdf_edges = gpd.read_file('network_data.gpkg', layers='edges')
-    gdf_nodes = gpd.read_file('network_data.gpkg', layers='nodes')
+    gdf_edges = gpd.read_file('network_data.gpkg', layer='edges')
+    gdf_nodes = gpd.read_file('network_data.gpkg', layer='nodes')
+
+    raw_travel_time_results = calculate_CCI(nx_graph, False)
+    penalty_adjusted_results = calculate_CCI(nx_graph)
+    
+    CCI_graph(raw_travel_time_results, 'raw')
+    CCI_graph(penalty_adjusted_results, 'adjusted')
