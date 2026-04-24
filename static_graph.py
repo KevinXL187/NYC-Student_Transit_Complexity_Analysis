@@ -1,4 +1,6 @@
 # %%
+import pickle
+import pandas as pd
 import geopandas as gpd
 import matplotlib.pyplot as plt
 import datashader as ds
@@ -27,7 +29,7 @@ edge_configs = {
     'walking': {'cmap': cc.gray, 'agg_func': 'mean', 'max_px' : 1},
     'walk_transit': {'cmap': cc.fire, 'agg_func': 'mean', 'max_px' : 2},
     'walk_school': {'cmap': cc.fire, 'agg_func': 'mean', 'max_px' : 2},
-    'walki_nta': {'cmap': cc.fire, 'agg_func': 'mean', 'max_px' : 2}
+    'walk_nta': {'cmap': cc.fire, 'agg_func': 'mean', 'max_px' : 2}
 }
 order_configs = [
     'walking', 'transit_travel', 'sub_transfer',
@@ -62,11 +64,12 @@ for e_type in order_configs:
     img = tf.shade(agg, cmap=config['cmap'])
     
     if e_type == 'walking': continue
-    #if e_type == 'transit_travel': continue
+    if e_type == 'transit_travel': continue
     if e_type == 'sub_transfer': continue #all transfer appears as points instead of edges
-    if e_type == 'walk_transit': continue
-    if e_type == 'walk_school': continue
-    if e_type == 'walk_nta' : continue
+    # TODO walk_type edges bearly show up
+    #if e_type == 'walk_transit': continue
+    #if e_type == 'walk_school': continue
+    #if e_type == 'walk_nta' : continue
         
     img = tf.dynspread(
         img, 
@@ -135,7 +138,7 @@ plt.show()
 # %%
 # Load CCI Data
 cci_edges = pickle.load('cci_result_graph_pkl')
-cci_nodes = gpd_nodes.copy()
+cci_nodes = gdf_nodes.copy()
 sch_df = pd.read_csv('processed_schools_2015.csv')
 
 funding_mp = sch_df.set_index('LOCATION_CODE')['funding_per_student'].to_dict()
