@@ -1,4 +1,5 @@
 # %%
+# pyright: basic
 import pickle
 import pandas as pd
 import geopandas as gpd
@@ -137,43 +138,71 @@ plt.show()
 
 # %%
 # Load CCI Data
-with open ("cci_result_graph.pkl", "rb") as f:
-    cci_edges = pickle.load(f)
-cci_nodes = gdf_nodes.copy()
-sch_df = pd.read_csv('processed_schools_2015.csv')
+prefix=['adjusted_', 'raw_']
+with open (f"{prefix[0]}cci_result_graph.pkl", "rb") as f:
+    cci_graph = pickle.load(f)
 
-funding_mp = sch_df.set_index('LOCATION_CODE')['funding_per_student'].to_dict()
-funding_mp = {'school_' + key: value for key, value in funding_mp.items()}
-
+## visualization configs
 base_size = 10
 scale = 0.05
-
 color_map_config = {
     'school': '#ff4d4d',          
-    'nta': '#2ecc71',             
+    'origin': '#2ecc71',             
     'subway_transit': '#3498db',  
     'bus_transit': '#f1c40f',    
     'walk': '#95a5a6'             
 }
 
-cci_graph = nx.Graph()
+sch_df = pd.read_csv('processed_schools_2015.csv')
+funding_mp = sch_df.set_index('LOCATION_CODE')['funding_per_student'].to_dict()
+funding_mp = {'school_' + key: value for key, value in funding_mp.items()}
 
-for idx, row in gdf_nodes.iterrows():
-    cci_graph.add_node(idx, pos=(row.geometry.x, row.geometry.y), node_type=row['node_type'])
-for u, v, weight in cci_edges:
-    cci_graph.add_edge(u, v, weight=weight)
-pos = nx.get_node_attributes(cci_graph, 'pos')
+node_metadata = gdf_nodes.set_index('stop_id').to_dict('index')
+for node_id in cci_graph.nodes():
+    if node_id in node_metadata:
+        attr = node_metadata[node_id]
+        n_type = attr.get('node_type')
+        funding = funding_mp.get(node_id, 0)
+        size = (funding*scale) if funding > 0 else base_size
+        
+        cci_graph.nodes[node_id].update({
+            'pos': (attr['geometry'].x, attr['geometry'].y),
+            'node_type': n_type,
+            'color': color_map_config.get(n_type, '#ffffff'),
+            'size': size
+        })
 
-node_sizes = []
-node_colors = []
+print("Graph Overview")
+print(f"Total Nodes {cci_graph.number_of_nodes()}")
+print(f"Total Edges {cci_graph.number_of_edges()}")
+
+attributes = ['pos', 'node_type', 'color', 'size']
+attr_stats = {attr: {'nan': 0, 'zero': 0, 'missing': 0} for attr in attributes}
+
 for n, data in cci_graph.nodes(data=True):
-    n_type = data.get('node_type', 'unknown')
-    node_colors.append(color_map_config.get(n_type, '#ffffff'))
+        for attr in attributes:
+            if attr not in data:
+                attr_stats[attr]['missing'] += 1
+                continue
+            
+            val = data[attr]
+            try:
+                if np.any(pd.isna(val)):
+                    attr_stats[attr]['nan'] += 1
+            except: pass
+            
+            if attr == 'size' and val == 10:
+                attr_stats[attr]['zero'] += 1
 
-    funding = funding_mp.get(n, 0)
-    if funding > 0: size = funding*scale
-    else:   size = base_size
-    node_sizes.append(size)
+print("--- Attribute Diagnostics ---")
+for attr, stats in attr_stats.items():
+    print(f"Attribute: [{attr}]")
+    print(f"  - Missing: {stats['missing']}")
+    print(f"  - NaN values: {stats['nan']}")
+    if attr == 'size':
+        print(f"  - base values: {stats['zero']}")
+    print("-" * 15)
+
 # %%
 # Create direct CCI Graph
 fig, ax = plt.subplots(figsize=(12, 12))
@@ -181,40 +210,50 @@ fig.patch.set_facecolor('#1a1a1a')
 ax.set_facecolor('#1a1a1a')
 boroughs.plot(ax=ax, color='#252525', edgecolor='#444444', linewidth=0.8, zorder=0)
 
+pos = nx.get_node_attributes(cci_graph, 'pos')
+node_colors = [data.get('color') for n, data in cci_graph.nodes(data=True)]
+node_sizes = [data.get('size') for n, data in cci_graph.nodes(data=True)]
+weights = [data['weight'] for u, v, data in cci_graph.edges(data=True)]
+
+
 ## draw nodes and edges
-nx.draw_networkx_nodes(
+edges = nx.draw_networkx_edges(
     cci_graph, pos, ax=ax,
-    node_size=node_sizes,
-    node_color=node_colors,
-    alpha=0.6,
-    zorder=3
-)
-weights = [cci_graph[u][v]['weight'] for u, v in cci_graph.edges()]
-nx.draw_networkx_edges(
-    cci_graph, pos, ax=ax,
-    width=1.5,
-    edgecolors='white',
+    width=1.2,
     edge_color=weights,
     edge_cmap=plt.cm.plasma,
-    alpha=0.5,
-    zorder=2
+    alpha=0.4,
+    #zorder=2,
+    arrows=True,
+    arrowsize=10
+)
+
+nodes = nx.draw_networkx_nodes(
+    cci_graph, pos, ax=ax,
+    node_size = node_sizes,
+    node_color = node_colors,
+    alpha=0.7,
+    #zorder=3,
 )
 
 ## create legend
 legend_elements = [
-    Line2D([0], [0], marker='o', color='w', label='School (Size = Funding)',
+    Line2D([0], [0], marker='o', color='w', label='School (Size ∝ Funding)',
            markerfacecolor=color_map_config['school'], markersize=10),
     Line2D([0], [0], marker='o', color='w', label='NTA Center',
-           markerfacecolor=color_map_config['nta'], markersize=8),
-    Line2D([0], [0], marker='o', color='w', label='Subway',
-           markerfacecolor=color_map_config['subway_transit'], markersize=6),
-    Line2D([0], [0], marker='o', color='w', label='Bus',
-           markerfacecolor=color_map_config['bus_transit'], markersize=6)
+           markerfacecolor=color_map_config['origin'], markersize=8),
 ]
 ax.legend(handles=legend_elements, loc='upper left', frameon=False, 
           labelcolor='white', fontsize=10)
 
-plt.title("NYC CCI Network", color='white')
-plt.axis('off')
+plt.title("NYC Community Cost Index (CCI) Network", color='white', fontsize=16, pad=20)
+ax.set_axis_off()
+
+sm = plt.cm.ScalarMappable(cmap=plt.cm.plasma, norm=plt.Normalize(vmin=min(weights), vmax=max(weights)))
+cb = plt.colorbar(sm, ax=ax, shrink=0.5, pad=0.02)
+cb.set_label('CCI Cost', color='white')
+cb.ax.yaxis.set_tick_params(color='white', labelcolor='white')
+
 plt.tight_layout()
 plt.show()
+# %%
