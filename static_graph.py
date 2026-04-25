@@ -2,6 +2,7 @@
 # pyright: basic
 import pickle
 import pandas as pd
+import numpy as np
 import geopandas as gpd
 import matplotlib.pyplot as plt
 import datashader as ds
@@ -144,7 +145,7 @@ with open (f"{prefix[0]}cci_result_graph.pkl", "rb") as f:
 
 ## visualization configs
 # TODO : look at distribution to find a better max_dist
-max_dist = 1500 
+max_dist = 150
 base_size = 10
 
 # TODO : need better scaling methods than flat scaling
@@ -152,11 +153,8 @@ base_size = 10
 # check distribution and variance
 scale = 0.005
 color_map_config = {
-    'school': '#ff4d4d',          
-    'origin': '#2ecc71',             
-    'subway_transit': '#3498db',  
-    'bus_transit': '#f1c40f',    
-    'walk': '#95a5a6'             
+    'school': '#d8e2e6',          
+    'origin': '#2ecc71',                      
 }
 
 sch_df = pd.read_csv('processed_schools_2015.csv')
@@ -167,12 +165,12 @@ gdf_indexed = gdf_nodes.set_index('stop_id')
 for node_id, data in cci_graph.nodes(data=True):
     if node_id in gdf_indexed.index:
         rw = gdf_indexed.loc[node_id]
-        n_type = attr.get('node_type')
+        n_type = rw.get('node_type')
         funding = funding_mp.get(node_id, 0)
         size = (funding*scale) if funding > 0 else base_size
         
         data.update({
-            'pos': (row['geometry'].x, row['geometry'].y),
+            'pos': (rw['geometry'].x, rw['geometry'].y),
             'node_type': n_type,
             'color': color_map_config.get(n_type, '#ffffff'),
             'size': (funding * scale) if funding > 0 else base_size
@@ -181,7 +179,7 @@ for node_id, data in cci_graph.nodes(data=True):
 pos = nx.get_node_attributes(cci_graph, 'pos')
 valid_edges = []
 for u, v in cci_graph.edges():
-    if u in pos and v in pas:
+    if u in pos and v in pos:
         dist = dist = np.linalg.norm(np.array(pos[u]) - np.array(pos[v]))
         if dist <= max_dist: valid_edges.append((u, v))
 
@@ -278,7 +276,7 @@ boroughs.plot(ax=ax, color='#252525', edgecolor='#444444', linewidth=0.8, zorder
 
 pos = nx.get_node_attributes(masked_cci_graph, 'pos')
 node_colors = [data.get('color') for n, data in masked_cci_graph.nodes(data=True)]
-node_sizes = [data.get('size') for n, data in masked_cci_graphh.nodes(data=True)]
+node_sizes = [data.get('size') for n, data in masked_cci_graph.nodes(data=True)]
 weights = [data['weight'] for u, v, data in masked_cci_graph.edges(data=True)]
 
 
@@ -319,3 +317,4 @@ cb.ax.yaxis.set_tick_params(color='white', labelcolor='white')
 
 plt.tight_layout()
 plt.show()
+# %%
