@@ -143,8 +143,14 @@ with open (f"{prefix[0]}cci_result_graph.pkl", "rb") as f:
     cci_graph = pickle.load(f)
 
 ## visualization configs
+# TODO : look at distribution to find a better max_dist
+max_dist = 1500 
 base_size = 10
-scale = 0.05
+
+# TODO : need better scaling methods than flat scaling
+# min-max normalization, logarithmic scaling, square root scaling
+# check distribution and variance
+scale = 0.005
 color_map_config = {
     'school': '#ff4d4d',          
     'origin': '#2ecc71',             
@@ -157,20 +163,29 @@ sch_df = pd.read_csv('processed_schools_2015.csv')
 funding_mp = sch_df.set_index('LOCATION_CODE')['funding_per_student'].to_dict()
 funding_mp = {'school_' + key: value for key, value in funding_mp.items()}
 
-node_metadata = gdf_nodes.set_index('stop_id').to_dict('index')
-for node_id in cci_graph.nodes():
-    if node_id in node_metadata:
-        attr = node_metadata[node_id]
+gdf_indexed = gdf_nodes.set_index('stop_id')
+for node_id, data in cci_graph.nodes(data=True):
+    if node_id in gdf_indexed.index:
+        rw = gdf_indexed.loc[node_id]
         n_type = attr.get('node_type')
         funding = funding_mp.get(node_id, 0)
         size = (funding*scale) if funding > 0 else base_size
         
-        cci_graph.nodes[node_id].update({
-            'pos': (attr['geometry'].x, attr['geometry'].y),
+        data.update({
+            'pos': (row['geometry'].x, row['geometry'].y),
             'node_type': n_type,
             'color': color_map_config.get(n_type, '#ffffff'),
-            'size': size
+            'size': (funding * scale) if funding > 0 else base_size
         })
+
+pos = nx.get_node_attributes(cci_graph, 'pos')
+valid_edges = []
+for u, v in cci_graph.edges():
+    if u in pos and v in pas:
+        dist = dist = np.linalg.norm(np.array(pos[u]) - np.array(pos[v]))
+        if dist <= max_dist: valid_edges.append((u, v))
+
+masked_cci_graph = cci_graph.edge_subgraph(valid_edges).copy()
 
 print("Graph Overview")
 print(f"Total Nodes {cci_graph.number_of_nodes()}")
@@ -223,17 +238,14 @@ edges = nx.draw_networkx_edges(
     edge_color=weights,
     edge_cmap=plt.cm.plasma,
     alpha=0.4,
-    #zorder=2,
     arrows=True,
     arrowsize=10
 )
-
 nodes = nx.draw_networkx_nodes(
     cci_graph, pos, ax=ax,
     node_size = node_sizes,
     node_color = node_colors,
     alpha=0.7,
-    #zorder=3,
 )
 
 ## create legend
@@ -257,3 +269,53 @@ cb.ax.yaxis.set_tick_params(color='white', labelcolor='white')
 plt.tight_layout()
 plt.show()
 # %%
+# Create masked version of CCI Graph
+# Create direct CCI Graph
+fig, ax = plt.subplots(figsize=(12, 12))
+fig.patch.set_facecolor('#1a1a1a')
+ax.set_facecolor('#1a1a1a')
+boroughs.plot(ax=ax, color='#252525', edgecolor='#444444', linewidth=0.8, zorder=0)
+
+pos = nx.get_node_attributes(masked_cci_graph, 'pos')
+node_colors = [data.get('color') for n, data in masked_cci_graph.nodes(data=True)]
+node_sizes = [data.get('size') for n, data in masked_cci_graphh.nodes(data=True)]
+weights = [data['weight'] for u, v, data in masked_cci_graph.edges(data=True)]
+
+
+## draw nodes and edges
+edges = nx.draw_networkx_edges(
+    masked_cci_graph, pos, ax=ax,
+    width=1.2,
+    edge_color=weights,
+    edge_cmap=plt.cm.plasma,
+    alpha=0.4,
+    arrows=True,
+    arrowsize=10
+)
+nodes = nx.draw_networkx_nodes(
+    masked_cci_graph, pos, ax=ax,
+    node_size = node_sizes,
+    node_color = node_colors,
+    alpha=0.7,
+)
+
+## create legend
+legend_elements = [
+    Line2D([0], [0], marker='o', color='w', label='School (Size ∝ Funding)',
+           markerfacecolor=color_map_config['school'], markersize=10),
+    Line2D([0], [0], marker='o', color='w', label='NTA Center',
+           markerfacecolor=color_map_config['origin'], markersize=8),
+]
+ax.legend(handles=legend_elements, loc='upper left', frameon=False, 
+          labelcolor='white', fontsize=10)
+
+plt.title("NYC Community Cost Index (CCI) Network", color='white', fontsize=16, pad=20)
+ax.set_axis_off()
+
+sm = plt.cm.ScalarMappable(cmap=plt.cm.plasma, norm=plt.Normalize(vmin=min(weights), vmax=max(weights)))
+cb = plt.colorbar(sm, ax=ax, shrink=0.5, pad=0.02)
+cb.set_label('CCI Cost', color='white')
+cb.ax.yaxis.set_tick_params(color='white', labelcolor='white')
+
+plt.tight_layout()
+plt.show()
