@@ -1,11 +1,14 @@
 # pyright: basic
 # %%
 import numpy as np
+import geopandas as gpd
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
+from matplotlib.lines import Line2D
+from adjustText import adjust_text
 # %%
 # grad results analysis
 base_path = "data/"
@@ -59,6 +62,9 @@ borough_map = {
     'R': 'Staten Island'
 }
 borough = school_subgraph['Geographic Subdivision'].str[2].map(borough_map)
+focused_schools = school_subgraph[school_subgraph['Cohort'] == '4 year August']
+focused_schools = focused_schools[focused_schools['Cohort Year'] == 2011]
+foc_borough = focused_schools['Geographic Subdivision'].str[2].map(borough_map)
 
 # Dropout vs. Grad 
 plt.figure(figsize=(10, 7))
@@ -89,9 +95,6 @@ plt.savefig('grad_result_sch_QvsQ.png')
 # Grad vs Adv_Grad Box Plot Graph
 fig, axes = plt.subplots(1, 2, figsize=(16, 6))
 
-focused_schools = school_subgraph[school_subgraph['Cohort'] == '4 year August']
-focused_schools = focused_schools[focused_schools['Cohort Year'] == 2011]
-foc_borough = focused_schools['Geographic Subdivision'].str[2].map(borough_map)
 
 sns.boxplot(ax=axes[0], data=focused_schools, x=foc_borough, y='% Grads')
 axes[0].set_title('Distribution of Graduation Rate of 2011 Cohort by Borough')
@@ -151,6 +154,8 @@ plt.savefig('diploma_composition_bar.png')
 # processed schools analysis
 school_df = pd.read_csv("processed_schools_2015.csv")
 
+school_df['Borough'] = school_df['LOCATION_CODE'].str[0].map(borough_map)
+
 ## funding vs grad
 plt.figure(figsize=(12, 7))
 sns.scatterplot(
@@ -158,32 +163,79 @@ sns.scatterplot(
     x='funding_per_student', 
     y='grad_rate', 
     size='size',        # Bubbles represent school size
-    hue='NTA_NAME',     # Color by neighborhood to see clusters
-    alpha=0.6,
-    sizes=(20, 200),
-    legend=False
+    hue='Borough',      # Color by neighborhood to see clusters
+    alpha=0.4,
+    sizes=(40, 500),
+    palette='Set1',
 )
-plt.title('Funding vs. Graduation Rate by Neighborhood')
-plt.xlabel('Funding Per Student ($)')
-plt.ylabel('Graduation Rate (%)')
-#plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', title='Neighborhood')
+
+top_performers = pd.concat([
+    school_df.nlargest(2, 'grad_rate'),
+    school_df.nlargest(2, 'funding_per_student')
+]).drop_duplicates(subset=['LOCATION_CODE'])
+
+texts = []
+top_performers = pd.concat([
+    school_df.nlargest(3, 'grad_rate'),
+    school_df.nlargest(3, 'funding_per_student')
+]).drop_duplicates(subset=['LOCATION_CODE'])
+
+for i, rw in top_performers.iterrows():
+    texts.append(plt.text(
+        rw['funding_per_student'], 
+        rw['grad_rate'], 
+        rw['NTA_NAME'], 
+        fontsize=10, 
+        weight='bold'
+    ))
+
+adjust_text(texts, arrowprops=dict(arrowstyle='->', color='black', lw=0.5))
+plt.title('NYC Schools: Funding vs. Graduation Rate (2015)', fontsize=15)
+plt.xlabel('Funding Per Student ($)', fontsize=12)
+plt.ylabel('Graduation Rate (%)', fontsize=12)
+
+plt.legend(bbox_to_anchor=(1.02, 1), loc='upper left',borderaxespad=0)
+plt.grid(True, linestyle='--', alpha=0.3)
 plt.tight_layout()
-plt.show()
+plt.savefig("fund_grad_bor.png")
 
 ## spatial performance
-plt.figure(figsize=(10, 10))
-map_plot = sns.scatterplot(
-    data=school_df, 
-    x='lon', 
-    y='lat', 
-    hue='adv_regents_rate', 
+boroughs = gpd.read_file("./data/spatial/Borough_Boundaries.geojson").to_crs(epsg=4326)
+schools_gdf = gpd.GeoDataFrame(
+    school_df, 
+    geometry=gpd.points_from_xy(school_df['lon'], school_df['lat']),
+    crs="EPSG:4326"
+)
+fig, ax = plt.subplots(figsize=(14, 12))
+boroughs.plot(ax=ax, color='#f2f2f2', edgecolor='black', linewidth=0.5, zorder=1)
+sns.scatterplot(
+    data=school_df,
+    x='lon',
+    y='lat',
+    hue='adv_regents_rate',
     size='grad_rate',
     palette='viridis',
-    alpha=0.7
+    sizes=(20, 400),
+    alpha=0.4,
+    edgecolor='white',
+    linewidth=0.5,
+    ax=ax,
+    zorder=2
 )
-plt.title('NYC School Performance Geography')
-plt.legend(title='Adv Regents Rate %')
-plt.show()
+
+leg = ax.legend(
+    bbox_to_anchor=(1.02, 1), 
+    loc='upper left', 
+    title="School Metrics",
+    fontsize='medium',
+)
+
+ax.set_title('NYC School Performance Geography (2015)', fontsize=18, pad=20)
+ax.set_aspect(1.3)
+ax.axis('off')
+
+plt.tight_layout()
+plt.savefig("sch_perf.png")
 
 ## funding disparity
 plt.figure(figsize=(12, 6))
@@ -192,7 +244,7 @@ other_categories = [
     'Home School', 
     'Alternative' 
 ]
-labels = [l for l in school_df['LOCATION_TYPE_DESCRIPTION'].unique() if l not in others]
+labels = [l for l in school_df['LOCATION_TYPE_DESCRIPTION'].unique() if l not in other_categories]
 labels.append('Other/Specialized')
 
 sns.violinplot(
@@ -207,5 +259,5 @@ sns.violinplot(
 plt.xticks(rotation=45)
 plt.title('Distribution of Funding per Student by School Type')
 plt.ylabel('Funding ($)')
-plt.show()
+plt.savefig("sch_type.png")
 # %%
