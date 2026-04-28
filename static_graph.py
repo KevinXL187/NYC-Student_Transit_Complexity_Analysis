@@ -25,8 +25,8 @@ def get_color(cmap_attr, index=0.5):
 # %%
 # Load Transit Data
 projected_crs = 'EPSG:2263'
-gdf_edges = gpd.read_file('network_data.gpkg', layer='edges').to_crs(projected_crs)
-gdf_nodes = gpd.read_file('network_data.gpkg', layer='nodes').to_crs(projected_crs)
+gdf_edges = gpd.read_file('data/network_data.gpkg', layer='edges').to_crs(projected_crs)
+gdf_nodes = gpd.read_file('data/network_data.gpkg', layer='nodes').to_crs(projected_crs)
 boroughs = gpd.read_file("./data/spatial/Borough_Boundaries.geojson").to_crs(projected_crs)
 
 minX, minY, maxX, maxY = boroughs.total_bounds
@@ -144,10 +144,10 @@ plt.savefig("transit_acc.png")
 # %%
 # Load CCI and School Data
 prefix=['adjusted_', 'raw_']
-with open (f"{prefix[0]}cci_result_graph.pkl", "rb") as f:
+with open (f"data/{prefix[0]}cci_result_graph.pkl", "rb") as f:
     cci_graph = pickle.load(f)
 
-sch_df = pd.read_csv('processed_schools_2015.csv')
+sch_df = pd.read_csv('data/processed_schools_2015.csv')
 funding_mp = sch_df.set_index('LOCATION_CODE')['funding_per_student'].to_dict()
 funding_mp = {'school_' + key: value for key, value in funding_mp.items()}
 funding_vals = sch_df['funding_per_student']
@@ -349,4 +349,3 @@ cb.ax.yaxis.set_tick_params(color='white', labelcolor='white')
 
 plt.tight_layout()
 plt.savefig("95th_cci_graph.png")
-# %%

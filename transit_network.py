@@ -43,8 +43,8 @@ for u, v, k, data in walk_graph.edges(keys=True, data=True):
 
 # %%
 
-transit_edges_df = pd.read_csv("processed_edges_2015.csv")
-transit_stops_df = pd.read_csv("processed_stops_2015.csv")
+transit_edges_df = pd.read_csv("data/processed_edges_2015.csv")
+transit_stops_df = pd.read_csv("data/processed_stops_2015.csv")
 transit_gdf = gpd.GeoDataFrame(
     transit_stops_df,
     geometry = gpd.points_from_xy(transit_stops_df['stop_lon'], transit_stops_df['stop_lat']),
@@ -119,7 +119,7 @@ print(f"Coordinates of stop: {bad_node['y']}, {bad_node['x']}")
 
 # %%
 # add school nodes and walking edge to Graph
-school_df = pd.read_csv("processed_schools_2015.csv")
+school_df = pd.read_csv("data/processed_schools_2015.csv")
 school_gdf = gpd.GeoDataFrame(
     school_df,
     geometry=gpd.points_from_xy(school_df['lon'], school_df['lat']),
@@ -168,7 +168,7 @@ nta_gdf = gpd.read_file("./data/spatial/nta_2010/nynta2010.shp").to_crs(crs_code
 
 #print("nta_shapefile cols:", nta_gdf.columns.tolist())
 
-nta_df = pd.read_csv('nta_SE_indicators_2015.csv')
+nta_df = pd.read_csv('data/nta_SE_indicators_2015.csv')
 income_dict = nta_df.set_index('GeoID')['median_income_estimate'].to_dict()
 
 rep_points = nta_gdf.geometry.representative_point()
@@ -259,7 +259,7 @@ print(f"Minimum Travel Time : {min_tk} and Maximum Travel Time : {max_tk}")
 
 # %%
 # save data structure to file
-with open('transit_graph.pkl', 'wb') as f: pickle.dump(nxG_final, f)
+with open('data/transit_graph.pkl', 'wb') as f: pickle.dump(nxG_final, f)
 
-gdf_edges.to_file("network_data.gpkg", layer='edges', driver="GPKG")
-gdf_nodes.to_file("network_data.gpkg", layer='nodes', driver="GPKG")
+gdf_edges.to_file("data/network_data.gpkg", layer='edges', driver="GPKG")
+gdf_nodes.to_file("data/network_data.gpkg", layer='nodes', driver="GPKG")

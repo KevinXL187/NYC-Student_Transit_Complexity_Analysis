@@ -108,6 +108,6 @@ if __name__ == '__main__':
     final_shapes = pd.concat(all_shapes)
     
     # Save the master files
-    final_stops.to_csv("processed_stops_2015.csv", index=False)
-    final_edges.to_csv("processed_edges_2015.csv", index=False)
-    final_shapes.to_csv("processed_shapes_2015.csv", index=False)
+    final_stops.to_csv("data/processed_stops_2015.csv", index=False)
+    final_edges.to_csv("data/processed_edges_2015.csv", index=False)
+    final_shapes.to_csv("data/processed_shapes_2015.csv", index=False)

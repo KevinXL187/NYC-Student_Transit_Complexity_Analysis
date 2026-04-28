@@ -152,7 +152,7 @@ plt.tight_layout()
 plt.savefig('diploma_composition_bar.png')
 # %%
 # processed schools analysis
-school_df = pd.read_csv("processed_schools_2015.csv")
+school_df = pd.read_csv("data/processed_schools_2015.csv")
 
 school_df['Borough'] = school_df['LOCATION_CODE'].str[0].map(borough_map)
 

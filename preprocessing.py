@@ -165,7 +165,7 @@ def process_acs(output_path):
     print("cols:", main_df.columns.to_list())
 
 if __name__ == "__main__":
-    processed_sch_csv = "processed_schools_2015.csv"
+    processed_sch_csv = "data/processed_schools_2015.csv"
     raw_sch_csvs = [
         "./data/spatial/school_points_15.csv", 
         "./data/other/school_info_15.csv", 
@@ -174,5 +174,5 @@ if __name__ == "__main__":
 
     process_schools(raw_sch_csvs, processed_sch_csv)
 
-    processed_acs_csv = "nta_SE_indicators_2015.csv"
+    processed_acs_csv = "data/nta_SE_indicators_2015.csv"
     process_acs(processed_acs_csv)

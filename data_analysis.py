@@ -61,7 +61,7 @@ def CCI_graph(results, prefix):
                 weight=entry['cci_cost']
             )
             
-    with open(f"{prefix}_cci_result_graph.pkl", 'wb') as f:
+    with open(f"data/{prefix}_cci_result_graph.pkl", 'wb') as f:
         pickle.dump(cci_nx, f)
         
     return cci_nx
@@ -69,11 +69,11 @@ def CCI_graph(results, prefix):
 if __name__ == "__main__":
 
     # loading data
-    with open('transit_graph.pkl', 'rb') as f:
+    with open('data/transit_graph.pkl', 'rb') as f:
         nx_graph = pickle.load(f)
 
-    gdf_edges = gpd.read_file('network_data.gpkg', layer='edges')
-    gdf_nodes = gpd.read_file('network_data.gpkg', layer='nodes')
+    gdf_edges = gpd.read_file('data/network_data.gpkg', layer='edges')
+    gdf_nodes = gpd.read_file('data/network_data.gpkg', layer='nodes')
 
     raw_travel_time_results = calculate_CCI(nx_graph, False)
     penalty_adjusted_results = calculate_CCI(nx_graph)

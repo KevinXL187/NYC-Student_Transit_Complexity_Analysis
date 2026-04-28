@@ -88,9 +88,9 @@ def visual_representation(stops_file, edges_file):
     plt.legend(markerscale=10)
     ax.set_axis_off()
     
-    output_file = "transit_coverage_verification.png"
+    output_file = "data/transit_coverage_verification.png"
     plt.savefig(output_file, dpi=300, bbox_inches='tight')
 
 if __name__ == '__main__':
-    verify_graph_results("processed_stops_2015.csv", "processed_edges_2015.csv")
-    visual_representation("processed_stops_2015.csv", "processed_edges_2015.csv")
+    verify_graph_results("data/processed_stops_2015.csv", "data/processed_edges_2015.csv")
+    visual_representation("data/processed_stops_2015.csv", "data/processed_edges_2015.csv")
