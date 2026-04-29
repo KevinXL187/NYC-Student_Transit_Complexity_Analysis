@@ -1,0 +1,12 @@
+nyc_transit_complexity_files/
+
+__pycache__/
+.venv/
+.Rproj.user
+dataset/
+.ipynb_checkpoints/
+checkpoints/
+.env/
+data/
+data
+cache/
