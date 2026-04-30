@@ -87,7 +87,7 @@ def process_schools(input_paths, output_path):
     print('number of nan rows', clean_df.isna().any(axis=1).sum())
     missing_schools = clean_df[clean_df.isna().any(axis=1)]['LOCATION_CODE']
     missing_schools = pd.merge(clean_df, missing_schools, on=clean_df_key, how="right")
-    missing_schools.to_csv('missing_school_15.csv', index=False)
+    missing_schools.to_csv('data/missing_school_15.csv', index=False)
     # mostly full of k-12 and charter school
     print(clean_df.shape)
 
@@ -152,7 +152,7 @@ def process_acs(output_path):
     # missing data
     missing_ntas = main_df[main_df.isna().any(axis=1)]['GeoID']
     missing_ntas = pd.merge(missing_ntas, main_df, on='GeoID', how='right')
-    missing_ntas.to_csv('missing_ntas_15.csv', index=False)
+    missing_ntas.to_csv('data/missing_ntas_15.csv', index=False)
 
     # fill in data
     numeric_cols = main_df.select_dtypes(include=np.number).columns

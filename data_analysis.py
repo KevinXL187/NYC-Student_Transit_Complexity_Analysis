@@ -9,7 +9,7 @@ import numpy as np
 
 def calculate_CCI(nx_graph, apply_penalty=True):
     transfer_penalty = 180
-
+    print("start cci calculations")
     for u, v, k, data in nx_graph.edges(keys=True, data=True):
         base_time = data.get('weight', 0)
         penalty = 0
@@ -34,10 +34,12 @@ def calculate_CCI(nx_graph, apply_penalty=True):
         lengths = nx.single_source_dijkstra_path_length(nx_graph, start_node, weight='tmp_w')
 
         results[start_node] = {s: lengths.get(s, np.nan) for s in school_nodes}
-        
+    
+    print("finish cci calculations")
     return results
         
 def CCI_graph(results, prefix):
+    print('saving data')
     flattened_data = []
     for origin, schools in results.items():
         for school, cost in schools.items():
@@ -48,7 +50,7 @@ def CCI_graph(results, prefix):
             })
     
     cci_df = pd.DataFrame(flattened_data)
-    cci_df.to_csv(f"cci_result.csv", index=False)
+    cci_df.to_csv(f"data/{prefix}_cci_result.csv", index=False)
     print(f"Results saved to cci_result.csv")
 
     cci_nx = nx.DiGraph()

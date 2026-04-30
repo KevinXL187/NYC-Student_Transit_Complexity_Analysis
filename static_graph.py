@@ -139,7 +139,7 @@ leg = ax.legend(
     title="NYC Transit Accessibility"
 )
 plt.tight_layout()
-plt.savefig("transit_acc.png")
+plt.savefig("assets/transit_acc.png")
 
 # %%
 # Load CCI and School Data
@@ -174,7 +174,7 @@ print("Size Statistics Comparison:")
 print(f"Linear - Mean: {linear_sizes.mean():.2f}, Std: {linear_sizes.std():.2f}")
 print(f"Sqrt   - Mean: {sqrt_sizes.mean():.2f}, Std: {sqrt_sizes.std():.2f}")
 print(f"Log    - Mean: {log_sizes.mean():.2f}, Std: {log_sizes.std():.2f}")
-plt.savefig("sch_size_distr.png")
+plt.savefig("assets/sch_size_distr.png")
 
 gdf_indexed = gdf_nodes.set_index('stop_id')
 for node_id, data in cci_graph.nodes(data=True):
@@ -212,7 +212,7 @@ plt.axvline(dist_ser.quantile(0.95), color='red', linestyle='--', label='95th Pe
 plt.title("Distribution of Edge Distances in CCI Graph")
 plt.xlabel("Distance Units")
 plt.legend()
-plt.savefig("distr_edg_dist.png")
+plt.savefig("assets/distr_edg_dist.png")
 
 
 masked_cci_graph = cci_graph.edge_subgraph(valid_edges).copy()
@@ -297,7 +297,7 @@ cb.set_label('CCI Cost', color='white')
 cb.ax.yaxis.set_tick_params(color='white', labelcolor='white')
 
 plt.tight_layout()
-plt.savefig("all_cci_graph.png")
+plt.savefig("assets/all_cci_graph.png")
 # %%
 # Create masked version of CCI Graph
 # Create direct CCI Graph
@@ -348,4 +348,4 @@ cb.set_label('CCI Cost', color='white')
 cb.ax.yaxis.set_tick_params(color='white', labelcolor='white')
 
 plt.tight_layout()
-plt.savefig("95th_cci_graph.png")
+plt.savefig("assets/95th_cci_graph.png")

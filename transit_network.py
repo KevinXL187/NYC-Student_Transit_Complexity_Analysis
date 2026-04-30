@@ -229,7 +229,7 @@ valid_stops = set(gdf_nodes['stop_id'])
 
 # Filter the edges into different types so they can be represented differently on the visual
 # transit_travel, sub_transfer, walking, walk_transit, walk_school, walk_nta
-shapes_df = pd.read_csv("processed_shapes_2015.csv")
+shapes_df = pd.read_csv("data/processed_shapes_2015.csv")
 shape_lookup = {name: group for name, group in shapes_df.groupby('shape_id')}
 
 edges_data = []

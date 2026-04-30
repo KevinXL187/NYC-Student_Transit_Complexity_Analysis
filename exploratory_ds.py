@@ -105,7 +105,7 @@ axes[1].set_title('Distribution of Advanced Regents Rate of 2011 Cohort by Borou
 axes[1].set_ylim(0, 100)
 
 plt.tight_layout()
-plt.savefig('bxplot_sch_bh.png')
+plt.savefig('assets/bxplot_sch_bh.png')
 
 # Advanced Gap Violin
 plt.figure(figsize=(12, 6))

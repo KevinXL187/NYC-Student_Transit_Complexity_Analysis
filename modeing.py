@@ -18,7 +18,7 @@ import scipy.stats as stats
 # %%
 sch_df = pd.read_csv('data/processed_schools_2015.csv')
 nta_df = pd.read_csv('data/nta_SE_indicators_2015.csv')
-cci_df = pd.read_csv('data/cci_result.csv')
+cci_df = pd.read_csv('data/adjusted_cci_result.csv')
 
 if 'cci_cost' in cci_df.columns and 'CCI' not in cci_df.columns:
     cci_df = cci_df.rename(columns={'cci_cost': 'CCI'})
