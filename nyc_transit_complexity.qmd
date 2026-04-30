@@ -584,14 +584,14 @@ plt.savefig("sch_type.png")
 ### School Performance and Demographics
 
 #### Borough Variance
-![](bxplot_sch_bh.png)
+![](assets/bxplot_sch_bh.png)
 
 - most boroughs show median graduation rates hovering around 70%
 - advanced regents rates are strikingly low compared to the % of grad as a whole
 - advanced regents chart shows extreme positive skewness
 
 #### Funding and Graduation
-![](fund_grad_bor.png)
+![](assets/fund_grad_bor.png)
 
 - concentration of schools in Manhattan (Blue) and Queens (Green) that achieve 80–100% graduation rates with funding $4,000~$6,000 per student
 - past the $10,000 mark, schools in areas like Elmhurst and Clinton where funding spikes significantly, yet graduation rates remain stagnant or even lower
@@ -600,15 +600,15 @@ plt.savefig("sch_type.png")
 - many of the 90%+ graduation rate schools are mid-to-large sized, whereas the very small schools (tiny dots) are more scattered
 
 #### School Composition
-![](diploma_composition_bar.png)
+![](assets/diploma_composition_bar.png)
 
 - Queens has the highest overall graduation rate and Staten Island has the largest purple segments
 - the standard regents is fairly cconsistent across all boroughs 
-![](sch_advanced_gap_violin.png)
+![](assets/sch_advanced_gap_violin.png)
 
 - the widest area for most boroughs is between 60 and 80 suggests on average there is a 70-point gap between their total graduation rate and their advanced graduation rate
 
-![](sch_size_distr.png)
+![](assets/sch_size_distr.png)
 
 - log/sqrt transformation will likely yield a more stable R-squared and satisfy the assumption of homoscedasticity better than the raw values (skewed)
 
@@ -878,7 +878,7 @@ The CCI is derived by analyzing the "centrality" and "reachability" of schools w
 
 $$ CCI = Time\_Spent\_Traveling + Transfer\_Penalty$$
 
-![](transit_acc.png)
+![](assets/transit_acc.png)
 
 - dense convergence of yellow (subway) and blue (bus) lines in Manhattan creates a centrality sink, lower CCI scores
 - sparse coverage in parts of Eastern Queens and Southern Staten Island
@@ -1063,12 +1063,12 @@ print(f"=== Shapiro-Wilk Normality Test (p-value): {shapiro_p:.4f} ===")
 ```
 
 ### Linearity
-![](fitvalue_reg.png)
+![](assets/fitvalue_reg.png)
 
 - shows distinct horizontal banding, suggests model may strugge with discrete graduation values or there were missing a non-linear relationship 
 
 ### Normality
-![](Q_Q.png)
+![](assets/Q_Q.png)
 
 - shows significant deviations from the reference line at the tails, suggests that the residuals are not perfectly normal distributed and shows heavy tails
 

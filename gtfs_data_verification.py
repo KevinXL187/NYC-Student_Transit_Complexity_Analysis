@@ -88,7 +88,7 @@ def visual_representation(stops_file, edges_file):
     plt.legend(markerscale=10)
     ax.set_axis_off()
     
-    output_file = "data/transit_coverage_verification.png"
+    output_file = "assets/transit_coverage_verification.png"
     plt.savefig(output_file, dpi=300, bbox_inches='tight')
 
 if __name__ == '__main__':

@@ -76,7 +76,7 @@ sns.scatterplot(
     alpha=0.6
 )
 plt.title('Persistence vs. Attrition : 2001-2015 Grad Results')
-plt.savefig('grad_result_sch_RvsA.png')
+plt.savefig('assets/grad_result_sch_RvsA.png')
 
 # Quantity vs Quality Graph
 plt.figure(figsize=(10, 8))
@@ -90,7 +90,7 @@ sns.scatterplot(
 )
 plt.plot([0, 100], [0, 100], color='red', linestyle='--') 
 plt.title('Quantity vs. Quality: 2001-2015 Grad Results')
-plt.savefig('grad_result_sch_QvsQ.png')
+plt.savefig('assets/grad_result_sch_QvsQ.png')
 
 # Grad vs Adv_Grad Box Plot Graph
 fig, axes = plt.subplots(1, 2, figsize=(16, 6))
@@ -118,7 +118,7 @@ sns.violinplot(
 )
 plt.title('Quality Gap Distribution by Borough of 2011 Cohort')
 plt.ylabel('Difference between Grad % and Advanced %')
-plt.savefig('sch_advanced_gap_violin.png')
+plt.savefig('assets/sch_advanced_gap_violin.png')
 
 # School Type  Comparison
 plt.figure(figsize=(12, 6))
@@ -131,7 +131,7 @@ sns.boxplot(
 )
 plt.title('Graduation Rates by School Type: 2001-2015 Grad Results')
 plt.ylabel('% Graduates')
-plt.savefig('sch_type_comp.png')
+plt.savefig('assets/sch_type_comp.png')
 
 # Diploma Comparison Bar
 composition = focused_schools.groupby(foc_borough)[[
@@ -149,7 +149,7 @@ plt.ylabel('Percentage of Total Cohort')
 plt.legend(title='Diploma Type', bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.xticks(rotation=45)
 plt.tight_layout()
-plt.savefig('diploma_composition_bar.png')
+plt.savefig('assets/diploma_composition_bar.png')
 # %%
 # processed schools analysis
 school_df = pd.read_csv("data/processed_schools_2015.csv")
@@ -197,7 +197,7 @@ plt.ylabel('Graduation Rate (%)', fontsize=12)
 plt.legend(bbox_to_anchor=(1.02, 1), loc='upper left',borderaxespad=0)
 plt.grid(True, linestyle='--', alpha=0.3)
 plt.tight_layout()
-plt.savefig("fund_grad_bor.png")
+plt.savefig("assets/fund_grad_bor.png")
 
 ## spatial performance
 boroughs = gpd.read_file("./data/spatial/Borough_Boundaries.geojson").to_crs(epsg=4326)
@@ -235,7 +235,7 @@ ax.set_aspect(1.3)
 ax.axis('off')
 
 plt.tight_layout()
-plt.savefig("sch_perf.png")
+plt.savefig("assets/sch_perf.png")
 
 ## funding disparity
 plt.figure(figsize=(12, 6))
@@ -259,5 +259,5 @@ sns.violinplot(
 plt.xticks(rotation=45)
 plt.title('Distribution of Funding per Student by School Type')
 plt.ylabel('Funding ($)')
-plt.savefig("sch_type.png")
+plt.savefig("assets/sch_type.png")
 # %%

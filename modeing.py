@@ -16,9 +16,9 @@ import seaborn as sns
 import scipy.stats as stats
 
 # %%
-sch_df = pd.read_csv('processed_schools_2015.csv')
-nta_df = pd.read_csv('nta_SE_indicators_2015.csv')
-cci_df = pd.read_csv('cci_result.csv')
+sch_df = pd.read_csv('data/processed_schools_2015.csv')
+nta_df = pd.read_csv('data/nta_SE_indicators_2015.csv')
+cci_df = pd.read_csv('data/cci_result.csv')
 
 if 'cci_cost' in cci_df.columns and 'CCI' not in cci_df.columns:
     cci_df = cci_df.rename(columns={'cci_cost': 'CCI'})
@@ -76,14 +76,14 @@ plt.show()
 
 # Homoscedasticity (Breusch-Pagan)
 bp_test = het_breuschpagan(residuals, ols_model.model.exog)
-print(f"=== Breusch-Pagan Test (p-value): {bp_test[1]:.4f} ===")
+print(f"--- Breusch-Pagan Test (p-value): {bp_test[1]:.4f} ---")
 
 # Independence (VIF & Durbin-Watson)
 vif_data = pd.DataFrame({
     "Feature": ols_model.model.exog_names,
     "VIF": [variance_inflation_factor(ols_model.model.exog, i) for i in range(ols_model.model.exog.shape[1])]
 })
-print("\n=== VIF Results ===\n", vif_data)
+print("\n--- VIF Results ---\n", vif_data)
 print(f"Durbin-Watson Score: {durbin_watson(residuals):.4f}")
 
 # Normality (Q-Q Plot & Shapiro-Wilk)
@@ -91,7 +91,7 @@ plt.figure(figsize=(6, 6))
 stats.probplot(residuals, dist="norm", plot=plt)
 plt.show()
 shapiro_p = stats.shapiro(residuals)[1]
-print(f"=== Shapiro-Wilk Normality Test (p-value): {shapiro_p:.4f} ===")
+print(f"--- Shapiro-Wilk Normality Test (p-value): {shapiro_p:.4f} ---")
 
 # %%
 # MLR (LASSO / RIDGE)
@@ -124,7 +124,7 @@ mixed_model = smf.mixedlm(
     groups=main_df["origin_id"]
     ).fit()
 
-print("=== Mixed Effects Model (Grouping by NTA) ===")
+print("--- Mixed Effects Model (Grouping by NTA) ---")
 print(mixed_model.summary())
 
 # %%
@@ -144,11 +144,11 @@ prediction_comparison = pd.DataFrame({
     "Ridge": get_error_metrics(y_test, y_pred_ridge)
 })
 
-print("=== Predictive Performance (Test Set) ===")
+print("--- Predictive Performance (Test Set) ---")
 print(prediction_comparison)
 print("\n")
 
-print("=== Statistical Fit Comparison ===")
+print("--- Statistical Fit Comparison ---")
 likelihood_comparison = pd.DataFrame({
     "Metric": ["AIC", "BIC", "Log-Likelihood"],
     "OLS (Train)": [ols_model.aic, ols_model.bic, ols_model.llf],
