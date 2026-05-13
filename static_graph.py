@@ -32,6 +32,11 @@ boroughs = gpd.read_file("./data/spatial/Borough_Boundaries.geojson").to_crs(pro
 minX, minY, maxX, maxY = boroughs.total_bounds
 PLOT_H, PLOT_W = 4500, 4500
 
+num_edges = len(gdf_edges)
+num_nodes = len(gdf_nodes)
+
+print(f"Nodes: {num_nodes}")
+print(f"Edges: {num_edges}")
 # %%
 # Create Transit Graph
 spf_edges = spd.GeoDataFrame(gdf_edges)
